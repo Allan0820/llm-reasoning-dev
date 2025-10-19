@@ -1,0 +1,1001 @@
+sympy,natural_language
+"ForAll(a, T(u, c, y))","For all a, T of u and c and y."
+"ForAll(c, S(u))","For all c, S of u."
+"Exists(w, (g(v, x) == z) & (h(u) == w))","There exists an w such that g(v, x) equals z and h(u) equals w."
+"ForAll(c, (Implies(Q(c, v), m(y) == x)) & (Implies(V(v), h(w) == w)))","For all c, If Q of c and v, then m(y) equals x and If V of v, then h(w) equals w."
+"Exists(a, Exists(u, (h(w) == x) | (V(v, y))))",There exists an a such that There exists an u such that h(w) equals x or V of v and y.
+"Exists(a, ~(~(Equivalent(m(a, w) == u, f(y) == z))))","There exists an a such that not (not (m(a, w) equals u if and only if f(y) equals z))."
+"ForAll(y, (Implies(Implies(Q(c, v, a), f(a, z) == b), (Q(v, u, y)) & (g(w) == b))) | ((Implies(g(u) == y, f(z) == b)) & (Implies(g(v) == a, m(y, u) == u))))","For all y, If If Q of c and v and a, then f(a, z) equals b, then Q of v and u and y and g(w) equals b or If g(u) equals y, then f(z) equals b and If g(v) equals a, then m(y, u) equals u."
+P(w),P of w.
+"ForAll(y, Equivalent(g(b) == u, g(y) == a))","For all y, g(b) equals u if and only if g(y) equals a."
+"ForAll(a, h(u) == u)","For all a, h(u) equals u."
+(W(c)) | (P(y)),W of c or P of y.
+"Exists(z, ForAll(w, Implies((Implies(P(a, v), h(c, b) == z)) & ((P(w, x, b)) | (m(x) == c)), (Implies(Q(u, x), U(v, u))) | (Implies(g(b, w) == y, m(y) == c)))))","There exists an z such that For all w, If If P of a and v, then h(c, b) equals z and P of w and x and b or m(x) equals c, then If Q of u and x, then U of v and u or If g(b, w) equals y, then m(y) equals c."
+"ForAll(a, ForAll(z, ((Implies(T(y, z, b), R(v))) | (Implies(g(c, b) == v, V(v, x, b)))) | (Equivalent((m(c, x) == y) | (P(w, z, u)), ~(f(u, c) == y)))))","For all a, For all z, If T of y and z and b, then R of v or If g(c, b) equals v, then V of v and x and b or m(c, x) equals y or P of w and z and u if and only if not (f(u, c) equals y)."
+"U(a, u, z)",U of a and u and z.
+"ForAll(u, f(u, c) == b)","For all u, f(u, c) equals b."
+"Exists(c, Exists(w, U(v, y)))",There exists an c such that There exists an w such that U of v and y.
+"ForAll(v, Exists(w, (~(g(x, y) == a)) & (Equivalent(k(a) == u, V(x, u, z)))))","For all v, There exists an w such that not (g(x, y) equals a) and k(a) equals u if and only if V of x and u and z."
+"ForAll(z, Implies(Implies(m(u) == a, T(a, x, z)), (k(b, u) == c) | (Q(v, w, x))))","For all z, If If m(u) equals a, then T of a and x and z, then k(b, u) equals c or Q of v and w and x."
+"ForAll(a, W(y))","For all a, W of y."
+"(~(Equivalent(S(z, b), S(y, b, c)))) | (((k(c, b) == z) | (h(v) == c)) | (Equivalent(T(u, v, z), m(z) == z)))","not (S of z and b if and only if S of y and b and c) or k(c, b) equals z or h(v) equals c or T of u and v and z if and only if m(z) equals z."
+"ForAll(x, (Equivalent(~(k(a) == b), (k(c, u) == b) | (k(x, a) == w))) & ((Equivalent(P(y, a), R(x, v))) | (Implies(h(a, v) == a, P(c, x)))))","For all x, not (k(a) equals b) if and only if k(c, u) equals b or k(x, a) equals w and P of y and a if and only if R of x and v or If h(a, v) equals a, then P of c and x."
+"Implies(R(u, z, c), S(b, v, a))","If R of u and z and c, then S of b and v and a."
+"Exists(a, Q(x, v))",There exists an a such that Q of x and v.
+"ForAll(w, ~(T(y)))","For all w, not (T of y)."
+"ForAll(b, Equivalent(~(Equivalent(W(y, a), k(a) == z)), (Equivalent(h(y) == v, V(w, x))) | ((S(w, v)) & (h(c, x) == c))))","For all b, not (W of y and a if and only if k(a) equals z) if and only if h(y) equals v if and only if V of w and x or S of w and v and h(c, x) equals c."
+"Implies(~(Implies(g(w, b) == c, m(w, b) == v)), Equivalent(Implies(f(u) == u, m(y, u) == v), Equivalent(R(v, x, b), g(y, x) == v)))","If not (If g(w, b) equals c, then m(w, b) equals v), then If f(u) equals u, then m(y, u) equals v if and only if R of v and x and b if and only if g(y, x) equals v."
+k(y) == a,k(y) equals a.
+"Exists(u, ForAll(c, T(y)))","There exists an u such that For all c, T of y."
+"(Implies((h(y) == u) | (f(u) == z), ~(m(v, x) == u))) & (Implies((S(a, y)) & (R(v, z, x)), Implies(m(b, y) == b, h(b, y) == x)))","If h(y) equals u or f(u) equals z, then not (m(v, x) equals u) and If S of a and y and R of v and z and x, then If m(b, y) equals b, then h(b, y) equals x."
+"Exists(y, ForAll(a, m(z) == b))","There exists an y such that For all a, m(z) equals b."
+"Equivalent((Implies(V(b, v), m(b) == y)) & (Equivalent(m(c) == b, U(b))), ((k(y, x) == u) | (m(c) == a)) | (Equivalent(Q(z, b), m(a, b) == b)))","If V of b and v, then m(b) equals y and m(c) equals b if and only if U of b if and only if k(y, x) equals u or m(c) equals a or Q of z and b if and only if m(a, b) equals b."
+"Exists(b, Implies(k(c, v) == x, m(z, b) == c))","There exists an b such that If k(c, v) equals x, then m(z, b) equals c."
+"Exists(c, Exists(w, ((V(u, a, x)) | (k(a, z) == b)) & (Equivalent(f(y, b) == x, g(b) == v))))","There exists an c such that There exists an w such that V of u and a and x or k(a, z) equals b and f(y, b) equals x if and only if g(b) equals v."
+"Exists(y, T(u))",There exists an y such that T of u.
+"Exists(a, g(x, c) == w)","There exists an a such that g(x, c) equals w."
+"Exists(v, Equivalent(m(z) == z, m(b) == z))",There exists an v such that m(z) equals z if and only if m(b) equals z.
+"Exists(b, Exists(a, h(y) == b))",There exists an b such that There exists an a such that h(y) equals b.
+"ForAll(v, Implies(Implies(f(a) == w, f(v, x) == x), (U(u, c, v)) & (g(x) == v)))","For all v, If If f(a) equals w, then f(v, x) equals x, then U of u and c and v and g(x) equals v."
+"Exists(a, Implies((U(c, v, a)) & (W(v, w)), Equivalent(S(a), f(x, v) == c)))","There exists an a such that If U of c and v and a and W of v and w, then S of a if and only if f(x, v) equals c."
+"ForAll(c, ForAll(y, ~(Implies(U(u, y, w), h(y, z) == x))))","For all c, For all y, not (If U of u and y and w, then h(y, z) equals x)."
+"Exists(c, Exists(y, Equivalent(m(z, a) == y, h(w) == u)))","There exists an c such that There exists an y such that m(z, a) equals y if and only if h(w) equals u."
+"ForAll(w, ForAll(u, ~((Q(u, x)) & (S(z, u)))))","For all w, For all u, not (Q of u and x and S of z and u)."
+"ForAll(w, (R(z, v)) & (P(z)))","For all w, R of z and v and P of z."
+"ForAll(b, P(z, a))","For all b, P of z and a."
+"ForAll(w, Equivalent((~(P(c, v, u))) & ((W(a)) | (f(b, y) == y)), ~(Implies(k(b, a) == y, W(u, a)))))","For all w, not (P of c and v and u) and W of a or f(b, y) equals y if and only if not (If k(b, a) equals y, then W of u and a)."
+"ForAll(a, (Implies(Implies(f(y) == y, U(z, x, v)), (h(x, v) == v) & (S(z, b, y)))) & ((Implies(m(a) == c, f(v) == v)) & (~(V(y, z, w)))))","For all a, If If f(y) equals y, then U of z and x and v, then h(x, v) equals v and S of z and b and y and If m(a) equals c, then f(v) equals v and not (V of y and z and w)."
+"Exists(v, Equivalent((Equivalent(m(x) == z, Q(v, b, w))) | ((k(u, y) == w) & (W(c, v))), Implies((T(u)) & (T(w, y)), (g(a) == c) & (f(x, a) == x))))","There exists an v such that m(x) equals z if and only if Q of v and b and w or k(u, y) equals w and W of c and v if and only if If T of u and T of w and y, then g(a) equals c and f(x, a) equals x."
+"ForAll(u, f(z, b) == w)","For all u, f(z, b) equals w."
+"Exists(c, (Implies((h(w) == z) | (S(w, c, b)), Equivalent(S(z, c), W(b)))) | (Equivalent(Implies(Q(b, c), h(w) == c), (U(v)) & (Q(c, a, u)))))","There exists an c such that If h(w) equals z or S of w and c and b, then S of z and c if and only if W of b or If Q of b and c, then h(w) equals c if and only if U of v and Q of c and a and u."
+"Exists(x, Equivalent(f(y, z) == x, k(w) == w))","There exists an x such that f(y, z) equals x if and only if k(w) equals w."
+"ForAll(y, Exists(a, ~(~(h(z, w) == y))))","For all y, There exists an a such that not (not (h(z, w) equals y))."
+"(Implies(g(a) == c, T(z, u))) | ((g(z) == z) | (f(w) == z))","If g(a) equals c, then T of z and u or g(z) equals z or f(w) equals z."
+"Exists(b, ForAll(w, Equivalent(U(u, b), k(c) == u)))","There exists an b such that For all w, U of u and b if and only if k(c) equals u."
+"ForAll(w, ((g(z) == v) & (h(c) == y)) | (Implies(k(a) == y, h(a) == x)))","For all w, g(z) equals v and h(c) equals y or If k(a) equals y, then h(a) equals x."
+"Exists(z, ~(U(z, c, x)))",There exists an z such that not (U of z and c and x).
+"Exists(a, (~(~(g(c) == c))) | (~((f(u) == a) & (W(c)))))",There exists an a such that not (not (g(c) equals c)) or not (f(u) equals a and W of c).
+"g(z, y) == c","g(z, y) equals c."
+"Exists(y, k(a) == w)",There exists an y such that k(a) equals w.
+"Exists(v, Exists(c, Implies(Equivalent(U(z, x, c), g(b, z) == z), ~(S(x)))))","There exists an v such that There exists an c such that If U of z and x and c if and only if g(b, z) equals z, then not (S of x)."
+"Exists(a, U(x, w))",There exists an a such that U of x and w.
+"Exists(w, (Implies((W(w, v)) | (V(y, a, v)), (f(w) == v) & (m(z, b) == w))) | (((V(w)) & (R(b))) & (~(U(w, a, v)))))","There exists an w such that If W of w and v or V of y and a and v, then f(w) equals v and m(z, b) equals w or V of w and R of b and not (U of w and a and v)."
+"Exists(z, Equivalent(Implies(Equivalent(h(u, y) == x, m(c, y) == v), Implies(k(y) == z, g(y, w) == w)), Equivalent(Implies(S(y, u), W(x)), (k(y) == y) & (k(a, y) == z))))","There exists an z such that If h(u, y) equals x if and only if m(c, y) equals v, then If k(y) equals z, then g(y, w) equals w if and only if If S of y and u, then W of x if and only if k(y) equals y and k(a, y) equals z."
+"Exists(z, Exists(u, Implies(P(y, z), g(w) == u)))","There exists an z such that There exists an u such that If P of y and z, then g(w) equals u."
+"Exists(v, Equivalent(~(R(z, w, a)), Implies(Q(x), g(x, b) == c)))","There exists an v such that not (R of z and w and a) if and only if If Q of x, then g(x, b) equals c."
+"ForAll(v, ~(~(Implies(k(w) == z, h(z, w) == c))))","For all v, not (not (If k(w) equals z, then h(z, w) equals c))."
+"Implies(~(Equivalent(m(u, z) == w, W(c))), Implies(Implies(V(c), g(w) == x), (h(y) == a) | (h(w, x) == a)))","If not (m(u, z) equals w if and only if W of c), then If If V of c, then g(w) equals x, then h(y) equals a or h(w, x) equals a."
+"(((Q(a)) & (h(z, u) == c)) | (~(U(b, c, y)))) & ((Equivalent(T(w, b), k(w) == w)) & ((W(v, u, w)) | (W(z, a, y))))","Q of a and h(z, u) equals c or not (U of b and c and y) and T of w and b if and only if k(w) equals w and W of v and u and w or W of z and a and y."
+"(Equivalent(Implies(m(x, z) == c, k(w, z) == b), Implies(m(u, c) == v, T(u, b)))) | ((Equivalent(h(c) == a, g(x, v) == y)) | ((g(c) == v) & (S(u))))","If m(x, z) equals c, then k(w, z) equals b if and only if If m(u, c) equals v, then T of u and b or h(c) equals a if and only if g(x, v) equals y or g(c) equals v and S of u."
+"Implies(((R(a)) & (k(v) == w)) & (Implies(S(c, x, y), g(a) == b)), ~((T(b, c)) & (W(v, u, a))))","If R of a and k(v) equals w and If S of c and x and y, then g(a) equals b, then not (T of b and c and W of v and u and a)."
+"Exists(y, (Equivalent(~(h(z) == a), (Q(z, c)) | (h(x) == v))) & ((Equivalent(m(v) == w, Q(b, v, y))) | ((f(w, u) == u) | (g(w, a) == c))))","There exists an y such that not (h(z) equals a) if and only if Q of z and c or h(x) equals v and m(v) equals w if and only if Q of b and v and y or f(w, u) equals u or g(w, a) equals c."
+"Exists(y, S(c, z, y))",There exists an y such that S of c and z and y.
+"ForAll(u, (f(x, b) == z) & (m(c) == b))","For all u, f(x, b) equals z and m(c) equals b."
+"ForAll(v, ForAll(b, U(y, x)))","For all v, For all b, U of y and x."
+"ForAll(a, (~(Equivalent(h(b, a) == a, U(y, z, v)))) & (Equivalent(Equivalent(P(v), m(c, a) == u), (g(x) == a) & (Q(y)))))","For all a, not (h(b, a) equals a if and only if U of y and z and v) and P of v if and only if m(c, a) equals u if and only if g(x) equals a and Q of y."
+"Exists(v, Equivalent((Equivalent(T(u), m(u, v) == z)) | (Equivalent(R(a, b, x), k(a, c) == z)), ((R(b, x)) | (k(a) == u)) | ((U(y, u)) | (V(x, y)))))","There exists an v such that T of u if and only if m(u, v) equals z or R of a and b and x if and only if k(a, c) equals z if and only if R of b and x or k(a) equals u or U of y and u or V of x and y."
+"ForAll(c, ForAll(a, Q(b)))","For all c, For all a, Q of b."
+"Exists(v, ((h(w, b) == b) & (h(w) == w)) | (Equivalent(R(x, v, b), h(u) == w)))","There exists an v such that h(w, b) equals b and h(w) equals w or R of x and v and b if and only if h(u) equals w."
+"(Equivalent((U(z, c, w)) & (g(c) == x), Equivalent(g(y) == z, W(w, x, v)))) | (~((f(c) == v) | (V(z, y, x))))",U of z and c and w and g(c) equals x if and only if g(y) equals z if and only if W of w and x and v or not (f(c) equals v or V of z and y and x).
+"ForAll(v, Equivalent(Equivalent(f(a, b) == u, f(y) == a), (P(z, y, u)) | (h(c) == x)))","For all v, f(a, b) equals u if and only if f(y) equals a if and only if P of z and y and u or h(c) equals x."
+"Exists(y, P(u, z))",There exists an y such that P of u and z.
+"Exists(u, ((m(a, z) == y) & (V(u))) & (Equivalent(h(v) == b, V(a, z))))","There exists an u such that m(a, z) equals y and V of u and h(v) equals b if and only if V of a and z."
+"Exists(w, R(a, z))",There exists an w such that R of a and z.
+"Exists(y, T(b))",There exists an y such that T of b.
+"Exists(a, ~(k(y, x) == y))","There exists an a such that not (k(y, x) equals y)."
+"ForAll(z, k(y, u) == c)","For all z, k(y, u) equals c."
+"ForAll(v, Implies(Equivalent(V(v), h(y, w) == v), Equivalent(Q(z, v), U(a, w))))","For all v, If V of v if and only if h(y, w) equals v, then Q of z and v if and only if U of a and w."
+"ForAll(a, Implies(Equivalent(h(a) == w, m(w) == a), (R(c, x, w)) | (g(v, y) == a)))","For all a, If h(a) equals w if and only if m(w) equals a, then R of c and x and w or g(v, y) equals a."
+"ForAll(b, ~(((m(c, x) == w) & (U(z))) | (Equivalent(h(y, x) == y, S(b, w, u)))))","For all b, not (m(c, x) equals w and U of z or h(y, x) equals y if and only if S of b and w and u)."
+"Exists(u, k(y) == z)",There exists an u such that k(y) equals z.
+"ForAll(b, (~((h(v) == x) | (Q(z, u)))) | ((Equivalent(k(a) == z, k(u) == b)) & (~(T(y)))))","For all b, not (h(v) equals x or Q of z and u) or k(a) equals z if and only if k(u) equals b and not (T of y)."
+"Exists(z, k(a, c) == y)","There exists an z such that k(a, c) equals y."
+"ForAll(b, ForAll(w, Implies(Equivalent(Q(u, v), U(z)), (V(a, z, u)) | (R(b, v, y)))))","For all b, For all w, If Q of u and v if and only if U of z, then V of a and z and u or R of b and v and y."
+"Exists(z, (m(a, b) == a) & (g(x) == u))","There exists an z such that m(a, b) equals a and g(x) equals u."
+"Equivalent(((Q(v, w, c)) & (W(c, u, b))) | (Equivalent(P(b, v), f(y, u) == u)), Equivalent(Implies(U(c), m(w) == v), (V(x)) | (g(u) == z)))","Q of v and w and c and W of c and u and b or P of b and v if and only if f(y, u) equals u if and only if If U of c, then m(w) equals v if and only if V of x or g(u) equals z."
+"Exists(x, (Implies(Q(a, v, w), k(w, x) == y)) & ((g(u, b) == v) & (h(b) == w)))","There exists an x such that If Q of a and v and w, then k(w, x) equals y and g(u, b) equals v and h(b) equals w."
+"ForAll(v, W(x, a))","For all v, W of x and a."
+"ForAll(u, (f(v, y) == w) & (T(u, a)))","For all u, f(v, y) equals w and T of u and a."
+"ForAll(z, ~(Equivalent((f(w) == y) & (Q(u, a)), (U(w)) | (g(z, c) == y))))","For all z, not (f(w) equals y and Q of u and a if and only if U of w or g(z, c) equals y)."
+"Exists(y, Equivalent(((Q(a)) | (k(z, u) == v)) | ((f(u, c) == a) & (W(a))), Implies((U(z, a)) & (h(b) == y), ~(P(a)))))","There exists an y such that Q of a or k(z, u) equals v or f(u, c) equals a and W of a if and only if If U of z and a and h(b) equals y, then not (P of a)."
+"Exists(y, (f(z) == c) & (m(v) == a))",There exists an y such that f(z) equals c and m(v) equals a.
+"ForAll(x, (~(Implies(P(z), W(w)))) & ((~(f(w) == a)) & (Implies(m(b) == b, R(w, z)))))","For all x, not (If P of z, then W of w) and not (f(w) equals a) and If m(b) equals b, then R of w and z."
+"ForAll(z, W(w))","For all z, W of w."
+"ForAll(z, Exists(y, g(u, a) == w))","For all z, There exists an y such that g(u, a) equals w."
+"Exists(u, Implies(Q(b, v), h(c) == b))","There exists an u such that If Q of b and v, then h(c) equals b."
+"Exists(b, Exists(w, Implies(Equivalent(Implies(S(z, x, u), U(x)), ~(h(u) == c)), Implies(~(T(y, x, c)), Implies(h(y, c) == c, f(a) == z)))))","There exists an b such that There exists an w such that If If S of z and x and u, then U of x if and only if not (h(u) equals c), then If not (T of y and x and c), then If h(y, c) equals c, then f(a) equals z."
+"ForAll(v, Exists(c, ((Q(z, y, b)) | (k(a, y) == c)) | ((h(y) == z) & (U(z)))))","For all v, There exists an c such that Q of z and y and b or k(a, y) equals c or h(y) equals z and U of z."
+((k(y) == b) | (P(x))) & (~(h(v) == y)),k(y) equals b or P of x and not (h(v) equals y).
+"Exists(c, Exists(x, (~(Implies(f(b) == x, k(x, a) == a))) & (((k(x) == u) | (k(x, y) == v)) | (Implies(P(a, w, u), h(a, v) == z)))))","There exists an c such that There exists an x such that not (If f(b) equals x, then k(x, a) equals a) and k(x) equals u or k(x, y) equals v or If P of a and w and u, then h(a, v) equals z."
+"ForAll(c, ((S(u)) | (m(u) == a)) | ((h(w) == z) & (m(z, b) == x)))","For all c, S of u or m(u) equals a or h(w) equals z and m(z, b) equals x."
+"Exists(u, ~((Implies(R(w, x), R(y))) | (Implies(k(w) == v, V(b)))))","There exists an u such that not (If R of w and x, then R of y or If k(w) equals v, then V of b)."
+"ForAll(u, (g(x) == a) | (U(u, y, c)))","For all u, g(x) equals a or U of u and y and c."
+"ForAll(z, Equivalent(Implies(U(b, x, z), Q(w)), (V(b)) & (g(b, a) == w)))","For all z, If U of b and x and z, then Q of w if and only if V of b and g(b, a) equals w."
+"ForAll(x, ~(Implies(Equivalent(h(y) == w, g(c) == y), Implies(g(z, x) == y, V(c)))))","For all x, not (If h(y) equals w if and only if g(c) equals y, then If g(z, x) equals y, then V of c)."
+"((Implies(f(y, v) == b, S(z))) | (Implies(f(a, b) == b, V(z, w, u)))) | ((Equivalent(h(v) == x, U(c))) & (Equivalent(P(a, c, v), m(b) == v)))","If f(y, v) equals b, then S of z or If f(a, b) equals b, then V of z and w and u or h(v) equals x if and only if U of c and P of a and c and v if and only if m(b) equals v."
+"Exists(x, Implies(Equivalent(Implies(P(a), V(u, z, a)), (V(c)) & (m(v, b) == x)), ~((Q(v)) | (k(a, b) == b))))","There exists an x such that If If P of a, then V of u and z and a if and only if V of c and m(v, b) equals x, then not (Q of v or k(a, b) equals b)."
+"Exists(w, Equivalent((Equivalent(h(x, w) == v, k(u) == z)) | (Equivalent(h(y, u) == b, k(x, z) == y)), ((S(u)) & (P(b))) | (Equivalent(U(b, a), P(u, w, c)))))","There exists an w such that h(x, w) equals v if and only if k(u) equals z or h(y, u) equals b if and only if k(x, z) equals y if and only if S of u and P of b or U of b and a if and only if P of u and w and c."
+"ForAll(x, Implies(f(x, a) == x, S(u)))","For all x, If f(x, a) equals x, then S of u."
+"ForAll(w, Implies(Implies(Equivalent(T(v), k(w, b) == v), Implies(m(x) == c, h(b) == y)), (Implies(g(c) == u, h(x) == b)) | (Equivalent(k(u) == w, h(z, c) == v))))","For all w, If If T of v if and only if k(w, b) equals v, then If m(x) equals c, then h(b) equals y, then If g(c) equals u, then h(x) equals b or k(u) equals w if and only if h(z, c) equals v."
+"Exists(w, S(v, a))",There exists an w such that S of v and a.
+"ForAll(w, Implies((P(y, b)) & (Q(a, v, u)), Equivalent(S(w), m(z, w) == z)))","For all w, If P of y and b and Q of a and v and u, then S of w if and only if m(z, w) equals z."
+"ForAll(b, T(u, z))","For all b, T of u and z."
+"ForAll(c, Exists(x, V(a, c, u)))","For all c, There exists an x such that V of a and c and u."
+"(S(x, c)) | (U(v))",S of x and c or U of v.
+"ForAll(x, Implies((h(c, w) == a) | (k(u, z) == a), Equivalent(P(c), U(x))))","For all x, If h(c, w) equals a or k(u, z) equals a, then P of c if and only if U of x."
+"ForAll(c, Q(a))","For all c, Q of a."
+"Exists(v, (Implies(V(y, v), Q(c, y))) | (~(S(u, v))))","There exists an v such that If V of y and v, then Q of c and y or not (S of u and v)."
+"ForAll(b, ~(g(w, u) == x))","For all b, not (g(w, u) equals x)."
+"Exists(a, Implies(Q(v, u, b), h(x, y) == z))","There exists an a such that If Q of v and u and b, then h(x, y) equals z."
+"ForAll(w, P(z))","For all w, P of z."
+"Exists(w, Exists(z, Equivalent((f(w, z) == y) & (k(a, b) == a), ~(Q(a)))))","There exists an w such that There exists an z such that f(w, z) equals y and k(a, b) equals a if and only if not (Q of a)."
+"ForAll(v, W(y, a))","For all v, W of y and a."
+"~((U(c, y, u)) & (U(a, z)))",not (U of c and y and u and U of a and z).
+"ForAll(y, Equivalent(k(y) == b, T(x, u)))","For all y, k(y) equals b if and only if T of x and u."
+"Exists(b, ((~(k(y, b) == x)) | ((P(y, v, b)) & (W(w, c, a)))) & (((h(y, c) == u) | (h(c, w) == y)) & (Equivalent(f(u, c) == y, S(w, y)))))","There exists an b such that not (k(y, b) equals x) or P of y and v and b and W of w and c and a and h(y, c) equals u or h(c, w) equals y and f(u, c) equals y if and only if S of w and y."
+"Exists(c, Equivalent(P(c, a, b), m(z) == z))",There exists an c such that P of c and a and b if and only if m(z) equals z.
+"Exists(x, (Implies(Implies(V(w, v), g(a) == c), (S(v)) & (g(c) == c))) | (Equivalent((m(a, x) == c) | (R(x, c)), (T(z, x)) | (g(w) == b))))","There exists an x such that If If V of w and v, then g(a) equals c, then S of v and g(c) equals c or m(a, x) equals c or R of x and c if and only if T of z and x or g(w) equals b."
+"Exists(y, Equivalent((Equivalent(m(x) == v, g(c, u) == u)) | (Implies(R(c), P(a, v))), (Implies(W(z, x), P(v, b))) | (~(m(z) == c))))","There exists an y such that m(x) equals v if and only if g(c, u) equals u or If R of c, then P of a and v if and only if If W of z and x, then P of v and b or not (m(z) equals c)."
+"Exists(b, Implies((h(v, u) == c) | (U(b)), (U(a)) & (T(c, v))))","There exists an b such that If h(v, u) equals c or U of b, then U of a and T of c and v."
+"ForAll(u, ForAll(y, g(c, y) == y))","For all u, For all y, g(c, y) equals y."
+"Exists(c, (((f(x) == b) | (Q(x))) & ((S(v, a, u)) & (k(w, x) == a))) & (((Q(v, c)) & (W(a, c))) & ((V(c)) & (g(w, x) == c))))","There exists an c such that f(x) equals b or Q of x and S of v and a and u and k(w, x) equals a and Q of v and c and W of a and c and V of c and g(w, x) equals c."
+"g(u, a) == c","g(u, a) equals c."
+"Exists(w, (g(z) == x) | (Q(v, y)))",There exists an w such that g(z) equals x or Q of v and y.
+"~(Equivalent(Q(u, w), k(v, z) == w))","not (Q of u and w if and only if k(v, z) equals w)."
+"Exists(z, (Implies(h(z, w) == b, h(b, y) == z)) & ((S(v, y, w)) | (P(a))))","There exists an z such that If h(z, w) equals b, then h(b, y) equals z and S of v and y and w or P of a."
+"Exists(a, ((g(c, y) == a) | (S(z, c, u))) | ((W(w, x, y)) & (g(v) == w)))","There exists an a such that g(c, y) equals a or S of z and c and u or W of w and x and y and g(v) equals w."
+"((~(f(v, z) == a)) | (Equivalent(T(a, u, v), h(b, c) == x))) | (((g(z) == z) & (S(a, w, b))) & ((k(z) == a) | (R(z))))","not (f(v, z) equals a) or T of a and u and v if and only if h(b, c) equals x or g(z) equals z and S of a and w and b and k(z) equals a or R of z."
+"((m(v) == y) | (m(b, z) == u)) & ((T(z, w, u)) | (V(a)))","m(v) equals y or m(b, z) equals u and T of z and w and u or V of a."
+"Exists(v, (Equivalent((Q(y, b, w)) & (P(a, c, z)), Implies(g(a, w) == y, W(u, y)))) | (Equivalent(~(Q(c, x, u)), Equivalent(k(y, z) == a, m(w, v) == a))))","There exists an v such that Q of y and b and w and P of a and c and z if and only if If g(a, w) equals y, then W of u and y or not (Q of c and x and u) if and only if k(y, z) equals a if and only if m(w, v) equals a."
+"Exists(c, ((g(u) == b) & (V(w))) & ((R(b)) & (f(v) == u)))",There exists an c such that g(u) equals b and V of w and R of b and f(v) equals u.
+"Exists(w, ((W(b, x, y)) | (g(c) == c)) & ((g(z) == y) & (h(a, u) == c)))","There exists an w such that W of b and x and y or g(c) equals c and g(z) equals y and h(a, u) equals c."
+"ForAll(u, Equivalent((k(v) == z) & (Q(c, v, z)), (m(b, a) == b) & (k(x, b) == y)))","For all u, k(v) equals z and Q of c and v and z if and only if m(b, a) equals b and k(x, b) equals y."
+"Implies(Implies(T(u, v, x), h(c) == z), (g(b) == u) | (S(u, c)))","If If T of u and v and x, then h(c) equals z, then g(b) equals u or S of u and c."
+"ForAll(b, W(x))","For all b, W of x."
+"Implies((k(c) == v) & (R(x, a, u)), Implies(g(y, b) == w, S(a, y, z)))","If k(c) equals v and R of x and a and u, then If g(y, b) equals w, then S of a and y and z."
+"ForAll(c, ((h(b) == a) | (h(a, v) == b)) | ((T(u)) & (k(z) == z)))","For all c, h(b) equals a or h(a, v) equals b or T of u and k(z) equals z."
+"Exists(b, Implies(Implies(Q(z, x), W(y, b)), Implies(m(w, x) == a, m(c) == z)))","There exists an b such that If If Q of z and x, then W of y and b, then If m(w, x) equals a, then m(c) equals z."
+"Exists(y, m(b, z) == z)","There exists an y such that m(b, z) equals z."
+"Exists(a, S(w, c))",There exists an a such that S of w and c.
+"ForAll(y, ((m(a, z) == z) | (S(v, y, b))) & ((W(c)) & (V(c))))","For all y, m(a, z) equals z or S of v and y and b and W of c and V of c."
+"ForAll(a, Equivalent(Implies(Implies(R(x), U(w, b, u)), Implies(R(b, a, v), h(c, u) == y)), Equivalent((R(w)) & (k(b) == b), (m(x) == c) | (V(a, u)))))","For all a, If If R of x, then U of w and b and u, then If R of b and a and v, then h(c, u) equals y if and only if R of w and k(b) equals b if and only if m(x) equals c or V of a and u."
+"Exists(u, Implies(h(a, u) == y, Q(b, c)))","There exists an u such that If h(a, u) equals y, then Q of b and c."
+"Exists(x, ~(~(Q(v))))",There exists an x such that not (not (Q of v)).
+"Exists(w, ~(S(w, a)))",There exists an w such that not (S of w and a).
+"ForAll(c, Equivalent(~(~(T(a))), ~((V(x, y)) | (W(u, x)))))","For all c, not (not (T of a)) if and only if not (V of x and y or W of u and x)."
+"Exists(w, (h(x) == c) & (k(u, w) == x))","There exists an w such that h(x) equals c and k(u, w) equals x."
+"Q(a, u)",Q of a and u.
+m(w) == y,m(w) equals y.
+f(w) == z,f(w) equals z.
+"Exists(u, Implies(k(x) == a, P(b, c)))","There exists an u such that If k(x) equals a, then P of b and c."
+"ForAll(w, Equivalent(k(c, z) == y, h(c, w) == b))","For all w, k(c, z) equals y if and only if h(c, w) equals b."
+"Implies(V(u, b, a), T(w, a, c))","If V of u and b and a, then T of w and a and c."
+"Exists(u, R(x))",There exists an u such that R of x.
+"ForAll(x, V(b, v, x))","For all x, V of b and v and x."
+"ForAll(c, ForAll(y, (P(w, a)) & (f(c, x) == y)))","For all c, For all y, P of w and a and f(c, x) equals y."
+"Implies(Implies(Implies(V(y, w, b), k(z) == z), Implies(h(c, w) == w, h(c) == u)), Implies(Implies(f(v) == x, f(u, c) == w), (P(b)) | (g(v) == w)))","If If If V of y and w and b, then k(z) equals z, then If h(c, w) equals w, then h(c) equals u, then If If f(v) equals x, then f(u, c) equals w, then P of b or g(v) equals w."
+"Exists(z, Equivalent(Equivalent(~(k(b) == y), ~(f(w) == w)), (~(P(a, x, z))) | ((m(w) == c) & (V(b)))))",There exists an z such that not (k(b) equals y) if and only if not (f(w) equals w) if and only if not (P of a and x and z) or m(w) equals c and V of b.
+"Exists(a, Equivalent(m(c) == a, V(z, c)))",There exists an a such that m(c) equals a if and only if V of z and c.
+"Exists(w, Implies(Q(v), h(y) == a))","There exists an w such that If Q of v, then h(y) equals a."
+"Exists(z, ForAll(u, g(b, z) == b))","There exists an z such that For all u, g(b, z) equals b."
+"Exists(y, Exists(x, P(u, z, a)))",There exists an y such that There exists an x such that P of u and z and a.
+"ForAll(y, (~(S(u, v, b))) & (Implies(P(a, x, z), T(u))))","For all y, not (S of u and v and b) and If P of a and x and z, then T of u."
+"ForAll(u, Exists(b, Implies(Implies((f(v) == a) | (m(w) == b), Implies(m(x) == u, k(z, x) == w)), Equivalent((f(a, x) == c) | (U(a)), ~(m(a) == u)))))","For all u, There exists an b such that If If f(v) equals a or m(w) equals b, then If m(x) equals u, then k(z, x) equals w, then f(a, x) equals c or U of a if and only if not (m(a) equals u)."
+"ForAll(z, (T(c)) & (R(z, w)))","For all z, T of c and R of z and w."
+"Implies(~(V(a, v)), (g(y) == z) & (T(u, c, y)))","If not (V of a and v), then g(y) equals z and T of u and c and y."
+"Exists(w, ~(((g(b, c) == z) & (P(a))) & (Equivalent(g(u) == y, m(w, b) == u))))","There exists an w such that not (g(b, c) equals z and P of a and g(u) equals y if and only if m(w, b) equals u)."
+"Exists(c, ((Equivalent(Q(b, c, a), V(x))) | ((T(b)) & (h(b, z) == a))) & (Implies(Equivalent(Q(z, c, u), h(x, z) == b), ~(g(y) == y))))","There exists an c such that Q of b and c and a if and only if V of x or T of b and h(b, z) equals a and If Q of z and c and u if and only if h(x, z) equals b, then not (g(y) equals y)."
+"Exists(v, Implies(f(w) == z, P(a)))","There exists an v such that If f(w) equals z, then P of a."
+~(P(v)),not (P of v).
+"Exists(x, Equivalent(Implies(~(g(b) == b), (T(c)) & (R(z))), ~((h(x) == y) | (T(c)))))","There exists an x such that If not (g(b) equals b), then T of c and R of z if and only if not (h(x) equals y or T of c)."
+"ForAll(y, h(a, y) == a)","For all y, h(a, y) equals a."
+"ForAll(u, Equivalent(Implies(S(x, y, v), T(a, w)), (g(c, b) == b) & (T(u, x, b))))","For all u, If S of x and y and v, then T of a and w if and only if g(c, b) equals b and T of u and x and b."
+"Exists(u, Implies(Implies(Implies(S(v), f(v, w) == x), Equivalent(S(w), k(x, z) == b)), (Implies(T(w, x, y), h(z) == v)) | (Equivalent(V(z, y, a), h(v) == a))))","There exists an u such that If If If S of v, then f(v, w) equals x, then S of w if and only if k(x, z) equals b, then If T of w and x and y, then h(z) equals v or V of z and y and a if and only if h(v) equals a."
+"ForAll(y, (Equivalent(Q(b), R(u, w))) & ((h(y) == c) & (P(b, a, w))))","For all y, Q of b if and only if R of u and w and h(y) equals c and P of b and a and w."
+"Exists(z, Implies(~(f(u, w) == u), (k(v) == z) | (f(c) == c)))","There exists an z such that If not (f(u, w) equals u), then k(v) equals z or f(c) equals c."
+"ForAll(b, Exists(z, ((m(c, b) == x) & (P(y, a))) & (~(g(w, v) == w))))","For all b, There exists an z such that m(c, b) equals x and P of y and a and not (g(w, v) equals w)."
+"Exists(z, Exists(w, h(b, u) == u))","There exists an z such that There exists an w such that h(b, u) equals u."
+"Equivalent((k(y) == b) & (k(z, v) == w), Equivalent(Q(v, b), m(u, c) == c))","k(y) equals b and k(z, v) equals w if and only if Q of v and b if and only if m(u, c) equals c."
+"Exists(w, ForAll(y, Implies(k(c, u) == z, f(w, y) == b)))","There exists an w such that For all y, If k(c, u) equals z, then f(w, y) equals b."
+"(~(Implies(P(z, c, u), k(u, c) == w))) | (Equivalent((f(c) == a) & (f(c, x) == x), (V(a)) | (k(a, c) == c)))","not (If P of z and c and u, then k(u, c) equals w) or f(c) equals a and f(c, x) equals x if and only if V of a or k(a, c) equals c."
+"Exists(a, Equivalent(((g(x) == y) | (W(a, z, x))) | (Equivalent(k(z, b) == c, k(u, z) == a)), Equivalent((f(b) == w) & (f(c) == v), Equivalent(W(y), m(w) == c))))","There exists an a such that g(x) equals y or W of a and z and x or k(z, b) equals c if and only if k(u, z) equals a if and only if f(b) equals w and f(c) equals v if and only if W of y if and only if m(w) equals c."
+"Exists(z, Exists(u, Implies(Implies(g(v) == v, m(x) == v), Equivalent(Q(v, c, y), h(x, y) == z))))","There exists an z such that There exists an u such that If If g(v) equals v, then m(x) equals v, then Q of v and c and y if and only if h(x, y) equals z."
+"ForAll(b, f(z) == b)","For all b, f(z) equals b."
+"Exists(x, Equivalent(f(y, x) == z, k(b, u) == a))","There exists an x such that f(y, x) equals z if and only if k(b, u) equals a."
+"Equivalent(Implies(m(y) == c, m(w, v) == v), (k(u) == c) & (P(x, y)))","If m(y) equals c, then m(w, v) equals v if and only if k(u) equals c and P of x and y."
+h(v) == v,h(v) equals v.
+"ForAll(y, ForAll(a, S(y, c, x)))","For all y, For all a, S of y and c and x."
+"ForAll(v, Equivalent(f(v, a) == w, T(x)))","For all v, f(v, a) equals w if and only if T of x."
+"(~(V(z, b, x))) & (~(g(b) == v))",not (V of z and b and x) and not (g(b) equals v).
+"Equivalent(~(g(x) == a), Equivalent(k(c) == b, k(c) == u))",not (g(x) equals a) if and only if k(c) equals b if and only if k(c) equals u.
+"Exists(b, Equivalent(Equivalent(Q(w, c, x), h(z) == c), (k(w) == b) | (g(x) == u)))",There exists an b such that Q of w and c and x if and only if h(z) equals c if and only if k(w) equals b or g(x) equals u.
+"Exists(w, (~((f(y, u) == c) | (S(y, x, w)))) | ((~(R(x))) & ((Q(b, z)) | (Q(b)))))","There exists an w such that not (f(y, u) equals c or S of y and x and w) or not (R of x) and Q of b and z or Q of b."
+"ForAll(v, S(x, z))","For all v, S of x and z."
+"ForAll(b, Equivalent(U(c, z, u), P(z, y, a)))","For all b, U of c and z and u if and only if P of z and y and a."
+"Exists(a, R(y))",There exists an a such that R of y.
+"Exists(u, Exists(w, (((k(z) == x) & (m(v) == w)) & ((Q(w)) | (S(v, x)))) & ((Equivalent(k(z) == x, h(a) == v)) & (~(R(z, x, u))))))",There exists an u such that There exists an w such that k(z) equals x and m(v) equals w and Q of w or S of v and x and k(z) equals x if and only if h(a) equals v and not (R of z and x and u).
+"ForAll(w, (~(S(a))) | (Implies(g(b) == b, g(b) == z)))","For all w, not (S of a) or If g(b) equals b, then g(b) equals z."
+"Exists(v, (~(R(y, b))) | (Equivalent(S(v, z), S(y, a, b))))",There exists an v such that not (R of y and b) or S of v and z if and only if S of y and a and b.
+"Exists(x, ForAll(x, g(w) == a))","There exists an x such that For all x, g(w) equals a."
+"ForAll(b, m(a) == c)","For all b, m(a) equals c."
+"ForAll(b, Implies(Equivalent(~(g(w) == v), (W(v)) | (W(x, b, u))), ((f(a) == w) & (k(c, u) == y)) | ((f(a) == w) | (U(z, y)))))","For all b, If not (g(w) equals v) if and only if W of v or W of x and b and u, then f(a) equals w and k(c, u) equals y or f(a) equals w or U of z and y."
+"ForAll(b, Equivalent(U(v, a), f(w) == w))","For all b, U of v and a if and only if f(w) equals w."
+"Exists(x, Equivalent((W(y)) & (R(v, y)), (R(b, z, a)) | (P(v, a, w))))",There exists an x such that W of y and R of v and y if and only if R of b and z and a or P of v and a and w.
+"(~(U(a, w, b))) & (Implies(k(b, v) == z, S(b, w)))","not (U of a and w and b) and If k(b, v) equals z, then S of b and w."
+"ForAll(c, Equivalent((T(z, c, a)) & (S(y)), Implies(T(w, z), P(w, c, y))))","For all c, T of z and c and a and S of y if and only if If T of w and z, then P of w and c and y."
+"Exists(b, ~(~(g(w, z) == x)))","There exists an b such that not (not (g(w, z) equals x))."
+"((W(w, y, c)) & (f(c) == y)) | (Implies(U(y, w), S(c, u, a)))","W of w and y and c and f(c) equals y or If U of y and w, then S of c and u and a."
+"Equivalent(((g(w, x) == w) & (V(w, a, z))) | ((h(c, y) == u) & (k(z, a) == a)), Implies(Implies(f(y, x) == a, g(z, u) == z), Implies(T(b, c), P(z))))","g(w, x) equals w and V of w and a and z or h(c, y) equals u and k(z, a) equals a if and only if If If f(y, x) equals a, then g(z, u) equals z, then If T of b and c, then P of z."
+"Exists(x, Implies((Q(v)) & (f(b, a) == v), Implies(R(x, z), k(w) == z)))","There exists an x such that If Q of v and f(b, a) equals v, then If R of x and z, then k(w) equals z."
+"Exists(w, Implies(Implies(S(z, y, v), U(w, v, z)), ~(g(z) == c)))","There exists an w such that If If S of z and y and v, then U of w and v and z, then not (g(z) equals c)."
+"ForAll(y, ~(S(u, y, c)))","For all y, not (S of u and y and c)."
+"Exists(z, ForAll(u, (h(w, z) == b) | (T(x, y, b))))","There exists an z such that For all u, h(w, z) equals b or T of x and y and b."
+"Exists(x, ~(Q(y, x)))",There exists an x such that not (Q of y and x).
+"~(Q(v, x))",not (Q of v and x).
+S(u),S of u.
+"ForAll(y, ~(~(m(w, z) == c)))","For all y, not (not (m(w, z) equals c))."
+"ForAll(u, S(v, z, a))","For all u, S of v and z and a."
+"Exists(y, (Equivalent((U(a)) & (g(a) == y), Implies(U(v, x), W(y, a)))) | (Implies(Equivalent(g(v, a) == u, h(x) == b), (R(a)) | (m(z) == y))))","There exists an y such that U of a and g(a) equals y if and only if If U of v and x, then W of y and a or If g(v, a) equals u if and only if h(x) equals b, then R of a or m(z) equals y."
+"ForAll(z, Implies(h(a, w) == b, m(z, b) == y))","For all z, If h(a, w) equals b, then m(z, b) equals y."
+"P(y, b, w)",P of y and b and w.
+"Exists(y, ForAll(x, Implies(g(y, c) == c, g(b, c) == c)))","There exists an y such that For all x, If g(y, c) equals c, then g(b, c) equals c."
+"ForAll(b, ((Equivalent(R(c), g(a, z) == v)) & ((m(b, z) == c) & (h(a, w) == v))) & ((~(h(w) == a)) | (Implies(k(x, u) == u, m(y) == v))))","For all b, R of c if and only if g(a, z) equals v and m(b, z) equals c and h(a, w) equals v and not (h(w) equals a) or If k(x, u) equals u, then m(y) equals v."
+"ForAll(w, Exists(x, Implies(Equivalent(Implies(m(w) == a, m(b) == y), Implies(g(w, a) == u, S(v, c, x))), Equivalent(Implies(Q(w, v, x), k(w) == y), (g(a, v) == c) | (R(b))))))","For all w, There exists an x such that If If m(w) equals a, then m(b) equals y if and only if If g(w, a) equals u, then S of v and c and x, then If Q of w and v and x, then k(w) equals y if and only if g(a, v) equals c or R of b."
+"Exists(a, ~(Equivalent((k(w, y) == u) | (h(v) == u), ~(S(v)))))","There exists an a such that not (k(w, y) equals u or h(v) equals u if and only if not (S of v))."
+T(z),T of z.
+"Exists(u, Implies(Implies(W(x, c, a), T(y, a)), (R(u, y)) & (T(b, y, c))))","There exists an u such that If If W of x and c and a, then T of y and a, then R of u and y and T of b and y and c."
+"Exists(y, Exists(x, Implies(~(Implies(k(v, x) == b, V(b, u))), Equivalent((k(v, x) == x) & (V(v, w)), (V(x, a)) | (h(u) == v)))))","There exists an y such that There exists an x such that If not (If k(v, x) equals b, then V of b and u), then k(v, x) equals x and V of v and w if and only if V of x and a or h(u) equals v."
+"Exists(v, (Equivalent(Equivalent(f(v) == c, k(b, x) == x), (V(u)) | (h(y) == z))) & ((Equivalent(g(z, w) == v, U(z, a))) | (Implies(P(c), W(u)))))","There exists an v such that f(v) equals c if and only if k(b, x) equals x if and only if V of u or h(y) equals z and g(z, w) equals v if and only if U of z and a or If P of c, then W of u."
+"Exists(b, ~(g(x) == c))",There exists an b such that not (g(x) equals c).
+"Exists(z, S(u, v, z))",There exists an z such that S of u and v and z.
+"ForAll(z, Exists(z, Implies(Implies(Equivalent(g(z, a) == z, h(b) == u), ~(g(a, u) == a)), ~(Equivalent(S(b, w), T(c))))))","For all z, There exists an z such that If If g(z, a) equals z if and only if h(b) equals u, then not (g(a, u) equals a), then not (S of b and w if and only if T of c)."
+"((k(y) == w) | (Q(w, x))) | ((h(v, c) == v) & (g(b, z) == c))","k(y) equals w or Q of w and x or h(v, c) equals v and g(b, z) equals c."
+"Exists(y, ForAll(y, (h(b) == a) & (f(w, b) == b)))","There exists an y such that For all y, h(b) equals a and f(w, b) equals b."
+"Exists(x, Equivalent(T(u), R(a, y, b)))",There exists an x such that T of u if and only if R of a and y and b.
+"Equivalent((h(w) == z) & (W(b, v)), (W(w, z, y)) & (T(w, x, c)))",h(w) equals z and W of b and v if and only if W of w and z and y and T of w and x and c.
+"Equivalent(Equivalent(f(u) == z, h(y) == v), Implies(m(w) == y, W(a, b)))","f(u) equals z if and only if h(y) equals v if and only if If m(w) equals y, then W of a and b."
+"(Equivalent(Equivalent(f(c) == w, R(b, y, z)), (h(z) == v) & (h(c) == y))) & (Equivalent((h(y, x) == y) & (V(x)), (h(b, v) == w) & (Q(v))))","f(c) equals w if and only if R of b and y and z if and only if h(z) equals v and h(c) equals y and h(y, x) equals y and V of x if and only if h(b, v) equals w and Q of v."
+"Exists(v, W(b))",There exists an v such that W of b.
+"Exists(x, Exists(b, ((h(z) == z) & (P(u))) | ((S(a, u, x)) & (k(b) == a))))",There exists an x such that There exists an b such that h(z) equals z and P of u or S of a and u and x and k(b) equals a.
+"Exists(v, (Implies(Equivalent(f(x, y) == a, m(x, b) == a), Equivalent(P(a, w, v), V(b, y)))) & (Equivalent(Implies(S(b, w), g(w) == b), (k(b, z) == u) | (W(z, c, y)))))","There exists an v such that If f(x, y) equals a if and only if m(x, b) equals a, then P of a and w and v if and only if V of b and y and If S of b and w, then g(w) equals b if and only if k(b, z) equals u or W of z and c and y."
+"ForAll(y, Implies(U(v), g(c) == x))","For all y, If U of v, then g(c) equals x."
+"ForAll(c, ForAll(c, (h(c) == v) & (P(b, c, a))))","For all c, For all c, h(c) equals v and P of b and c and a."
+"Exists(c, Q(u, w, y))",There exists an c such that Q of u and w and y.
+"ForAll(a, Implies(~(Implies(g(u) == b, W(w))), Implies(~(k(u, z) == c), (V(a, b)) & (f(z, x) == c))))","For all a, If not (If g(u) equals b, then W of w), then If not (k(u, z) equals c), then V of a and b and f(z, x) equals c."
+"Exists(w, f(x) == c)",There exists an w such that f(x) equals c.
+"ForAll(c, ~(Implies(V(b, u, v), h(u, v) == y)))","For all c, not (If V of b and u and v, then h(u, v) equals y)."
+"ForAll(a, Implies((m(z, x) == x) & (V(c, y)), (m(y, x) == y) | (m(b) == w)))","For all a, If m(z, x) equals x and V of c and y, then m(y, x) equals y or m(b) equals w."
+"Exists(y, ~(W(y, z)))",There exists an y such that not (W of y and z).
+"Exists(c, R(b, u))",There exists an c such that R of b and u.
+"Exists(b, Exists(b, ((Equivalent(m(a, b) == b, R(b))) | (~(S(b, c, x)))) & (Implies(Implies(V(y, c, z), f(y) == w), (f(z) == a) & (h(z) == b)))))","There exists an b such that There exists an b such that m(a, b) equals b if and only if R of b or not (S of b and c and x) and If If V of y and c and z, then f(y) equals w, then f(z) equals a and h(z) equals b."
+"ForAll(b, ForAll(c, (Equivalent(W(b), g(y, a) == a)) | ((W(v, y, a)) & (P(v, y, w)))))","For all b, For all c, W of b if and only if g(y, a) equals a or W of v and y and a and P of v and y and w."
+"Exists(y, R(x, v, a))",There exists an y such that R of x and v and a.
+"Implies(~(V(z, a)), ~(k(y, c) == y))","If not (V of z and a), then not (k(y, c) equals y)."
+"Exists(y, Implies((g(w) == z) | (V(y, w)), (h(y, x) == u) & (V(y, v))))","There exists an y such that If g(w) equals z or V of y and w, then h(y, x) equals u and V of y and v."
+"Exists(a, Exists(v, ~(((Q(u, z)) | (m(b, y) == c)) & ((V(c)) & (f(b) == v)))))","There exists an a such that There exists an v such that not (Q of u and z or m(b, y) equals c and V of c and f(b) equals v)."
+"Exists(a, ForAll(a, (Equivalent(f(c) == y, Q(z, v))) & (Equivalent(h(b, v) == u, g(w, x) == z))))","There exists an a such that For all a, f(c) equals y if and only if Q of z and v and h(b, v) equals u if and only if g(w, x) equals z."
+"Exists(z, Exists(w, P(b, y, z)))",There exists an z such that There exists an w such that P of b and y and z.
+"U(u, b)",U of u and b.
+"Exists(w, h(y) == v)",There exists an w such that h(y) equals v.
+k(x) == u,k(x) equals u.
+"ForAll(u, Equivalent(Implies(R(y, z, w), T(u)), Equivalent(T(c, b, x), f(a, c) == v)))","For all u, If R of y and z and w, then T of u if and only if T of c and b and x if and only if f(a, c) equals v."
+"ForAll(u, k(w, x) == a)","For all u, k(w, x) equals a."
+"(Equivalent((h(y) == x) | (f(v, u) == y), (S(y, b)) & (W(y, c, x)))) | (Implies((P(b)) & (V(y, c)), Equivalent(k(y, a) == u, k(a, y) == w)))","h(y) equals x or f(v, u) equals y if and only if S of y and b and W of y and c and x or If P of b and V of y and c, then k(y, a) equals u if and only if k(a, y) equals w."
+"Exists(z, S(z, v, c))",There exists an z such that S of z and v and c.
+"Exists(v, ~(R(v)))",There exists an v such that not (R of v).
+"~(m(v, w) == x)","not (m(v, w) equals x)."
+"Exists(b, h(u) == u)",There exists an b such that h(u) equals u.
+"ForAll(v, (Equivalent(m(a, w) == z, f(u, x) == u)) & (Implies(U(a, u), g(w) == x)))","For all v, m(a, w) equals z if and only if f(u, x) equals u and If U of a and u, then g(w) equals x."
+"ForAll(z, (Implies((S(u)) | (g(v) == z), (T(y)) | (R(a, y, z)))) & ((Implies(g(y, c) == z, V(w))) | (Equivalent(S(c), g(u, x) == v))))","For all z, If S of u or g(v) equals z, then T of y or R of a and y and z and If g(y, c) equals z, then V of w or S of c if and only if g(u, x) equals v."
+"ForAll(w, (((m(z, w) == w) | (k(a, x) == u)) & ((S(v, a)) | (m(w) == v))) & ((Implies(P(b, w, u), k(a, w) == b)) & ((S(v, y)) & (f(c, y) == v))))","For all w, m(z, w) equals w or k(a, x) equals u and S of v and a or m(w) equals v and If P of b and w and u, then k(a, w) equals b and S of v and y and f(c, y) equals v."
+"ForAll(a, ForAll(b, Equivalent(h(u, z) == c, T(w, a))))","For all a, For all b, h(u, z) equals c if and only if T of w and a."
+"Exists(c, Equivalent(S(c, b), h(w) == u))",There exists an c such that S of c and b if and only if h(w) equals u.
+"ForAll(a, Exists(w, g(v) == x))","For all a, There exists an w such that g(v) equals x."
+"ForAll(v, ForAll(z, Equivalent((Equivalent(h(x) == z, m(a, u) == a)) & (Equivalent(W(v, y), R(x))), (~(h(u) == v)) & (Equivalent(m(z) == w, g(z) == c)))))","For all v, For all z, h(x) equals z if and only if m(a, u) equals a and W of v and y if and only if R of x if and only if not (h(u) equals v) and m(z) equals w if and only if g(z) equals c."
+"Equivalent(Equivalent((m(c) == b) & (R(b)), Implies(U(b, c, u), Q(v, b, z))), Equivalent((S(z, a)) | (k(y) == a), Implies(T(y, u), k(w) == y)))","m(c) equals b and R of b if and only if If U of b and c and u, then Q of v and b and z if and only if S of z and a or k(y) equals a if and only if If T of y and u, then k(w) equals y."
+"Exists(b, (f(b) == a) | (g(x, c) == v))","There exists an b such that f(b) equals a or g(x, c) equals v."
+"ForAll(a, ~(Equivalent(Equivalent(g(v, z) == z, T(y)), (T(z, b, c)) | (P(c)))))","For all a, not (g(v, z) equals z if and only if T of y if and only if T of z and b and c or P of c)."
+"ForAll(z, (Equivalent(S(u, w), Q(x))) & (~(S(y, u))))","For all z, S of u and w if and only if Q of x and not (S of y and u)."
+"Exists(a, m(w) == w)",There exists an a such that m(w) equals w.
+"ForAll(a, Q(w))","For all a, Q of w."
+"Exists(y, ~(Implies(T(w), S(a))))","There exists an y such that not (If T of w, then S of a)."
+"Exists(a, (U(a, z, b)) & (U(b, y, z)))",There exists an a such that U of a and z and b and U of b and y and z.
+"ForAll(z, Implies(P(y), g(u, y) == x))","For all z, If P of y, then g(u, y) equals x."
+"ForAll(u, (~((h(v) == w) | (h(u) == w))) | ((~(S(a, w, y))) & ((W(y)) | (R(u)))))","For all u, not (h(v) equals w or h(u) equals w) or not (S of a and w and y) and W of y or R of u."
+"k(z, u) == u","k(z, u) equals u."
+"Exists(a, Exists(x, (g(b, y) == w) | (g(b, a) == c)))","There exists an a such that There exists an x such that g(b, y) equals w or g(b, a) equals c."
+"Exists(b, m(c) == z)",There exists an b such that m(c) equals z.
+"Exists(c, Implies(Implies(R(b, u), P(x)), Equivalent(k(a, b) == v, f(a) == z)))","There exists an c such that If If R of b and u, then P of x, then k(a, b) equals v if and only if f(a) equals z."
+"Equivalent(Equivalent(~(k(u) == b), Equivalent(f(v) == b, g(x) == y)), ((S(a, z, c)) & (h(c, a) == v)) | (~(g(u, a) == v)))","not (k(u) equals b) if and only if f(v) equals b if and only if g(x) equals y if and only if S of a and z and c and h(c, a) equals v or not (g(u, a) equals v)."
+"ForAll(u, m(v, a) == z)","For all u, m(v, a) equals z."
+"ForAll(w, Equivalent(Equivalent(Equivalent(S(x), T(a)), Equivalent(R(y, v, x), f(y, w) == x)), Implies(~(P(x, y)), (T(b, c)) | (m(w, c) == w))))","For all w, S of x if and only if T of a if and only if R of y and v and x if and only if f(y, w) equals x if and only if If not (P of x and y), then T of b and c or m(w, c) equals w."
+"ForAll(b, Exists(b, (~(g(y) == c)) & (Implies(W(b, a), U(x)))))","For all b, There exists an b such that not (g(y) equals c) and If W of b and a, then U of x."
+"ForAll(y, (((f(v, u) == z) | (Q(v, b))) | ((S(u, c)) & (Q(y, a, w)))) & (((h(v) == b) | (W(y, w, a))) & ((U(a, c, w)) & (g(v) == y))))","For all y, f(v, u) equals z or Q of v and b or S of u and c and Q of y and a and w and h(v) equals b or W of y and w and a and U of a and c and w and g(v) equals y."
+"Exists(w, ~((m(v) == x) & (k(w, z) == c)))","There exists an w such that not (m(v) equals x and k(w, z) equals c)."
+"ForAll(b, Equivalent(g(b, z) == v, U(v, y, z)))","For all b, g(b, z) equals v if and only if U of v and y and z."
+"ForAll(b, Equivalent(Implies(g(u) == x, k(z, x) == c), Implies(h(a, y) == c, g(y, z) == w)))","For all b, If g(u) equals x, then k(z, x) equals c if and only if If h(a, y) equals c, then g(y, z) equals w."
+"ForAll(x, Equivalent(~((P(w, y, c)) & (V(z, x))), ((U(a)) | (V(u, x, b))) & ((m(a) == y) & (h(w, x) == y))))","For all x, not (P of w and y and c and V of z and x) if and only if U of a or V of u and x and b and m(a) equals y and h(w, x) equals y."
+"(Implies((W(a, v)) | (U(y)), Equivalent(W(y, c), Q(z, c, x)))) & (~(~(R(y, v, a))))","If W of a and v or U of y, then W of y and c if and only if Q of z and c and x and not (not (R of y and v and a))."
+"Exists(c, h(a) == x)",There exists an c such that h(a) equals x.
+"ForAll(y, Exists(z, ~(((m(y) == x) | (R(v))) & (Equivalent(U(v, z, w), f(v, a) == z)))))","For all y, There exists an z such that not (m(y) equals x or R of v and U of v and z and w if and only if f(v, a) equals z)."
+"Exists(w, Implies((U(c, z, u)) | (V(a, x)), ~(Q(c, a, x))))","There exists an w such that If U of c and z and u or V of a and x, then not (Q of c and a and x)."
+"Exists(y, ~(Implies(f(a) == u, R(c))))","There exists an y such that not (If f(a) equals u, then R of c)."
+"Implies(Implies(m(x) == z, g(c, a) == b), ~(R(z, a, v)))","If If m(x) equals z, then g(c, a) equals b, then not (R of z and a and v)."
+"ForAll(b, Exists(c, (Implies(k(b) == w, h(c, u) == v)) & (Equivalent(f(y) == u, P(y, v, b)))))","For all b, There exists an c such that If k(b) equals w, then h(c, u) equals v and f(y) equals u if and only if P of y and v and b."
+"ForAll(a, Equivalent(Implies((P(u, x)) | (m(u, x) == b), (g(x, a) == b) & (Q(w, u))), (Implies(V(u), m(b) == b)) | (~(h(w, y) == x))))","For all a, If P of u and x or m(u, x) equals b, then g(x, a) equals b and Q of w and u if and only if If V of u, then m(b) equals b or not (h(w, y) equals x)."
+"ForAll(z, ((Implies(f(x, z) == v, k(v, w) == a)) & (~(k(z) == w))) & ((Implies(S(v), V(a))) & ((S(b, v, x)) | (k(z, w) == a))))","For all z, If f(x, z) equals v, then k(v, w) equals a and not (k(z) equals w) and If S of v, then V of a and S of b and v and x or k(z, w) equals a."
+"Exists(u, Implies(Equivalent(U(a), W(v, c)), ~(g(c) == z)))","There exists an u such that If U of a if and only if W of v and c, then not (g(c) equals z)."
+"Exists(y, Exists(w, Implies((Implies(R(u), V(x))) | ((P(u, y)) | (V(c, v))), ((f(y, v) == w) & (k(w) == x)) | (~(g(b, v) == y)))))","There exists an y such that There exists an w such that If If R of u, then V of x or P of u and y or V of c and v, then f(y, v) equals w and k(w) equals x or not (g(b, v) equals y)."
+"Exists(u, Exists(u, R(w, c, b)))",There exists an u such that There exists an u such that R of w and c and b.
+"ForAll(x, ForAll(c, ~(~(Equivalent(S(u), f(c) == w)))))","For all x, For all c, not (not (S of u if and only if f(c) equals w))."
+"ForAll(v, (m(w, b) == y) | (V(c, x)))","For all v, m(w, b) equals y or V of c and x."
+"ForAll(z, S(a, b, w))","For all z, S of a and b and w."
+"Exists(w, (Implies(Implies(m(u, z) == x, P(c, b, v)), (T(c, y)) | (P(c)))) & (~(~(g(x, u) == u))))","There exists an w such that If If m(u, z) equals x, then P of c and b and v, then T of c and y or P of c and not (not (g(x, u) equals u))."
+"ForAll(v, ForAll(v, g(v, w) == x))","For all v, For all v, g(v, w) equals x."
+"Exists(v, V(v, u, a))",There exists an v such that V of v and u and a.
+"ForAll(v, (g(u, a) == w) | (f(z, b) == z))","For all v, g(u, a) equals w or f(z, b) equals z."
+g(a) == u,g(a) equals u.
+"Equivalent(((R(x, y, u)) | (f(x) == x)) | (Equivalent(g(x) == y, R(b))), Equivalent(Implies(T(c), P(y)), ~(g(u) == x)))","R of x and y and u or f(x) equals x or g(x) equals y if and only if R of b if and only if If T of c, then P of y if and only if not (g(u) equals x)."
+"Exists(v, Exists(b, Implies((f(z, y) == u) & (h(w) == y), Implies(V(c), m(a) == z))))","There exists an v such that There exists an b such that If f(z, y) equals u and h(w) equals y, then If V of c, then m(a) equals z."
+R(w),R of w.
+"ForAll(a, (Equivalent((V(v)) | (U(z)), Equivalent(h(a, b) == a, S(a, c, v)))) | (((f(c, u) == y) | (f(x) == w)) & ((U(z, v)) | (g(u, c) == u))))","For all a, V of v or U of z if and only if h(a, b) equals a if and only if S of a and c and v or f(c, u) equals y or f(x) equals w and U of z and v or g(u, c) equals u."
+"ForAll(u, ~(~(R(x, z))))","For all u, not (not (R of x and z))."
+"Exists(b, V(z, c, u))",There exists an b such that V of z and c and u.
+"ForAll(c, ((Equivalent(Q(z, x), R(c, z, x))) | ((m(c, v) == u) | (Q(c, a)))) & (Implies(~(g(b) == b), Implies(k(x) == w, Q(y, c)))))","For all c, Q of z and x if and only if R of c and z and x or m(c, v) equals u or Q of c and a and If not (g(b) equals b), then If k(x) equals w, then Q of y and c."
+P(v),P of v.
+"Exists(a, ForAll(w, (T(y)) & (W(x, c, z))))","There exists an a such that For all w, T of y and W of x and c and z."
+"ForAll(b, (h(y) == w) & (R(x, a, u)))","For all b, h(y) equals w and R of x and a and u."
+"Exists(b, S(u, z, a))",There exists an b such that S of u and z and a.
+"(m(x, a) == u) & (W(y))","m(x, a) equals u and W of y."
+"ForAll(b, Implies(Implies(Q(b, w), R(y, v)), Implies(W(v), h(z, y) == b)))","For all b, If If Q of b and w, then R of y and v, then If W of v, then h(z, y) equals b."
+"((h(a) == c) | (f(u) == c)) & (Equivalent(k(a) == y, k(w) == b))",h(a) equals c or f(u) equals c and k(a) equals y if and only if k(w) equals b.
+"Exists(u, k(a) == w)",There exists an u such that k(a) equals w.
+"~(Equivalent((g(w) == x) & (V(b, u)), Implies(V(v, c, w), R(y))))","not (g(w) equals x and V of b and u if and only if If V of v and c and w, then R of y)."
+"Exists(x, ForAll(w, ((Equivalent(g(y) == a, g(w) == a)) & (Implies(V(w, a, b), S(y, z, b)))) | (Implies((U(y, a)) & (m(b) == z), ~(R(a, u))))))","There exists an x such that For all w, g(y) equals a if and only if g(w) equals a and If V of w and a and b, then S of y and z and b or If U of y and a and m(b) equals z, then not (R of a and u)."
+"Equivalent(Equivalent(W(b, a, u), h(c, w) == y), (R(c, a, u)) & (k(y, c) == y))","W of b and a and u if and only if h(c, w) equals y if and only if R of c and a and u and k(y, c) equals y."
+"Exists(c, m(v) == a)",There exists an c such that m(v) equals a.
+"Exists(u, ~(Implies(Equivalent(k(a, x) == w, h(v, a) == u), ~(U(c)))))","There exists an u such that not (If k(a, x) equals w if and only if h(v, a) equals u, then not (U of c))."
+"ForAll(y, ((Equivalent(g(z, a) == w, g(z) == c)) & ((m(w) == u) | (V(x)))) | (((V(x, z, u)) | (g(u) == v)) & ((h(v) == y) & (Q(y, b, v)))))","For all y, g(z, a) equals w if and only if g(z) equals c and m(w) equals u or V of x or V of x and z and u or g(u) equals v and h(v) equals y and Q of y and b and v."
+"Exists(y, h(a) == y)",There exists an y such that h(a) equals y.
+"Exists(b, Exists(c, (~(Equivalent(h(z, c) == v, P(y, w, z)))) | (Equivalent((T(y)) | (P(c, x, v)), Implies(f(x) == w, R(v))))))","There exists an b such that There exists an c such that not (h(z, c) equals v if and only if P of y and w and z) or T of y or P of c and x and v if and only if If f(x) equals w, then R of v."
+"Exists(u, Equivalent(Equivalent(Equivalent(g(v) == a, g(b) == a), Implies(h(a) == a, h(b) == z)), (Implies(k(y) == z, g(u, y) == u)) | (~(f(w) == x))))","There exists an u such that g(v) equals a if and only if g(b) equals a if and only if If h(a) equals a, then h(b) equals z if and only if If k(y) equals z, then g(u, y) equals u or not (f(w) equals x)."
+"ForAll(a, h(c) == u)","For all a, h(c) equals u."
+"(((k(v) == a) | (R(w, a))) & (Equivalent(f(b) == v, f(w) == x))) | (Equivalent(Equivalent(h(w, a) == y, m(a) == v), Implies(Q(x, u), R(y))))","k(v) equals a or R of w and a and f(b) equals v if and only if f(w) equals x or h(w, a) equals y if and only if m(a) equals v if and only if If Q of x and u, then R of y."
+"Exists(v, Implies(m(x) == v, T(y)))","There exists an v such that If m(x) equals v, then T of y."
+"Exists(u, Implies(f(w) == z, f(b) == b))","There exists an u such that If f(w) equals z, then f(b) equals b."
+"ForAll(y, h(w) == c)","For all y, h(w) equals c."
+"ForAll(w, ForAll(b, f(x) == u))","For all w, For all b, f(x) equals u."
+"ForAll(v, (h(z, y) == z) & (k(c, u) == a))","For all v, h(z, y) equals z and k(c, u) equals a."
+"Q(y, u)",Q of y and u.
+"ForAll(y, (~(Equivalent(h(y, c) == w, V(c)))) & ((~(h(x) == a)) & ((R(v, b)) & (f(u) == y))))","For all y, not (h(y, c) equals w if and only if V of c) and not (h(x) equals a) and R of v and b and f(u) equals y."
+"Exists(b, g(a, c) == y)","There exists an b such that g(a, c) equals y."
+"(T(v, x)) | (W(v))",T of v and x or W of v.
+U(b),U of b.
+"k(x, z) == v","k(x, z) equals v."
+k(b) == u,k(b) equals u.
+"Exists(b, g(z) == y)",There exists an b such that g(z) equals y.
+"Exists(z, Exists(z, (((h(b, x) == w) | (m(y, v) == c)) | ((R(w, b, x)) & (V(w, u, c)))) & (Implies((W(c, z)) | (h(a, c) == v), ~(m(a) == b)))))","There exists an z such that There exists an z such that h(b, x) equals w or m(y, v) equals c or R of w and b and x and V of w and u and c and If W of c and z or h(a, c) equals v, then not (m(a) equals b)."
+"ForAll(v, ((k(y, v) == x) & (T(y))) | ((U(x, c)) | (g(v, z) == y)))","For all v, k(y, v) equals x and T of y or U of x and c or g(v, z) equals y."
+"Exists(w, Exists(z, ~(g(a, c) == y)))","There exists an w such that There exists an z such that not (g(a, c) equals y)."
+"Exists(y, Equivalent(R(a, u), h(v) == b))",There exists an y such that R of a and u if and only if h(v) equals b.
+"Exists(u, (m(b, w) == a) | (k(x, c) == a))","There exists an u such that m(b, w) equals a or k(x, c) equals a."
+"Exists(b, ~(Implies(f(z, a) == x, f(x) == v)))","There exists an b such that not (If f(z, a) equals x, then f(x) equals v)."
+"ForAll(c, (~(S(c, z, v))) | ((g(z) == v) & (S(y, c))))","For all c, not (S of c and z and v) or g(z) equals v and S of y and c."
+Q(b),Q of b.
+"ForAll(z, Exists(v, Equivalent(Equivalent((g(c) == v) | (R(x, z)), Equivalent(S(b), h(y, b) == w)), (~(k(x) == v)) | (~(f(x, b) == x)))))","For all z, There exists an v such that g(c) equals v or R of x and z if and only if S of b if and only if h(y, b) equals w if and only if not (k(x) equals v) or not (f(x, b) equals x)."
+"Equivalent((V(c, y)) | (R(w, c, u)), Implies(k(b) == a, T(z, w, v)))","V of c and y or R of w and c and u if and only if If k(b) equals a, then T of z and w and v."
+"Exists(w, Q(y))",There exists an w such that Q of y.
+"Exists(x, (R(a)) & (f(v) == y))",There exists an x such that R of a and f(v) equals y.
+"ForAll(y, ForAll(y, Equivalent(k(c) == u, k(v, u) == u)))","For all y, For all y, k(c) equals u if and only if k(v, u) equals u."
+"ForAll(w, ~(U(a)))","For all w, not (U of a)."
+"Exists(y, ForAll(z, Equivalent(g(b) == c, m(y) == b)))","There exists an y such that For all z, g(b) equals c if and only if m(y) equals b."
+"Exists(v, g(c) == w)",There exists an v such that g(c) equals w.
+"ForAll(w, (~(Implies(f(c) == c, m(c) == y))) & ((~(h(w) == x)) & ((f(b) == y) & (f(y, b) == z))))","For all w, not (If f(c) equals c, then m(c) equals y) and not (h(w) equals x) and f(b) equals y and f(y, b) equals z."
+"ForAll(v, (Implies(Equivalent(P(x), V(x, b, c)), (V(c, z)) | (Q(w, c)))) & (Implies(~(P(u)), (S(x)) | (R(b)))))","For all v, If P of x if and only if V of x and b and c, then V of c and z or Q of w and c and If not (P of u), then S of x or R of b."
+"Exists(w, ForAll(c, Implies(f(y) == v, h(b) == v)))","There exists an w such that For all c, If f(y) equals v, then h(b) equals v."
+"V(b, v)",V of b and v.
+"ForAll(v, ForAll(b, Equivalent(S(y, w), S(b))))","For all v, For all b, S of y and w if and only if S of b."
+"Exists(a, Implies((T(a)) | (f(a, b) == x), (m(v) == x) & (U(v, u, a))))","There exists an a such that If T of a or f(a, b) equals x, then m(v) equals x and U of v and u and a."
+"Exists(z, V(v, b, u))",There exists an z such that V of v and b and u.
+"((Implies(T(y, u), h(x, v) == w)) & (Equivalent(T(w), g(b, x) == b))) & ((Equivalent(P(y, v), f(z, v) == v)) & (~(P(u))))","If T of y and u, then h(x, v) equals w and T of w if and only if g(b, x) equals b and P of y and v if and only if f(z, v) equals v and not (P of u)."
+"ForAll(x, (~((T(v, x, w)) & (m(u) == w))) & (Implies(~(S(w)), (f(v, z) == x) | (h(w, b) == v))))","For all x, not (T of v and x and w and m(u) equals w) and If not (S of w), then f(v, z) equals x or h(w, b) equals v."
+"Exists(y, ForAll(z, U(u, a)))","There exists an y such that For all z, U of u and a."
+"Exists(w, ForAll(b, V(c, y, a)))","There exists an w such that For all b, V of c and y and a."
+"ForAll(c, Equivalent(Implies(S(w, u), h(u) == b), ~(W(u, b))))","For all c, If S of w and u, then h(u) equals b if and only if not (W of u and b)."
+"ForAll(z, Equivalent(m(v) == v, f(a) == a))","For all z, m(v) equals v if and only if f(a) equals a."
+"Exists(c, Exists(z, ~(~(Equivalent(f(x) == a, R(c))))))",There exists an c such that There exists an z such that not (not (f(x) equals a if and only if R of c)).
+"Exists(v, Equivalent(U(y, x), U(b, a, w)))",There exists an v such that U of y and x if and only if U of b and a and w.
+"Exists(b, Implies(Equivalent((P(w)) & (k(b, z) == c), (h(c) == c) | (h(w, z) == z)), ((f(v, z) == y) & (k(u, z) == v)) & (Equivalent(g(u) == c, P(c, u, x)))))","There exists an b such that If P of w and k(b, z) equals c if and only if h(c) equals c or h(w, z) equals z, then f(v, z) equals y and k(u, z) equals v and g(u) equals c if and only if P of c and u and x."
+"ForAll(y, (f(b) == a) & (f(v) == y))","For all y, f(b) equals a and f(v) equals y."
+"Exists(c, ((m(w) == x) & (U(u, x, w))) & ((g(v) == b) | (g(v, z) == u)))","There exists an c such that m(w) equals x and U of u and x and w and g(v) equals b or g(v, z) equals u."
+"Exists(w, Equivalent(T(a, u), k(v) == u))",There exists an w such that T of a and u if and only if k(v) equals u.
+"ForAll(z, (Implies(Equivalent(k(w, u) == a, U(y, w)), Implies(k(u, x) == v, P(c, w)))) | (((k(x, v) == b) | (f(b, a) == u)) & ((U(z, x, w)) & (Q(w, c)))))","For all z, If k(w, u) equals a if and only if U of y and w, then If k(u, x) equals v, then P of c and w or k(x, v) equals b or f(b, a) equals u and U of z and x and w and Q of w and c."
+"ForAll(v, Implies(Implies(Equivalent(h(u, c) == x, Q(c, a, b)), ~(h(u) == u)), Implies((k(v) == y) | (V(x, c, w)), ~(g(w, a) == c))))","For all v, If If h(u, c) equals x if and only if Q of c and a and b, then not (h(u) equals u), then If k(v) equals y or V of x and c and w, then not (g(w, a) equals c)."
+"ForAll(y, Equivalent((Equivalent(m(b, v) == c, f(a, w) == c)) & ((S(b, w)) & (m(v) == w)), Equivalent(Equivalent(m(y) == z, m(x) == b), Implies(g(w) == a, g(c, b) == w))))","For all y, m(b, v) equals c if and only if f(a, w) equals c and S of b and w and m(v) equals w if and only if m(y) equals z if and only if m(x) equals b if and only if If g(w) equals a, then g(c, b) equals w."
+"(Implies((Q(z, u, b)) | (V(b)), (g(a, x) == v) | (h(c, w) == w))) & (Implies(Implies(m(b, c) == u, W(x)), Equivalent(Q(x, v), Q(c))))","If Q of z and u and b or V of b, then g(a, x) equals v or h(c, w) equals w and If If m(b, c) equals u, then W of x, then Q of x and v if and only if Q of c."
+"(~((P(u, v)) & (k(w, a) == v))) | ((~(R(v, y))) | (~(h(b, u) == z)))","not (P of u and v and k(w, a) equals v) or not (R of v and y) or not (h(b, u) equals z)."
+"Exists(w, ~(f(y, x) == z))","There exists an w such that not (f(y, x) equals z)."
+"(~(k(b, w) == v)) | (Implies(T(z), m(b, v) == y))","not (k(b, w) equals v) or If T of z, then m(b, v) equals y."
+"Implies((k(c) == u) | (g(u) == b), ~(h(w) == v))","If k(c) equals u or g(u) equals b, then not (h(w) equals v)."
+"ForAll(w, Exists(u, ((h(x) == b) & (g(c, y) == x)) & (Implies(R(z, y, u), W(x)))))","For all w, There exists an u such that h(x) equals b and g(c, y) equals x and If R of z and y and u, then W of x."
+"ForAll(b, ((m(a) == a) & (R(v))) & (Implies(S(c, a), P(v, c, b))))","For all b, m(a) equals a and R of v and If S of c and a, then P of v and c and b."
+R(y),R of y.
+"ForAll(v, S(w))","For all v, S of w."
+"ForAll(v, Exists(u, (P(a, v)) | (R(w, a))))","For all v, There exists an u such that P of a and v or R of w and a."
+"Exists(a, Equivalent((h(w, b) == z) | (g(a) == w), (f(v) == u) | (f(c) == z)))","There exists an a such that h(w, b) equals z or g(a) equals w if and only if f(v) equals u or f(c) equals z."
+"ForAll(z, f(x, z) == a)","For all z, f(x, z) equals a."
+"Exists(x, ForAll(z, (Equivalent(W(b), k(u, v) == w)) | (Implies(f(c) == y, h(x, z) == c))))","There exists an x such that For all z, W of b if and only if k(u, v) equals w or If f(c) equals y, then h(x, z) equals c."
+"g(b, a) == z","g(b, a) equals z."
+"(T(y, z)) | (V(y))",T of y and z or V of y.
+"ForAll(a, ~(Implies(V(u, b), k(y) == a)))","For all a, not (If V of u and b, then k(y) equals a)."
+"ForAll(a, Implies(Implies(m(c, y) == w, R(u)), (V(y, u, c)) & (g(u) == v)))","For all a, If If m(c, y) equals w, then R of u, then V of y and u and c and g(u) equals v."
+"ForAll(a, Implies(k(v) == a, Q(b, y)))","For all a, If k(v) equals a, then Q of b and y."
+"ForAll(b, R(c, a))","For all b, R of c and a."
+"ForAll(b, Implies(~((W(c, w, a)) & (h(y, z) == a)), (Implies(g(a, x) == b, W(b))) | (~(h(w, v) == x))))","For all b, If not (W of c and w and a and h(y, z) equals a), then If g(a, x) equals b, then W of b or not (h(w, v) equals x)."
+"ForAll(z, (~(P(c, a))) & ((Q(z, c, w)) & (k(w, b) == u)))","For all z, not (P of c and a) and Q of z and c and w and k(w, b) equals u."
+"ForAll(v, m(w) == v)","For all v, m(w) equals v."
+"ForAll(w, f(v) == v)","For all w, f(v) equals v."
+"ForAll(z, Equivalent(Equivalent(Equivalent(P(a, z), h(a) == u), Implies(h(w, y) == u, U(u, y, v))), Implies((m(b, x) == w) | (h(z, b) == b), Implies(k(y) == b, U(v)))))","For all z, P of a and z if and only if h(a) equals u if and only if If h(w, y) equals u, then U of u and y and v if and only if If m(b, x) equals w or h(z, b) equals b, then If k(y) equals b, then U of v."
+"ForAll(y, (k(v) == c) & (R(a, y)))","For all y, k(v) equals c and R of a and y."
+"ForAll(u, Equivalent((m(w, u) == a) | (h(w) == c), Equivalent(k(b, z) == z, f(b, z) == y)))","For all u, m(w, u) equals a or h(w) equals c if and only if k(b, z) equals z if and only if f(b, z) equals y."
+"Implies(V(x, w, v), W(y))","If V of x and w and v, then W of y."
+"ForAll(v, (Equivalent((U(u, z)) | (g(z, v) == y), (g(u, z) == b) & (g(b) == y))) | ((Implies(f(v, y) == c, k(v) == a)) | (Implies(k(y) == z, R(w, a, c)))))","For all v, U of u and z or g(z, v) equals y if and only if g(u, z) equals b and g(b) equals y or If f(v, y) equals c, then k(v) equals a or If k(y) equals z, then R of w and a and c."
+"Exists(w, f(b, u) == v)","There exists an w such that f(b, u) equals v."
+"ForAll(u, (((T(x)) | (U(v, c))) & ((k(v, z) == z) | (k(u, x) == u))) | ((Equivalent(k(w) == z, k(z, b) == z)) | (~(S(v, u)))))","For all u, T of x or U of v and c and k(v, z) equals z or k(u, x) equals u or k(w) equals z if and only if k(z, b) equals z or not (S of v and u)."
+"Exists(z, (Implies(S(u, w, b), Q(w, y))) | ((W(c)) | (T(z))))","There exists an z such that If S of u and w and b, then Q of w and y or W of c or T of z."
+"ForAll(u, m(y, u) == y)","For all u, m(y, u) equals y."
+"Equivalent(k(c) == x, W(y))",k(c) equals x if and only if W of y.
+"ForAll(b, ~(W(v, x, c)))","For all b, not (W of v and x and c)."
+"Exists(b, (f(a, v) == b) | (m(c, v) == v))","There exists an b such that f(a, v) equals b or m(c, v) equals v."
+"ForAll(y, P(w, b))","For all y, P of w and b."
+"Exists(x, (~((m(u) == y) & (T(w, b)))) & (Equivalent(Equivalent(R(w, z, y), g(z) == w), Equivalent(g(b, v) == w, h(w, b) == v))))","There exists an x such that not (m(u) equals y and T of w and b) and R of w and z and y if and only if g(z) equals w if and only if g(b, v) equals w if and only if h(w, b) equals v."
+"Exists(z, ForAll(w, (Equivalent((f(u) == v) | (f(a, c) == w), Implies(h(y) == u, k(x, a) == b))) | (~(~(h(b, v) == y)))))","There exists an z such that For all w, f(u) equals v or f(a, c) equals w if and only if If h(y) equals u, then k(x, a) equals b or not (not (h(b, v) equals y))."
+"ForAll(w, Exists(u, Implies(Q(b, u, z), m(x, z) == y)))","For all w, There exists an u such that If Q of b and u and z, then m(x, z) equals y."
+"Exists(c, (((h(z) == y) & (k(x, c) == c)) & ((U(c, b, z)) | (f(y) == c))) | (Implies(Implies(V(v), k(w) == y), (f(v, x) == a) | (U(a)))))","There exists an c such that h(z) equals y and k(x, c) equals c and U of c and b and z or f(y) equals c or If If V of v, then k(w) equals y, then f(v, x) equals a or U of a."
+"ForAll(z, (((m(u) == z) | (g(x) == c)) | ((U(u, c)) | (R(a, v)))) | ((~(f(x, b) == u)) & (~(k(u) == a))))","For all z, m(u) equals z or g(x) equals c or U of u and c or R of a and v or not (f(x, b) equals u) and not (k(u) equals a)."
+"Exists(c, Exists(b, ~(m(w, a) == u)))","There exists an c such that There exists an b such that not (m(w, a) equals u)."
+"Exists(v, ForAll(w, f(a) == a))","There exists an v such that For all w, f(a) equals a."
+h(y) == a,h(y) equals a.
+"ForAll(b, ForAll(z, Implies(Equivalent(S(z), R(z)), (S(v, w, c)) | (g(z, c) == c))))","For all b, For all z, If S of z if and only if R of z, then S of v and w and c or g(z, c) equals c."
+"(h(x, c) == w) | (f(a) == x)","h(x, c) equals w or f(a) equals x."
+"Exists(z, Exists(a, g(a) == y))",There exists an z such that There exists an a such that g(a) equals y.
+"Exists(u, ForAll(b, k(v, z) == w))","There exists an u such that For all b, k(v, z) equals w."
+"Exists(w, (S(y)) | (V(v, y, b)))",There exists an w such that S of y or V of v and y and b.
+"Implies(Equivalent((g(a, w) == z) & (f(z) == x), Equivalent(V(w), W(b, w, y))), ((m(y, v) == c) & (g(w, b) == c)) & ((m(y, w) == a) & (S(b))))","If g(a, w) equals z and f(z) equals x if and only if V of w if and only if W of b and w and y, then m(y, v) equals c and g(w, b) equals c and m(y, w) equals a and S of b."
+"Exists(u, ((R(a, u, y)) | (S(w))) | ((U(c, u, w)) | (R(y, z))))",There exists an u such that R of a and u and y or S of w or U of c and u and w or R of y and z.
+"Exists(z, ForAll(x, ~((h(c, a) == b) | (g(x, y) == v))))","There exists an z such that For all x, not (h(c, a) equals b or g(x, y) equals v)."
+"Exists(y, Exists(z, (V(z)) | (k(u) == w)))",There exists an y such that There exists an z such that V of z or k(u) equals w.
+"Exists(v, Equivalent(T(w, x, c), T(c, y, a)))",There exists an v such that T of w and x and c if and only if T of c and y and a.
+"Exists(y, g(w) == v)",There exists an y such that g(w) equals v.
+"Implies((Implies(h(c) == y, g(a, c) == x)) | (Equivalent(h(a, v) == w, W(u))), ((W(c, a, v)) | (f(y) == y)) & ((k(w) == b) | (V(x, u))))","If If h(c) equals y, then g(a, c) equals x or h(a, v) equals w if and only if W of u, then W of c and a and v or f(y) equals y and k(w) equals b or V of x and u."
+"(Equivalent((h(w, u) == v) | (W(v, z)), (k(z, b) == y) & (m(w) == v))) & (((S(v, b)) & (h(w, z) == z)) | (~(m(c, z) == a)))","h(w, u) equals v or W of v and z if and only if k(z, b) equals y and m(w) equals v and S of v and b and h(w, z) equals z or not (m(c, z) equals a)."
+"Exists(y, (~((k(a) == y) | (S(b, x)))) | (Implies((f(u, c) == u) & (g(x) == v), Implies(k(c, u) == a, m(v, w) == v))))","There exists an y such that not (k(a) equals y or S of b and x) or If f(u, c) equals u and g(x) equals v, then If k(c, u) equals a, then m(v, w) equals v."
+"ForAll(b, Equivalent(R(y, b, v), f(w) == c))","For all b, R of y and b and v if and only if f(w) equals c."
+"Exists(b, Exists(a, (Equivalent(Implies(W(c), W(z, y)), ~(m(x, b) == a))) & (((h(c) == a) & (f(w) == y)) & (Implies(S(u, z, a), W(y))))))","There exists an b such that There exists an a such that If W of c, then W of z and y if and only if not (m(x, b) equals a) and h(c) equals a and f(w) equals y and If S of u and z and a, then W of y."
+"ForAll(u, (T(w)) | (V(v, b, x)))","For all u, T of w or V of v and b and x."
+"Exists(z, ForAll(z, ((k(c) == v) & (P(w, y, b))) | ((U(a)) | (f(y, z) == u))))","There exists an z such that For all z, k(c) equals v and P of w and y and b or U of a or f(y, z) equals u."
+"Exists(x, Implies(((P(x, y)) & (h(w) == z)) | ((U(b, a, c)) | (f(w) == u)), Equivalent((f(x, b) == y) | (m(c, u) == v), Equivalent(V(a, c), f(x, b) == y))))","There exists an x such that If P of x and y and h(w) equals z or U of b and a and c or f(w) equals u, then f(x, b) equals y or m(c, u) equals v if and only if V of a and c if and only if f(x, b) equals y."
+T(c),T of c.
+"ForAll(x, Equivalent(Implies(V(u, w), V(c, z, v)), (Q(b)) | (U(y))))","For all x, If V of u and w, then V of c and z and v if and only if Q of b or U of y."
+"Exists(v, Exists(v, Implies(Equivalent((U(z)) | (g(a, x) == z), (k(u, v) == a) & (k(v, u) == b)), ~((S(y, c, x)) | (Q(z, w))))))","There exists an v such that There exists an v such that If U of z or g(a, x) equals z if and only if k(u, v) equals a and k(v, u) equals b, then not (S of y and c and x or Q of z and w)."
+~(~(W(u))),not (not (W of u)).
+"ForAll(u, ForAll(y, k(y) == u))","For all u, For all y, k(y) equals u."
+"((~(S(u, w, x))) & (Implies(T(z, w), g(a) == a))) & (Implies((k(b) == y) & (m(z) == c), ~(P(z, w))))","not (S of u and w and x) and If T of z and w, then g(a) equals a and If k(b) equals y and m(z) equals c, then not (P of z and w)."
+"Exists(y, V(x))",There exists an y such that V of x.
+"ForAll(b, Exists(b, Implies(Q(x, b, v), h(b, u) == b)))","For all b, There exists an b such that If Q of x and b and v, then h(b, u) equals b."
+"Exists(z, Implies(Equivalent(T(z, w), T(z, x)), Equivalent(R(w, u), k(b, c) == b)))","There exists an z such that If T of z and w if and only if T of z and x, then R of w and u if and only if k(b, c) equals b."
+"Exists(v, (S(w, b, v)) & (h(u, a) == z))","There exists an v such that S of w and b and v and h(u, a) equals z."
+"~(((V(c, a, y)) | (f(a) == z)) & ((V(w)) & (g(b) == w)))",not (V of c and a and y or f(a) equals z and V of w and g(b) equals w).
+"ForAll(u, Q(w, c))","For all u, Q of w and c."
+"Equivalent((m(b, w) == z) & (f(z) == z), Equivalent(g(v, u) == y, f(z) == a))","m(b, w) equals z and f(z) equals z if and only if g(v, u) equals y if and only if f(z) equals a."
+"ForAll(w, Exists(w, k(b) == x))","For all w, There exists an w such that k(b) equals x."
+"Exists(v, ForAll(u, T(a)))","There exists an v such that For all u, T of a."
+"Exists(c, ForAll(c, m(x, a) == z))","There exists an c such that For all c, m(x, a) equals z."
+"Exists(w, h(x) == u)",There exists an w such that h(x) equals u.
+k(w) == c,k(w) equals c.
+"ForAll(v, V(u, b))","For all v, V of u and b."
+"ForAll(a, (((k(z, w) == v) & (h(y, b) == y)) | (~(S(y)))) | (Equivalent(Equivalent(Q(x), U(y, z, v)), (f(x) == z) & (Q(y)))))","For all a, k(z, w) equals v and h(y, b) equals y or not (S of y) or Q of x if and only if U of y and z and v if and only if f(x) equals z and Q of y."
+"((W(z, b, c)) & (R(c, x))) | (Implies(R(c, u), Q(u, z, a)))","W of z and b and c and R of c and x or If R of c and u, then Q of u and z and a."
+"Exists(w, Equivalent(Equivalent(g(v, w) == u, h(y) == x), Implies(V(y, b, x), U(y, v))))","There exists an w such that g(v, w) equals u if and only if h(y) equals x if and only if If V of y and b and x, then U of y and v."
+"ForAll(b, Equivalent((Equivalent(R(x), k(b, w) == a)) & (Implies(V(a, x, c), V(z, a))), Equivalent((R(u)) | (V(b)), Equivalent(W(a), T(u, c)))))","For all b, R of x if and only if k(b, w) equals a and If V of a and x and c, then V of z and a if and only if R of u or V of b if and only if W of a if and only if T of u and c."
+f(w) == b,f(w) equals b.
+"Exists(x, Implies(Implies(~(g(v, a) == y), (h(w) == b) | (U(a, u))), (Equivalent(k(c, w) == w, S(u, c))) | (Equivalent(Q(a, z), f(b, v) == y))))","There exists an x such that If If not (g(v, a) equals y), then h(w) equals b or U of a and u, then k(c, w) equals w if and only if S of u and c or Q of a and z if and only if f(b, v) equals y."
+"Implies(((m(v) == w) & (m(u) == y)) & (Implies(T(u, a, c), T(u, z))), ~(Equivalent(f(b, z) == b, W(w, y, z))))","If m(v) equals w and m(u) equals y and If T of u and a and c, then T of u and z, then not (f(b, z) equals b if and only if W of w and y and z)."
+"Exists(z, Equivalent((Equivalent(P(w), h(w) == a)) | ((g(x, v) == w) | (R(b, y, x))), ~((U(w)) & (f(w, y) == b))))","There exists an z such that P of w if and only if h(w) equals a or g(x, v) equals w or R of b and y and x if and only if not (U of w and f(w, y) equals b)."
+"ForAll(c, R(y, v))","For all c, R of y and v."
+"ForAll(z, S(b, x, c))","For all z, S of b and x and c."
+"Exists(x, (k(x, v) == b) | (m(x) == u))","There exists an x such that k(x, v) equals b or m(x) equals u."
+"ForAll(x, Equivalent(Equivalent(m(a) == u, T(v, w, c)), Equivalent(T(w, u, z), k(v) == b)))","For all x, m(a) equals u if and only if T of v and w and c if and only if T of w and u and z if and only if k(v) equals b."
+"Exists(y, Equivalent(Implies(Implies(T(u, v, z), f(v) == u), ~(S(b, a))), ((W(c, v)) & (Q(x))) | ((P(v, b)) | (m(y) == x))))","There exists an y such that If If T of u and v and z, then f(v) equals u, then not (S of b and a) if and only if W of c and v and Q of x or P of v and b or m(y) equals x."
+"ForAll(b, Exists(v, Equivalent(~(T(z)), (P(b)) | (Q(y)))))","For all b, There exists an v such that not (T of z) if and only if P of b or Q of y."
+"ForAll(x, Q(a))","For all x, Q of a."
+"ForAll(x, Exists(b, Implies(Equivalent((P(y, v, w)) | (k(v) == x), Implies(f(a) == c, P(v, w, x))), (Implies(h(w) == w, V(w, b, z))) | (~(m(w, a) == y)))))","For all x, There exists an b such that If P of y and v and w or k(v) equals x if and only if If f(a) equals c, then P of v and w and x, then If h(w) equals w, then V of w and b and z or not (m(w, a) equals y)."
+"Exists(c, Implies(Equivalent(U(c, z, a), V(y)), Implies(Q(x, v, b), S(w, b, x))))","There exists an c such that If U of c and z and a if and only if V of y, then If Q of x and v and b, then S of w and b and x."
+"ForAll(a, Equivalent(((W(z)) | (P(c, y, u))) & (Implies(g(v, u) == c, P(x))), Equivalent(Implies(T(b), U(a, x)), Implies(g(a, b) == x, U(w, x)))))","For all a, W of z or P of c and y and u and If g(v, u) equals c, then P of x if and only if If T of b, then U of a and x if and only if If g(a, b) equals x, then U of w and x."
+"ForAll(b, Exists(y, (Equivalent(P(b, y), h(y) == u)) & ((g(x, w) == v) | (V(y, x, w)))))","For all b, There exists an y such that P of b and y if and only if h(y) equals u and g(x, w) equals v or V of y and x and w."
+"Implies(Implies(Q(c, b), T(z, x)), (f(y) == u) & (g(a) == z))","If If Q of c and b, then T of z and x, then f(y) equals u and g(a) equals z."
+"Exists(y, Implies(Equivalent(g(y, c) == z, P(b, c, z)), ~(m(a) == b)))","There exists an y such that If g(y, c) equals z if and only if P of b and c and z, then not (m(a) equals b)."
+"ForAll(z, U(b, a))","For all z, U of b and a."
+"Exists(c, Q(z))",There exists an c such that Q of z.
+"ForAll(w, (Equivalent(V(y, x, c), T(z))) & (~(P(y, v, b))))","For all w, V of y and x and c if and only if T of z and not (P of y and v and b)."
+"ForAll(y, (W(b)) | (g(z) == a))","For all y, W of b or g(z) equals a."
+"Exists(v, ((Equivalent(V(w, u, a), k(a) == x)) | (~(k(u, z) == b))) & (Implies(Implies(f(x, a) == y, P(w, v, u)), Equivalent(h(v, b) == c, m(b) == w))))","There exists an v such that V of w and u and a if and only if k(a) equals x or not (k(u, z) equals b) and If If f(x, a) equals y, then P of w and v and u, then h(v, b) equals c if and only if m(b) equals w."
+"Implies((g(w) == v) | (m(v, c) == a), (g(c, w) == u) | (T(u)))","If g(w) equals v or m(v, c) equals a, then g(c, w) equals u or T of u."
+"ForAll(v, Equivalent(Equivalent((m(z, v) == y) | (V(x, y)), (k(c, v) == c) & (P(a, b))), Implies((Q(w)) & (Q(v)), Implies(g(a) == u, Q(w)))))","For all v, m(z, v) equals y or V of x and y if and only if k(c, v) equals c and P of a and b if and only if If Q of w and Q of v, then If g(a) equals u, then Q of w."
+"ForAll(u, ((g(a) == u) & (T(b))) | (~(g(b) == z)))","For all u, g(a) equals u and T of b or not (g(b) equals z)."
+"ForAll(u, (Implies(k(u) == y, k(z, a) == a)) | (Equivalent(k(w, x) == b, m(w) == z)))","For all u, If k(u) equals y, then k(z, a) equals a or k(w, x) equals b if and only if m(w) equals z."
+"ForAll(x, (Equivalent(g(b, x) == u, f(w, c) == a)) | ((k(a) == v) | (U(v, b))))","For all x, g(b, x) equals u if and only if f(w, c) equals a or k(a) equals v or U of v and b."
+"Exists(z, Equivalent(Implies(~(P(v)), ~(k(v) == z)), (Equivalent(h(c) == y, P(z, v, b))) & ((P(u)) | (Q(v)))))","There exists an z such that If not (P of v), then not (k(v) equals z) if and only if h(c) equals y if and only if P of z and v and b and P of u or Q of v."
+"Equivalent(P(w), P(c, x))",P of w if and only if P of c and x.
+"Exists(z, g(u) == w)",There exists an z such that g(u) equals w.
+"Exists(b, ForAll(x, P(y)))","There exists an b such that For all x, P of y."
+"Exists(a, ((Implies(m(c, w) == a, g(z, x) == u)) | (Equivalent(V(a, c, z), f(b, u) == x))) & (Implies(Equivalent(T(a, u, y), W(v)), Implies(h(b) == z, R(y)))))","There exists an a such that If m(c, w) equals a, then g(z, x) equals u or V of a and c and z if and only if f(b, u) equals x and If T of a and u and y if and only if W of v, then If h(b) equals z, then R of y."
+"Exists(c, h(x, b) == y)","There exists an c such that h(x, b) equals y."
+~(T(x)),not (T of x).
+"ForAll(c, Equivalent(f(a, w) == b, h(x, y) == b))","For all c, f(a, w) equals b if and only if h(x, y) equals b."
+"U(b, v)",U of b and v.
+"~(h(u, x) == x)","not (h(u, x) equals x)."
+"Exists(y, (R(a, v)) & (Q(z)))",There exists an y such that R of a and v and Q of z.
+"Exists(u, Implies(W(y, c, w), h(b, v) == c))","There exists an u such that If W of y and c and w, then h(b, v) equals c."
+"ForAll(u, (k(w, v) == b) | (T(v, y, a)))","For all u, k(w, v) equals b or T of v and y and a."
+"ForAll(z, ((Implies(k(a, w) == v, W(y))) | (Implies(V(a, z), k(w) == w))) & ((Equivalent(m(a) == a, g(w) == z)) & ((Q(x)) | (V(b, y, a)))))","For all z, If k(a, w) equals v, then W of y or If V of a and z, then k(w) equals w and m(a) equals a if and only if g(w) equals z and Q of x or V of b and y and a."
+"Exists(x, Equivalent((m(x) == z) | (f(y) == x), (k(v) == v) & (g(b) == v)))",There exists an x such that m(x) equals z or f(y) equals x if and only if k(v) equals v and g(b) equals v.
+"Exists(x, Exists(u, (((h(v, a) == a) | (h(u) == b)) | (~(Q(z, y, u)))) & (~(~(h(b) == a)))))","There exists an x such that There exists an u such that h(v, a) equals a or h(u) equals b or not (Q of z and y and u) and not (not (h(b) equals a))."
+"Exists(x, ForAll(z, Equivalent((P(v)) | (g(b, a) == w), (h(x) == z) | (f(w, z) == x))))","There exists an x such that For all z, P of v or g(b, a) equals w if and only if h(x) equals z or f(w, z) equals x."
+"ForAll(u, h(w, x) == y)","For all u, h(w, x) equals y."
+"Implies(m(c, u) == a, m(c, b) == x)","If m(c, u) equals a, then m(c, b) equals x."
+"ForAll(u, k(u, w) == u)","For all u, k(u, w) equals u."
+"Exists(z, Exists(c, (~(S(b))) | ((P(y, v)) & (f(x, b) == u))))","There exists an z such that There exists an c such that not (S of b) or P of y and v and f(x, b) equals u."
+"~(f(u, b) == x)","not (f(u, b) equals x)."
+"Exists(v, Equivalent((k(a) == u) & (f(v, y) == y), (Q(v)) & (W(w))))","There exists an v such that k(a) equals u and f(v, y) equals y if and only if Q of v and W of w."
+"ForAll(y, f(z, a) == u)","For all y, f(z, a) equals u."
+"Exists(a, ~(S(b, w, x)))",There exists an a such that not (S of b and w and x).
+"Exists(a, ForAll(b, g(u) == b))","There exists an a such that For all b, g(u) equals b."
+"ForAll(w, (Implies(W(u), U(x, w, b))) & (Implies(W(y, z), Q(z, b, u))))","For all w, If W of u, then U of x and w and b and If W of y and z, then Q of z and b and u."
+"Exists(y, ForAll(c, Implies(h(y) == x, T(a, z, b))))","There exists an y such that For all c, If h(y) equals x, then T of a and z and b."
+"ForAll(v, Implies(Implies(~(h(y) == z), Implies(U(w, y), S(y, u, x))), Equivalent((T(c, v, x)) & (f(a, y) == w), ~(P(y, b, x)))))","For all v, If If not (h(y) equals z), then If U of w and y, then S of y and u and x, then T of c and v and x and f(a, y) equals w if and only if not (P of y and b and x)."
+"(U(z)) | (Q(x, b, y))",U of z or Q of x and b and y.
+"Equivalent(T(u, b, v), V(u))",T of u and b and v if and only if V of u.
+"Equivalent(Implies(m(v, u) == y, m(x, y) == a), (Q(u, z, w)) & (S(x)))","If m(v, u) equals y, then m(x, y) equals a if and only if Q of u and z and w and S of x."
+"Equivalent(P(u, y, a), Q(w, u))",P of u and y and a if and only if Q of w and u.
+"Exists(w, ForAll(u, h(a, v) == b))","There exists an w such that For all u, h(a, v) equals b."
+"(W(v, a)) | (P(a, b))",W of v and a or P of a and b.
+"m(u, a) == y","m(u, a) equals y."
+"Exists(a, (Equivalent(m(b) == w, S(v, b))) & (Implies(g(z, x) == u, g(y) == v)))","There exists an a such that m(b) equals w if and only if S of v and b and If g(z, x) equals u, then g(y) equals v."
+"ForAll(z, ForAll(b, Q(u, v, z)))","For all z, For all b, Q of u and v and z."
+"m(w, x) == b","m(w, x) equals b."
+"Exists(c, (Implies(m(a) == w, k(u) == w)) & (Equivalent(U(b, u, c), Q(y, z, c))))","There exists an c such that If m(a) equals w, then k(u) equals w and U of b and u and c if and only if Q of y and z and c."
+"Exists(y, W(z, u, w))",There exists an y such that W of z and u and w.
+"f(y, v) == b","f(y, v) equals b."
+"ForAll(v, ForAll(y, Equivalent(S(x, b), m(x) == b)))","For all v, For all y, S of x and b if and only if m(x) equals b."
+"ForAll(z, ForAll(v, h(b, z) == x))","For all z, For all v, h(b, z) equals x."
+"ForAll(y, (R(u, c, y)) | (W(x, b)))","For all y, R of u and c and y or W of x and b."
+"Equivalent(k(y) == z, f(w) == x)",k(y) equals z if and only if f(w) equals x.
+"Exists(v, Exists(z, (Q(a, u)) | (U(b, z))))",There exists an v such that There exists an z such that Q of a and u or U of b and z.
+"ForAll(w, ((V(v)) | (m(y, c) == z)) | ((W(a, z, x)) & (S(z, u, x))))","For all w, V of v or m(y, c) equals z or W of a and z and x and S of z and u and x."
+"ForAll(z, h(c, z) == z)","For all z, h(c, z) equals z."
+"ForAll(x, Exists(x, Implies(R(b, y, u), U(b, z, w))))","For all x, There exists an x such that If R of b and y and u, then U of b and z and w."
+"ForAll(y, P(y, w, c))","For all y, P of y and w and c."
+"Exists(z, Implies(U(x, c), U(a, y)))","There exists an z such that If U of x and c, then U of a and y."
+"ForAll(v, ForAll(z, W(v, b, c)))","For all v, For all z, W of v and b and c."
+"k(x, a) == b","k(x, a) equals b."
+"ForAll(w, T(u, a, z))","For all w, T of u and a and z."
+"ForAll(z, (Implies(V(z), m(w) == w)) & (Implies(V(x, c, w), f(u, c) == a)))","For all z, If V of z, then m(w) equals w and If V of x and c and w, then f(u, c) equals a."
+"ForAll(c, P(y, a))","For all c, P of y and a."
+"ForAll(a, ForAll(c, h(c) == b))","For all a, For all c, h(c) equals b."
+"Exists(a, (T(u, z)) | (V(v)))",There exists an a such that T of u and z or V of v.
+"Exists(a, (Implies(g(c, a) == u, h(b) == x)) & ((g(w, v) == x) & (g(w, z) == v)))","There exists an a such that If g(c, a) equals u, then h(b) equals x and g(w, v) equals x and g(w, z) equals v."
+"Implies((Q(w)) | (R(v, w, b)), (U(x, v, w)) | (S(u, c)))","If Q of w or R of v and w and b, then U of x and v and w or S of u and c."
+"ForAll(y, ForAll(a, Implies(Equivalent(S(z, y), W(c)), Equivalent(P(u, c, v), S(b, u, y)))))","For all y, For all a, If S of z and y if and only if W of c, then P of u and c and v if and only if S of b and u and y."
+"ForAll(x, h(y, b) == c)","For all x, h(y, b) equals c."
+"Exists(v, Equivalent(Q(w), f(c) == x))",There exists an v such that Q of w if and only if f(c) equals x.
+"ForAll(y, ((f(a) == w) & (Q(v))) | ((f(u, c) == a) | (f(a) == u)))","For all y, f(a) equals w and Q of v or f(u, c) equals a or f(a) equals u."
+"Exists(a, (h(y, c) == v) | (g(x, w) == x))","There exists an a such that h(y, c) equals v or g(x, w) equals x."
+"ForAll(u, (Implies((R(a)) | (S(x)), Implies(m(x) == a, f(u, y) == z))) | (Equivalent(Implies(Q(b, c), m(u) == c), (S(v)) | (W(u, w, z)))))","For all u, If R of a or S of x, then If m(x) equals a, then f(u, y) equals z or If Q of b and c, then m(u) equals c if and only if S of v or W of u and w and z."
+"Exists(y, Exists(c, Equivalent(~(U(b, x, v)), Equivalent(m(v) == v, W(v, z, u)))))",There exists an y such that There exists an c such that not (U of b and x and v) if and only if m(v) equals v if and only if W of v and z and u.
+"ForAll(a, ForAll(v, ~((m(z) == w) | (f(u, z) == u))))","For all a, For all v, not (m(z) equals w or f(u, z) equals u)."
+"Exists(a, ForAll(x, ((~(W(z, a, w))) | (~(f(z, u) == v))) & (Equivalent(Equivalent(g(c) == x, V(y, z)), Implies(U(c, z), h(c) == a)))))","There exists an a such that For all x, not (W of z and a and w) or not (f(z, u) equals v) and g(c) equals x if and only if V of y and z if and only if If U of c and z, then h(c) equals a."
+"ForAll(v, ForAll(v, U(w)))","For all v, For all v, U of w."
+"Equivalent((Equivalent(m(x, c) == z, P(c))) & ((f(y) == a) & (S(w))), Implies((T(y, v, w)) | (U(x, b, u)), Equivalent(W(a, z, x), g(v, x) == b)))","m(x, c) equals z if and only if P of c and f(y) equals a and S of w if and only if If T of y and v and w or U of x and b and u, then W of a and z and x if and only if g(v, x) equals b."
+"Exists(a, (((g(w) == x) & (k(x, z) == y)) | (Implies(f(u) == u, R(w)))) | (Implies((f(c, y) == b) | (Q(y)), ~(V(u)))))","There exists an a such that g(w) equals x and k(x, z) equals y or If f(u) equals u, then R of w or If f(c, y) equals b or Q of y, then not (V of u)."
+"Exists(x, Exists(v, W(y)))",There exists an x such that There exists an v such that W of y.
+"Exists(y, (f(a) == v) | (T(v, x)))",There exists an y such that f(a) equals v or T of v and x.
+"ForAll(b, Equivalent(~(~(k(z) == y)), Equivalent((m(y) == u) | (g(b, c) == u), (R(c)) & (k(w) == u))))","For all b, not (not (k(z) equals y)) if and only if m(y) equals u or g(b, c) equals u if and only if R of c and k(w) equals u."
+"ForAll(y, Exists(c, Implies(((R(x, w)) | (R(y, z))) | (Equivalent(h(y) == a, W(y, v))), ((R(w)) | (k(c) == c)) | (Implies(m(z) == z, f(c) == a)))))","For all y, There exists an c such that If R of x and w or R of y and z or h(y) equals a if and only if W of y and v, then R of w or k(c) equals c or If m(z) equals z, then f(c) equals a."
+"ForAll(b, ((f(y, w) == z) & (k(b, u) == c)) | ((h(y, c) == b) | (k(a) == c)))","For all b, f(y, w) equals z and k(b, u) equals c or h(y, c) equals b or k(a) equals c."
+"Exists(x, m(a) == z)",There exists an x such that m(a) equals z.
+"ForAll(w, ForAll(c, (Implies(k(x) == y, m(w) == w)) | (Equivalent(k(u, z) == w, S(z, v, a)))))","For all w, For all c, If k(x) equals y, then m(w) equals w or k(u, z) equals w if and only if S of z and v and a."
+"ForAll(x, Equivalent(~((g(b, z) == w) | (R(a, u, c))), (Equivalent(f(c) == y, h(b) == c)) & ((f(b, v) == v) & (T(y)))))","For all x, not (g(b, z) equals w or R of a and u and c) if and only if f(c) equals y if and only if h(b) equals c and f(b, v) equals v and T of y."
+"Equivalent(m(v) == x, g(v, y) == w)","m(v) equals x if and only if g(v, y) equals w."
+"Implies(Implies(S(a, b), V(b)), ~(g(v) == y))","If If S of a and b, then V of b, then not (g(v) equals y)."
+"Implies(Equivalent(~(m(z) == b), Equivalent(U(a), U(c))), ~(Implies(k(v, c) == z, h(v, w) == a)))","If not (m(z) equals b) if and only if U of a if and only if U of c, then not (If k(v, c) equals z, then h(v, w) equals a)."
+(V(w)) & (P(x)),V of w and P of x.
+"Equivalent((S(z)) & (U(y, u)), Equivalent(f(a) == c, T(v, a)))",S of z and U of y and u if and only if f(a) equals c if and only if T of v and a.
+"ForAll(z, ForAll(c, (h(z, x) == z) | (T(u, y))))","For all z, For all c, h(z, x) equals z or T of u and y."
+"Exists(v, (R(x)) & (m(x) == a))",There exists an v such that R of x and m(x) equals a.
+"ForAll(v, Equivalent((Equivalent(R(b, a, v), W(z, c, b))) | (Equivalent(h(b, z) == a, R(y, b))), ((W(y, b, c)) | (S(u, b))) & ((U(z)) | (S(a)))))","For all v, R of b and a and v if and only if W of z and c and b or h(b, z) equals a if and only if R of y and b if and only if W of y and b and c or S of u and b and U of z or S of a."
+"Exists(b, Implies(R(w), g(w) == c))","There exists an b such that If R of w, then g(w) equals c."
+"(Implies((U(v, c, b)) & (m(z) == b), Equivalent(Q(z, x), g(c, b) == y))) | (~((R(x)) & (U(a))))","If U of v and c and b and m(z) equals b, then Q of z and x if and only if g(c, b) equals y or not (R of x and U of a)."
+"Exists(c, m(b, c) == w)","There exists an c such that m(b, c) equals w."
+"ForAll(x, ((f(u) == x) & (g(y, w) == y)) | (Implies(Q(x), R(w, x, b))))","For all x, f(u) equals x and g(y, w) equals y or If Q of x, then R of w and x and b."
+"ForAll(u, (k(u) == b) | (V(x)))","For all u, k(u) equals b or V of x."
+"~(k(z, x) == y)","not (k(z, x) equals y)."
+"Exists(z, ForAll(v, Implies(~(Implies(P(b, z, w), m(u, c) == u)), ((g(z) == b) & (T(z))) & (~(V(c, z, b))))))","There exists an z such that For all v, If not (If P of b and z and w, then m(u, c) equals u), then g(z) equals b and T of z and not (V of c and z and b)."
+"ForAll(u, U(w, a, b))","For all u, U of w and a and b."
+"Exists(v, ~(Implies(f(u) == b, S(a, w))))","There exists an v such that not (If f(u) equals b, then S of a and w)."
+"Exists(u, Implies(Q(z, x), P(a, y)))","There exists an u such that If Q of z and x, then P of a and y."
+"(Equivalent((f(a, x) == a) & (T(c)), Implies(g(u) == v, Q(x)))) | ((Equivalent(h(v, y) == w, h(a, z) == u)) & ((W(a, x)) & (P(y))))","f(a, x) equals a and T of c if and only if If g(u) equals v, then Q of x or h(v, y) equals w if and only if h(a, z) equals u and W of a and x and P of y."
+"ForAll(a, Implies(~((R(a, x)) | (Q(w, b, x))), Implies((P(b, y)) | (P(a, b, x)), ~(Q(x, v)))))","For all a, If not (R of a and x or Q of w and b and x), then If P of b and y or P of a and b and x, then not (Q of x and v)."
+~(P(a)),not (P of a).
+"Exists(y, Exists(a, (Implies(k(u) == y, g(a) == z)) & ((k(y) == w) & (W(x)))))","There exists an y such that There exists an a such that If k(u) equals y, then g(a) equals z and k(y) equals w and W of x."
+"((Q(x)) & (m(b, y) == v)) | (Implies(m(c) == c, m(w) == u))","Q of x and m(b, y) equals v or If m(c) equals c, then m(w) equals u."
+"m(a, b) == u","m(a, b) equals u."
+"(((f(a, y) == z) | (h(b) == b)) | (Implies(V(z, u), m(b) == x))) & (((S(b)) & (W(c, z, x))) | (Equivalent(P(v, y, a), U(c))))","f(a, y) equals z or h(b) equals b or If V of z and u, then m(b) equals x and S of b and W of c and z and x or P of v and y and a if and only if U of c."
+"ForAll(w, ForAll(a, Implies(Equivalent(Implies(m(y) == c, h(z) == y), (W(c, w, u)) & (R(x, c, z))), ((S(a)) | (V(y, c))) & ((m(z, a) == c) | (k(x, v) == x)))))","For all w, For all a, If If m(y) equals c, then h(z) equals y if and only if W of c and w and u and R of x and c and z, then S of a or V of y and c and m(z, a) equals c or k(x, v) equals x."
+"ForAll(c, ~((Implies(T(c, u), k(y, b) == a)) & ((h(a, u) == v) | (W(c, v)))))","For all c, not (If T of c and u, then k(y, b) equals a and h(a, u) equals v or W of c and v)."
+~(~(m(a) == v)),not (not (m(a) equals v)).
+"ForAll(y, (m(x) == a) & (k(z, b) == y))","For all y, m(x) equals a and k(z, b) equals y."
+"ForAll(w, ~(Equivalent(S(w, z, a), V(y, u, c))))","For all w, not (S of w and z and a if and only if V of y and u and c)."
+"Exists(y, Implies(U(c, y), h(z) == w))","There exists an y such that If U of c and y, then h(z) equals w."
+h(u) == v,h(u) equals v.
+"ForAll(w, ForAll(a, Equivalent(~((f(v) == c) & (W(c, z))), (Equivalent(m(u) == w, k(c, a) == c)) & ((h(v, y) == w) | (h(y) == y)))))","For all w, For all a, not (f(v) equals c and W of c and z) if and only if m(u) equals w if and only if k(c, a) equals c and h(v, y) equals w or h(y) equals y."
+"Exists(u, Q(a, x))",There exists an u such that Q of a and x.
+"Exists(a, Implies(Implies((T(w)) & (m(a) == b), ~(g(c, v) == z)), (Equivalent(m(a, b) == a, k(z, x) == v)) | ((k(c, x) == b) | (g(c) == x))))","There exists an a such that If If T of w and m(a) equals b, then not (g(c, v) equals z), then m(a, b) equals a if and only if k(z, x) equals v or k(c, x) equals b or g(c) equals x."
+"(U(v, x)) & (U(w, u))",U of v and x and U of w and u.
+"Exists(w, Equivalent(Equivalent((g(a, b) == b) & (g(y, a) == x), (U(c)) & (m(x, c) == c)), (Equivalent(k(u) == y, k(v) == b)) | (Implies(V(y, z, w), P(u)))))","There exists an w such that g(a, b) equals b and g(y, a) equals x if and only if U of c and m(x, c) equals c if and only if k(u) equals y if and only if k(v) equals b or If V of y and z and w, then P of u."
+"ForAll(x, Implies((Implies(g(v, z) == v, S(c, w, z))) | ((f(a) == v) & (h(w, z) == u)), Implies(Equivalent(h(y, b) == b, T(z)), (V(z, y, u)) & (f(y) == a))))","For all x, If If g(v, z) equals v, then S of c and w and z or f(a) equals v and h(w, z) equals u, then If h(y, b) equals b if and only if T of z, then V of z and y and u and f(y) equals a."
+"ForAll(y, Implies((Equivalent(S(w, u), f(y) == c)) | ((m(a) == w) & (h(w, v) == v)), (Equivalent(S(b, y), U(u, y, b))) | (Equivalent(m(a, z) == x, k(b) == y))))","For all y, If S of w and u if and only if f(y) equals c or m(a) equals w and h(w, v) equals v, then S of b and y if and only if U of u and y and b or m(a, z) equals x if and only if k(b) equals y."
+"Exists(b, ForAll(y, ((~(S(b, z, v))) | ((Q(c)) | (f(z, u) == z))) | (~(~(R(u))))))","There exists an b such that For all y, not (S of b and z and v) or Q of c or f(z, u) equals z or not (not (R of u))."
+"Exists(w, ForAll(w, Equivalent(~(~(k(x) == c)), Equivalent(Implies(f(x, u) == c, g(c) == x), (U(v)) & (m(y, x) == x)))))","There exists an w such that For all w, not (not (k(x) equals c)) if and only if If f(x, u) equals c, then g(c) equals x if and only if U of v and m(y, x) equals x."
+"ForAll(a, (~(~(V(a, c)))) & ((~(h(y, c) == u)) & (~(m(y, a) == v))))","For all a, not (not (V of a and c)) and not (h(y, c) equals u) and not (m(y, a) equals v)."
+"Exists(y, Implies((~(g(b, x) == c)) & (Equivalent(W(y, w), V(z, w))), Equivalent(Equivalent(S(z, x, b), U(b, z)), ~(P(w, z, x)))))","There exists an y such that If not (g(b, x) equals c) and W of y and w if and only if V of z and w, then S of z and x and b if and only if U of b and z if and only if not (P of w and z and x)."
+"Exists(b, ForAll(z, (Implies(~(T(a, z)), Equivalent(R(v, y, c), g(v, z) == z))) & ((~(T(w, v, y))) | (~(h(b, x) == w)))))","There exists an b such that For all z, If not (T of a and z), then R of v and y and c if and only if g(v, z) equals z and not (T of w and v and y) or not (h(b, x) equals w)."
+"Exists(x, Exists(a, P(y, a, c)))",There exists an x such that There exists an a such that P of y and a and c.
+"ForAll(x, Equivalent(((g(c) == w) | (Q(b))) & ((k(y) == z) & (U(x, b))), ((Q(w)) & (R(b, y, a))) & (Equivalent(f(w) == u, R(u, x, b)))))","For all x, g(c) equals w or Q of b and k(y) equals z and U of x and b if and only if Q of w and R of b and y and a and f(w) equals u if and only if R of u and x and b."
+"Exists(b, Exists(x, Implies(((T(c, w, b)) | (g(c) == b)) | (Equivalent(h(v) == v, Q(c, z))), Equivalent((Q(x)) | (h(z) == w), (T(u, w)) & (h(w) == z)))))","There exists an b such that There exists an x such that If T of c and w and b or g(c) equals b or h(v) equals v if and only if Q of c and z, then Q of x or h(z) equals w if and only if T of u and w and h(w) equals z."
+"Exists(w, (T(v, u, c)) | (g(u, a) == v))","There exists an w such that T of v and u and c or g(u, a) equals v."
+"Exists(y, k(x, a) == w)","There exists an y such that k(x, a) equals w."
+"Equivalent((P(x, w, a)) & (f(b) == v), Equivalent(Q(b), f(z) == w))",P of x and w and a and f(b) equals v if and only if Q of b if and only if f(z) equals w.
+"Exists(w, (U(u, w)) | (f(x) == y))",There exists an w such that U of u and w or f(x) equals y.
+V(x),V of x.
+"Exists(x, g(w) == v)",There exists an x such that g(w) equals v.
+"ForAll(y, Equivalent(((g(b) == c) & (m(x, u) == y)) & ((m(v) == x) | (T(w))), ((f(c) == v) | (U(z, w, c))) & ((g(w) == a) & (V(b)))))","For all y, g(b) equals c and m(x, u) equals y and m(v) equals x or T of w if and only if f(c) equals v or U of z and w and c and g(w) equals a and V of b."
+"Exists(x, ((~(T(z, u))) | ((h(u, x) == x) | (k(z, w) == w))) & ((Implies(S(a, w), g(z, v) == y)) & ((R(z, u, a)) & (U(y, c)))))","There exists an x such that not (T of z and u) or h(u, x) equals x or k(z, w) equals w and If S of a and w, then g(z, v) equals y and R of z and u and a and U of y and c."
+"ForAll(u, ((m(u, x) == z) | (V(b, u))) | (Implies(U(b, w), h(y) == z)))","For all u, m(u, x) equals z or V of b and u or If U of b and w, then h(y) equals z."
+"ForAll(x, Equivalent(((U(w, z)) | (W(b, x))) & (~(f(w) == z)), (Implies(R(y), m(c) == b)) & ((f(c) == a) | (h(w) == b))))","For all x, U of w and z or W of b and x and not (f(w) equals z) if and only if If R of y, then m(c) equals b and f(c) equals a or h(w) equals b."
+"Implies((V(z)) | (g(w, v) == x), (g(x) == z) & (m(u) == z))","If V of z or g(w, v) equals x, then g(x) equals z and m(u) equals z."
+"Exists(w, ForAll(b, ((R(c, y, x)) | (h(x) == z)) | (~(T(z)))))","There exists an w such that For all b, R of c and y and x or h(x) equals z or not (T of z)."
+"Exists(u, Exists(v, Implies(U(u), Q(a))))","There exists an u such that There exists an v such that If U of u, then Q of a."
+"Exists(y, S(b, c))",There exists an y such that S of b and c.
+"ForAll(b, ~(P(z, y, u)))","For all b, not (P of z and y and u)."
+"ForAll(a, Equivalent((S(y, x, z)) | (T(y, a, u)), Equivalent(Q(a), f(w) == a)))","For all a, S of y and x and z or T of y and a and u if and only if Q of a if and only if f(w) equals a."
+"Exists(u, Exists(u, Equivalent(V(w), f(v, c) == v)))","There exists an u such that There exists an u such that V of w if and only if f(v, c) equals v."
+"Exists(z, ForAll(y, Equivalent(f(a, z) == b, V(z))))","There exists an z such that For all y, f(a, z) equals b if and only if V of z."
+"Exists(b, (Equivalent(U(c, w, z), P(c))) | ((V(z, u, w)) | (f(v, u) == u)))","There exists an b such that U of c and w and z if and only if P of c or V of z and u and w or f(v, u) equals u."
+"ForAll(w, Exists(a, Implies(S(u, c), g(u) == y)))","For all w, There exists an a such that If S of u and c, then g(u) equals y."
+"ForAll(w, Implies(Implies(m(b, w) == b, h(w) == u), Implies(k(c, a) == y, R(y, z))))","For all w, If If m(b, w) equals b, then h(w) equals u, then If k(c, a) equals y, then R of y and z."
+"ForAll(a, ((R(w, c)) & (k(b, z) == y)) | (Implies(g(w) == y, Q(v, x))))","For all a, R of w and c and k(b, z) equals y or If g(w) equals y, then Q of v and x."
+"Exists(u, h(u, x) == b)","There exists an u such that h(u, x) equals b."
+"ForAll(y, Exists(z, Q(b)))","For all y, There exists an z such that Q of b."
+"Exists(z, m(y, v) == w)","There exists an z such that m(y, v) equals w."
+"(Equivalent(Implies(k(y) == b, P(c, a, b)), (W(b)) | (g(a, w) == a))) & (~((P(w, z, a)) & (m(x) == w)))","If k(y) equals b, then P of c and a and b if and only if W of b or g(a, w) equals a and not (P of w and z and a and m(x) equals w)."
+"ForAll(u, Implies(R(y, v, c), k(y) == a))","For all u, If R of y and v and c, then k(y) equals a."
+"Exists(x, Equivalent(Implies(~(S(y)), (h(c) == a) | (R(b, u, z))), ((R(z)) | (W(u, c, v))) | (~(k(w) == u))))","There exists an x such that If not (S of y), then h(c) equals a or R of b and u and z if and only if R of z or W of u and c and v or not (k(w) equals u)."
+"ForAll(w, Implies(Implies((f(a) == b) & (V(x)), ~(V(y))), (Equivalent(R(y, b, w), h(a, b) == u)) & ((S(u)) & (R(c)))))","For all w, If If f(a) equals b and V of x, then not (V of y), then R of y and b and w if and only if h(a, b) equals u and S of u and R of c."
+"Exists(u, Implies(U(a), R(w, u)))","There exists an u such that If U of a, then R of w and u."
+"ForAll(z, ForAll(b, Implies(Implies(Implies(P(v, a, w), h(u) == x), Equivalent(f(z, x) == y, g(x, v) == a)), Equivalent((k(w) == w) & (Q(w)), Equivalent(f(w) == w, f(a) == u)))))","For all z, For all b, If If If P of v and a and w, then h(u) equals x, then f(z, x) equals y if and only if g(x, v) equals a, then k(w) equals w and Q of w if and only if f(w) equals w if and only if f(a) equals u."
+"g(z, x) == y","g(z, x) equals y."
+"Exists(a, Q(u, c))",There exists an a such that Q of u and c.
+"Exists(x, Exists(v, Implies((Equivalent(g(z) == a, g(z) == z)) & ((U(c, b)) & (h(u) == v)), Equivalent((g(c) == w) | (R(x)), ~(P(w, b))))))","There exists an x such that There exists an v such that If g(z) equals a if and only if g(z) equals z and U of c and b and h(u) equals v, then g(c) equals w or R of x if and only if not (P of w and b)."
+"Exists(v, V(c))",There exists an v such that V of c.
+"ForAll(a, (Implies((h(a) == u) & (k(v) == w), (h(b) == u) & (h(z, b) == b))) | (~((S(x, w)) | (f(w) == w))))","For all a, If h(a) equals u and k(v) equals w, then h(b) equals u and h(z, b) equals b or not (S of x and w or f(w) equals w)."
+"ForAll(v, (~(m(c, w) == a)) | (Equivalent(k(v) == w, g(v, y) == v)))","For all v, not (m(c, w) equals a) or k(v) equals w if and only if g(v, y) equals v."
+"(Equivalent(k(x, z) == z, U(c, a, y))) | ((T(y, u, c)) & (W(z)))","k(x, z) equals z if and only if U of c and a and y or T of y and u and c and W of z."
+"Exists(a, (((g(a, w) == w) & (P(u))) | (~(m(v, a) == y))) | (Implies(Equivalent(U(y, z, a), W(w)), Implies(g(w, b) == x, S(y, v, w)))))","There exists an a such that g(a, w) equals w and P of u or not (m(v, a) equals y) or If U of y and z and a if and only if W of w, then If g(w, b) equals x, then S of y and v and w."
+"ForAll(c, ForAll(z, (~(Implies(f(v) == z, g(x) == u))) | (Implies((g(x) == v) & (m(c, a) == c), (g(a, x) == z) & (k(y, b) == v)))))","For all c, For all z, not (If f(v) equals z, then g(x) equals u) or If g(x) equals v and m(c, a) equals c, then g(a, x) equals z and k(y, b) equals v."
+"ForAll(u, ((k(w, z) == b) | (S(z))) & ((R(x)) | (V(y, u))))","For all u, k(w, z) equals b or S of z and R of x or V of y and u."
+"ForAll(u, ForAll(u, Implies(Implies(V(b, w, a), V(z, b)), (g(z) == v) | (Q(z)))))","For all u, For all u, If If V of b and w and a, then V of z and b, then g(z) equals v or Q of z."
+"ForAll(v, Exists(y, Implies((R(c)) | (k(x) == y), Equivalent(P(w, x), k(c, b) == y))))","For all v, There exists an y such that If R of c or k(x) equals y, then P of w and x if and only if k(c, b) equals y."
+"Exists(z, h(c) == b)",There exists an z such that h(c) equals b.
+"Exists(c, ForAll(u, Equivalent((U(x)) | (k(c, v) == v), (Q(z, y)) & (Q(x)))))","There exists an c such that For all u, U of x or k(c, v) equals v if and only if Q of z and y and Q of x."
+"ForAll(c, ForAll(u, Equivalent((~(P(b, v))) | ((R(w, y, v)) & (h(w) == y)), Implies(Implies(h(u) == c, P(w)), ~(R(a, w))))))","For all c, For all u, not (P of b and v) or R of w and y and v and h(w) equals y if and only if If If h(u) equals c, then P of w, then not (R of a and w)."
+"Exists(c, Implies(h(b, x) == v, f(b, x) == z))","There exists an c such that If h(b, x) equals v, then f(b, x) equals z."
+"~(Implies(g(b, v) == z, g(w) == a))","not (If g(b, v) equals z, then g(w) equals a)."
+"ForAll(c, (Implies(Implies(m(x) == a, h(z) == z), (T(y)) | (V(u, x)))) | ((Equivalent(g(u, b) == z, T(z, x, u))) | (~(m(c) == w))))","For all c, If If m(x) equals a, then h(z) equals z, then T of y or V of u and x or g(u, b) equals z if and only if T of z and x and u or not (m(c) equals w)."
+"ForAll(y, ForAll(z, S(z, y)))","For all y, For all z, S of z and y."
+"(h(w) == c) & (m(c, b) == a)","h(w) equals c and m(c, b) equals a."
+"ForAll(x, h(a) == v)","For all x, h(a) equals v."
+"ForAll(x, (((k(u, w) == c) | (k(a, v) == y)) & ((R(a)) | (Q(u)))) & ((~(g(c, u) == y)) | ((W(b)) | (T(c, y)))))","For all x, k(u, w) equals c or k(a, v) equals y and R of a or Q of u and not (g(c, u) equals y) or W of b or T of c and y."
+"ForAll(y, (k(z) == x) | (S(z, w)))","For all y, k(z) equals x or S of z and w."
+"ForAll(w, f(z, v) == u)","For all w, f(z, v) equals u."
+"ForAll(b, Exists(u, (P(x, b, u)) | (g(a, u) == u)))","For all b, There exists an u such that P of x and b and u or g(a, u) equals u."
+"Exists(b, (~(Implies(V(z, a, u), V(c)))) & (Implies(~(R(c)), Equivalent(R(y), R(b, y)))))","There exists an b such that not (If V of z and a and u, then V of c) and If not (R of c), then R of y if and only if R of b and y."
+"~(~(Equivalent(m(x) == c, g(z) == b)))",not (not (m(x) equals c if and only if g(z) equals b)).
+"Exists(z, m(c, u) == c)","There exists an z such that m(c, u) equals c."
+"Exists(z, Exists(c, V(a, w, b)))",There exists an z such that There exists an c such that V of a and w and b.
+"Exists(a, (~(k(v) == c)) | (Equivalent(T(a, x, c), h(x) == b)))",There exists an a such that not (k(v) equals c) or T of a and x and c if and only if h(x) equals b.
+"~(Implies(k(c) == x, k(c, w) == v))","not (If k(c) equals x, then k(c, w) equals v)."
+"Exists(x, (f(b, u) == v) & (g(c, y) == a))","There exists an x such that f(b, u) equals v and g(c, y) equals a."
+"(f(z, y) == x) & (g(x, a) == a)","f(z, y) equals x and g(x, a) equals a."
+"ForAll(c, Equivalent(h(u) == x, W(v, u)))","For all c, h(u) equals x if and only if W of v and u."
+"ForAll(c, Equivalent((W(w)) & (P(u)), Implies(k(w) == u, k(y, v) == u)))","For all c, W of w and P of u if and only if If k(w) equals u, then k(y, v) equals u."
+"Exists(v, Implies((Implies(g(x, c) == y, h(x) == u)) | (Equivalent(g(a) == b, k(w, z) == v)), Equivalent(~(h(b, z) == w), Implies(Q(x), g(v) == b))))","There exists an v such that If If g(x, c) equals y, then h(x) equals u or g(a) equals b if and only if k(w, z) equals v, then not (h(b, z) equals w) if and only if If Q of x, then g(v) equals b."
+"ForAll(z, ForAll(b, ((V(w, z, x)) & (S(w, x, u))) & ((h(u, y) == z) | (S(a, z, w)))))","For all z, For all b, V of w and z and x and S of w and x and u and h(u, y) equals z or S of a and z and w."
+"Exists(b, Implies((Implies(U(c, w, b), m(z, c) == v)) & (~(f(y, w) == b)), (~(P(w, v, b))) | (~(k(v, b) == u))))","There exists an b such that If If U of c and w and b, then m(z, c) equals v and not (f(y, w) equals b), then not (P of w and v and b) or not (k(v, b) equals u)."
+"ForAll(u, ~(Equivalent(f(v, b) == u, m(x) == w)))","For all u, not (f(v, b) equals u if and only if m(x) equals w)."
+"ForAll(a, ~(Q(y, u)))","For all a, not (Q of y and u)."
+"Exists(c, m(c) == y)",There exists an c such that m(c) equals y.
+"Exists(c, (((Q(w, z)) | (T(a, w))) & (Equivalent(P(y, c), k(u, v) == v))) & (((g(y, v) == u) & (g(a, c) == v)) | (Implies(P(y, x, v), k(x) == c))))","There exists an c such that Q of w and z or T of a and w and P of y and c if and only if k(u, v) equals v and g(y, v) equals u and g(a, c) equals v or If P of y and x and v, then k(x) equals c."
+"Exists(c, Exists(x, Equivalent((k(c, v) == b) & (g(b, w) == w), (R(y)) | (m(c, y) == z))))","There exists an c such that There exists an x such that k(c, v) equals b and g(b, w) equals w if and only if R of y or m(c, y) equals z."
+"ForAll(w, ((f(u, a) == b) & (m(y) == z)) & ((k(y) == u) | (U(x, c))))","For all w, f(u, a) equals b and m(y) equals z and k(y) equals u or U of x and c."
+~((m(u) == w) | (m(b) == x)),not (m(u) equals w or m(b) equals x).
+"Exists(w, ForAll(x, ~((~(Q(x, u, a))) & (Implies(h(w) == w, V(x, c, w))))))","There exists an w such that For all x, not (not (Q of x and u and a) and If h(w) equals w, then V of x and c and w)."
+"Exists(c, S(b, u))",There exists an c such that S of b and u.
+"ForAll(b, ((~(f(w) == c)) | (Equivalent(S(x, c), m(a, y) == w))) & (~(Equivalent(k(b) == z, f(a) == v))))","For all b, not (f(w) equals c) or S of x and c if and only if m(a, y) equals w and not (k(b) equals z if and only if f(a) equals v)."
+"ForAll(a, (~((k(x, w) == u) & (Q(a, v, z)))) | (Implies((Q(b)) & (g(c, v) == a), (S(c)) & (W(u)))))","For all a, not (k(x, w) equals u and Q of a and v and z) or If Q of b and g(c, v) equals a, then S of c and W of u."
+"ForAll(a, Equivalent(T(v, b), S(w, u, x)))","For all a, T of v and b if and only if S of w and u and x."
+"Exists(z, ((Equivalent(R(z, v, b), h(w, y) == u)) & (~(f(v, u) == x))) | (((f(v) == u) | (g(b, w) == c)) & (Equivalent(k(x, v) == y, P(y, w, c)))))","There exists an z such that R of z and v and b if and only if h(w, y) equals u and not (f(v, u) equals x) or f(v) equals u or g(b, w) equals c and k(x, v) equals y if and only if P of y and w and c."
+"ForAll(v, ((Q(z, u)) | (P(w, b, u))) & (~(f(x) == b)))","For all v, Q of z and u or P of w and b and u and not (f(x) equals b)."
+"Exists(v, (Equivalent(W(v), R(z, v, b))) | (~(g(v, a) == u)))","There exists an v such that W of v if and only if R of z and v and b or not (g(v, a) equals u)."
+"Exists(y, (S(z, a)) | (P(x)))",There exists an y such that S of z and a or P of x.
+"((~(k(x) == z)) | (~(g(a, z) == y))) & (Equivalent((U(b)) | (m(x, c) == y), ~(W(u))))","not (k(x) equals z) or not (g(a, z) equals y) and U of b or m(x, c) equals y if and only if not (W of u)."
+"Exists(x, g(y) == y)",There exists an x such that g(y) equals y.
+"ForAll(z, Implies(((P(v)) & (h(y, b) == y)) | ((T(v, u)) | (f(u) == v)), Equivalent(~(f(w) == z), (f(x) == v) | (k(a) == x))))","For all z, If P of v and h(y, b) equals y or T of v and u or f(u) equals v, then not (f(w) equals z) if and only if f(x) equals v or k(a) equals x."
+"ForAll(x, (Equivalent((m(z) == v) & (m(y, a) == x), ~(Q(z, a)))) & (((h(c, a) == c) & (W(a))) | (Implies(h(v, x) == c, m(y) == x))))","For all x, m(z) equals v and m(y, a) equals x if and only if not (Q of z and a) and h(c, a) equals c and W of a or If h(v, x) equals c, then m(y) equals x."
+"ForAll(y, ((Implies(R(u, w), T(c, a))) & ((R(y, u, v)) | (h(a, z) == z))) & (((g(w) == w) & (P(x))) & (~(g(a, b) == u))))","For all y, If R of u and w, then T of c and a and R of y and u and v or h(a, z) equals z and g(w) equals w and P of x and not (g(a, b) equals u)."
+"Exists(x, ~(Equivalent(Q(a, z, c), W(u))))",There exists an x such that not (Q of a and z and c if and only if W of u).
+"Exists(c, ~(Implies(Implies(V(b, v, u), P(x)), (Q(y, u)) & (f(c) == y))))","There exists an c such that not (If If V of b and v and u, then P of x, then Q of y and u and f(c) equals y)."
+"ForAll(b, Implies(g(u) == v, S(w, u)))","For all b, If g(u) equals v, then S of w and u."
+"ForAll(x, ForAll(a, Implies((h(a, c) == b) | (P(c)), Equivalent(Q(c), S(c)))))","For all x, For all a, If h(a, c) equals b or P of c, then Q of c if and only if S of c."
+"Exists(y, ForAll(c, (~(h(b) == u)) & ((T(z, u)) | (k(x) == v))))","There exists an y such that For all c, not (h(b) equals u) and T of z and u or k(x) equals v."
+"Exists(y, f(w) == w)",There exists an y such that f(w) equals w.
+"Exists(x, R(u, x))",There exists an x such that R of u and x.
+S(c),S of c.
+"ForAll(w, ForAll(a, R(u)))","For all w, For all a, R of u."
+"ForAll(b, T(c))","For all b, T of c."
+"ForAll(z, Equivalent(((h(x, v) == z) & (k(v) == a)) & (Equivalent(g(w) == b, k(v) == u)), Implies((U(y)) & (R(a, b)), Implies(k(a, z) == z, W(a, b, v)))))","For all z, h(x, v) equals z and k(v) equals a and g(w) equals b if and only if k(v) equals u if and only if If U of y and R of a and b, then If k(a, z) equals z, then W of a and b and v."
+"Exists(c, ForAll(c, P(x, a)))","There exists an c such that For all c, P of x and a."
+"Exists(c, Implies((~(h(v) == x)) & ((m(y) == z) | (k(w, z) == w)), ((h(y) == y) | (Q(c, z, u))) & (~(g(u, w) == v))))","There exists an c such that If not (h(v) equals x) and m(y) equals z or k(w, z) equals w, then h(y) equals y or Q of c and z and u and not (g(u, w) equals v)."
+"ForAll(w, ForAll(y, k(x, w) == y))","For all w, For all y, k(x, w) equals y."
+"(Equivalent(R(u, x, b), f(c, a) == x)) | (~(f(u) == z))","R of u and x and b if and only if f(c, a) equals x or not (f(u) equals z)."
+"ForAll(c, ForAll(a, ((Equivalent(Q(v), S(v))) & (Implies(W(y), m(x, y) == a))) & (Equivalent((k(w, x) == y) | (U(u, w)), (R(c, b)) | (R(b, x))))))","For all c, For all a, Q of v if and only if S of v and If W of y, then m(x, y) equals a and k(w, x) equals y or U of u and w if and only if R of c and b or R of b and x."
+"ForAll(c, g(u) == a)","For all c, g(u) equals a."
+"Exists(w, (W(a)) & (R(v)))",There exists an w such that W of a and R of v.
+"ForAll(b, (Equivalent(~(h(z) == u), Equivalent(V(x), m(c, w) == b))) | (~(Implies(f(y, u) == w, P(y, a)))))","For all b, not (h(z) equals u) if and only if V of x if and only if m(c, w) equals b or not (If f(y, u) equals w, then P of y and a)."
+"Exists(u, Exists(z, U(x)))",There exists an u such that There exists an z such that U of x.
+"R(v, c, b)",R of v and c and b.
+"ForAll(z, Exists(u, Q(a, y)))","For all z, There exists an u such that Q of a and y."
+"Exists(u, f(b, w) == c)","There exists an u such that f(b, w) equals c."
+"ForAll(b, Implies(g(c, y) == y, f(v) == b))","For all b, If g(c, y) equals y, then f(v) equals b."
+"Exists(b, Implies(~(Equivalent(h(z) == c, k(y, z) == u)), (Implies(g(x, b) == z, f(v) == v)) & (Equivalent(k(z, x) == w, f(b) == u))))","There exists an b such that If not (h(z) equals c if and only if k(y, z) equals u), then If g(x, b) equals z, then f(v) equals v and k(z, x) equals w if and only if f(b) equals u."
+"ForAll(v, Equivalent(Q(b), h(c) == x))","For all v, Q of b if and only if h(c) equals x."
+"Exists(b, Implies((f(z) == w) & (m(z, b) == z), (h(x) == b) | (W(y))))","There exists an b such that If f(z) equals w and m(z, b) equals z, then h(x) equals b or W of y."
+"ForAll(z, ForAll(b, ((~(m(x, a) == x)) | (Equivalent(m(z) == x, g(x, w) == x))) | (Equivalent(Equivalent(m(a, v) == x, U(a, b, x)), (k(w, v) == z) | (P(u, v, y))))))","For all z, For all b, not (m(x, a) equals x) or m(z) equals x if and only if g(x, w) equals x or m(a, v) equals x if and only if U of a and b and x if and only if k(w, v) equals z or P of u and v and y."
+R(b),R of b.
+"ForAll(v, h(a, y) == b)","For all v, h(a, y) equals b."
+"ForAll(z, (f(v, a) == c) & (R(y, a)))","For all z, f(v, a) equals c and R of y and a."
+"Exists(v, Exists(z, V(c, x, b)))",There exists an v such that There exists an z such that V of c and x and b.
+"Implies(~(Implies(W(x, u), S(b, x))), Implies(Equivalent(m(u) == z, g(v, a) == u), (k(u, x) == c) | (V(w, v, x))))","If not (If W of x and u, then S of b and x), then If m(u) equals z if and only if g(v, a) equals u, then k(u, x) equals c or V of w and v and x."
+"ForAll(v, (W(z)) | (g(z) == y))","For all v, W of z or g(z) equals y."
+"ForAll(z, ~(((k(z, b) == z) & (g(v, w) == x)) | ((h(a) == b) & (f(x) == c))))","For all z, not (k(z, b) equals z and g(v, w) equals x or h(a) equals b and f(x) equals c)."
+"ForAll(u, h(x) == v)","For all u, h(x) equals v."
+(g(u) == z) & (U(y)),g(u) equals z and U of y.
+"ForAll(y, ((f(u) == w) | (f(a) == c)) & ((R(v)) & (R(a, z))))","For all y, f(u) equals w or f(a) equals c and R of v and R of a and z."
+"Exists(a, (h(z) == x) | (m(w, z) == x))","There exists an a such that h(z) equals x or m(w, z) equals x."
+"Exists(y, ~(h(v, z) == y))","There exists an y such that not (h(v, z) equals y)."
+"ForAll(a, (m(z) == z) | (f(y) == b))","For all a, m(z) equals z or f(y) equals b."
+"Exists(y, Implies((h(y, z) == x) | (S(x, c)), (h(v) == x) | (Q(y, w, b))))","There exists an y such that If h(y, z) equals x or S of x and c, then h(v) equals x or Q of y and w and b."
+"ForAll(v, ((Q(v, u, w)) | (W(b, c, w))) | ((T(z, c)) & (S(v, w, b))))","For all v, Q of v and u and w or W of b and c and w or T of z and c and S of v and w and b."
+"Exists(u, Implies((Implies(S(z), h(w) == x)) | (Equivalent(k(x, w) == c, R(w, a, c))), (Equivalent(k(z, c) == w, U(w, y, a))) | (Equivalent(R(w), R(w)))))","There exists an u such that If If S of z, then h(w) equals x or k(x, w) equals c if and only if R of w and a and c, then k(z, c) equals w if and only if U of w and y and a or R of w if and only if R of w."
+"Exists(x, (Equivalent(R(u), f(z, x) == x)) & ((f(a) == a) | (h(w) == a)))","There exists an x such that R of u if and only if f(z, x) equals x and f(a) equals a or h(w) equals a."
+"Exists(u, Q(x, y, v))",There exists an u such that Q of x and y and v.
+"ForAll(c, ForAll(a, ~(k(y) == u)))","For all c, For all a, not (k(y) equals u)."
+"ForAll(c, (V(v, a)) | (V(x, b, u)))","For all c, V of v and a or V of x and b and u."
+"ForAll(x, ForAll(a, ~((R(u, v)) | (f(a, z) == u))))","For all x, For all a, not (R of u and v or f(a, z) equals u)."
+"ForAll(x, Implies(~(h(u) == y), (f(b) == z) | (k(b, a) == x)))","For all x, If not (h(u) equals y), then f(b) equals z or k(b, a) equals x."
+"Exists(v, Implies((h(y, b) == x) & (m(z) == v), Equivalent(m(b) == v, f(z, u) == v)))","There exists an v such that If h(y, b) equals x and m(z) equals v, then m(b) equals v if and only if f(z, u) equals v."
+"Exists(b, Equivalent((Equivalent(m(u, a) == z, W(z, u))) | (Implies(f(x) == w, h(v, z) == y)), Implies(Equivalent(S(b), V(x, v)), Equivalent(f(u, b) == c, g(x, a) == a))))","There exists an b such that m(u, a) equals z if and only if W of z and u or If f(x) equals w, then h(v, z) equals y if and only if If S of b if and only if V of x and v, then f(u, b) equals c if and only if g(x, a) equals a."
+"ForAll(y, (g(c, y) == w) | (U(c, x, b)))","For all y, g(c, y) equals w or U of c and x and b."
+h(b) == c,h(b) equals c.
+"ForAll(x, Equivalent(f(x, u) == u, k(u) == x))","For all x, f(x, u) equals u if and only if k(u) equals x."
+"ForAll(c, (Implies(Equivalent(R(a), k(y, x) == c), Implies(m(a) == b, g(z, b) == a))) & ((Equivalent(m(z) == y, V(y, a))) | (~(g(x) == y))))","For all c, If R of a if and only if k(y, x) equals c, then If m(a) equals b, then g(z, b) equals a and m(z) equals y if and only if V of y and a or not (g(x) equals y)."
+"Exists(u, Q(c, z))",There exists an u such that Q of c and z.
+"ForAll(w, (f(v, c) == z) & (g(u) == c))","For all w, f(v, c) equals z and g(u) equals c."
+"ForAll(a, (Implies(T(w), k(a) == z)) & (Equivalent(g(w) == v, g(u, x) == z)))","For all a, If T of w, then k(a) equals z and g(w) equals v if and only if g(u, x) equals z."
+"ForAll(z, ForAll(a, Equivalent(((P(y, a)) & (m(c) == y)) & ((f(b) == x) & (h(b) == x)), (Implies(R(a, z), V(c, z, w))) & (Equivalent(f(b) == z, W(v, y, x))))))","For all z, For all a, P of y and a and m(c) equals y and f(b) equals x and h(b) equals x if and only if If R of a and z, then V of c and z and w and f(b) equals z if and only if W of v and y and x."
+"Exists(b, (~(Implies(S(y), f(a) == u))) & (Equivalent(Implies(g(w, b) == x, T(z)), Equivalent(g(x, y) == z, h(x) == z))))","There exists an b such that not (If S of y, then f(a) equals u) and If g(w, b) equals x, then T of z if and only if g(x, y) equals z if and only if h(x) equals z."
+"S(a, w)",S of a and w.
+"Exists(b, ~((h(c) == b) & (f(a) == v)))",There exists an b such that not (h(c) equals b and f(a) equals v).
+"ForAll(w, Implies(k(z, u) == z, f(a, b) == c))","For all w, If k(z, u) equals z, then f(a, b) equals c."
+"ForAll(u, Exists(z, ((P(v)) | (V(z, c, u))) | (~(k(b) == a))))","For all u, There exists an z such that P of v or V of z and c and u or not (k(b) equals a)."
+"((m(b, c) == z) & (f(y, u) == v)) & ((m(y) == w) & (Q(z, c, u)))","m(b, c) equals z and f(y, u) equals v and m(y) equals w and Q of z and c and u."
+"ForAll(x, ForAll(v, h(b) == a))","For all x, For all v, h(b) equals a."
+"Exists(a, ForAll(b, Implies((Q(x, u)) & (h(c) == b), (h(v, z) == z) | (R(x, z)))))","There exists an a such that For all b, If Q of x and u and h(c) equals b, then h(v, z) equals z or R of x and z."
+"ForAll(y, m(z, x) == w)","For all y, m(z, x) equals w."
+"(((m(a, y) == c) | (k(v) == x)) & (Equivalent(k(y, z) == w, S(b, w, a)))) & (~((g(y) == b) | (V(y))))","m(a, y) equals c or k(v) equals x and k(y, z) equals w if and only if S of b and w and a and not (g(y) equals b or V of y)."
+"Exists(w, ForAll(b, ((S(c, b, y)) | (P(u, v))) & (Implies(h(v, x) == v, f(c, a) == z))))","There exists an w such that For all b, S of c and b and y or P of u and v and If h(v, x) equals v, then f(c, a) equals z."
+"P(c, w)",P of c and w.
+"ForAll(y, (U(y, v, z)) & (g(x, y) == c))","For all y, U of y and v and z and g(x, y) equals c."
+"Implies(Implies(m(w, u) == y, W(b, x, c)), ~(T(w)))","If If m(w, u) equals y, then W of b and x and c, then not (T of w)."
+"Exists(y, Equivalent((R(z, y, a)) | (S(a, c, b)), (U(c)) | (h(b) == c)))",There exists an y such that R of z and y and a or S of a and c and b if and only if U of c or h(b) equals c.
+"ForAll(y, ForAll(z, ((Implies(S(w, a, y), S(b))) | (Implies(P(a, b, x), f(x) == y))) | (~(Implies(V(y, c), m(c, w) == c)))))","For all y, For all z, If S of w and a and y, then S of b or If P of a and b and x, then f(x) equals y or not (If V of y and c, then m(c, w) equals c)."
+"Exists(z, Exists(a, ~(Equivalent(Implies(P(w), W(x, b, u)), Implies(h(x, z) == u, f(a, y) == w)))))","There exists an z such that There exists an a such that not (If P of w, then W of x and b and u if and only if If h(x, z) equals u, then f(a, y) equals w)."
+"Implies(Equivalent(Equivalent(f(u, x) == z, T(x, z, b)), (f(a) == c) & (P(a, u))), Implies((P(z, y)) | (h(c) == y), (P(u)) & (U(z))))","If f(u, x) equals z if and only if T of x and z and b if and only if f(a) equals c and P of a and u, then If P of z and y or h(c) equals y, then P of u and U of z."
+"Exists(v, Exists(w, (h(w, u) == y) | (f(c) == a)))","There exists an v such that There exists an w such that h(w, u) equals y or f(c) equals a."
+"ForAll(w, Equivalent((U(v)) & (h(u, y) == y), (h(c, u) == v) & (k(z, c) == w)))","For all w, U of v and h(u, y) equals y if and only if h(c, u) equals v and k(z, c) equals w."
+"Exists(x, Implies(((R(v, a)) | (P(v, b))) & ((f(u) == w) & (m(x, y) == w)), ((W(y, w)) | (f(c, b) == x)) & ((f(u) == w) | (m(x, a) == v))))","There exists an x such that If R of v and a or P of v and b and f(u) equals w and m(x, y) equals w, then W of y and w or f(c, b) equals x and f(u) equals w or m(x, a) equals v."
+"ForAll(w, Equivalent(~(V(a, v, c)), Implies(U(a, y), U(b))))","For all w, not (V of a and v and c) if and only if If U of a and y, then U of b."
+"~((Implies(k(c) == v, Q(z, c, x))) & (Implies(S(z), g(u) == a)))","not (If k(c) equals v, then Q of z and c and x and If S of z, then g(u) equals a)."
+"ForAll(z, Implies(W(a, z), g(b, u) == z))","For all z, If W of a and z, then g(b, u) equals z."
+"Implies(Q(v, x, b), m(u) == z)","If Q of v and x and b, then m(u) equals z."
+"(~(P(b, w, a))) & ((T(w, z)) | (f(w, a) == y))","not (P of b and w and a) and T of w and z or f(w, a) equals y."
+"ForAll(w, Equivalent(((V(z)) | (W(b, c))) & (Implies(P(a, c), k(b) == x)), ((m(z, v) == z) & (P(b, v, w))) | (~(h(a) == b))))","For all w, V of z or W of b and c and If P of a and c, then k(b) equals x if and only if m(z, v) equals z and P of b and v and w or not (h(a) equals b)."
+g(x) == u,g(x) equals u.
+"(Equivalent(h(y, v) == b, m(u, y) == c)) | (Implies(m(v) == c, U(w, x, a)))","h(y, v) equals b if and only if m(u, y) equals c or If m(v) equals c, then U of w and x and a."
+"Exists(a, ForAll(v, (Equivalent((S(v, a, x)) & (R(c)), (T(c, w)) | (P(x, y)))) & (Equivalent(Equivalent(S(c), k(z, c) == w), (f(z) == u) & (f(c, v) == y)))))","There exists an a such that For all v, S of v and a and x and R of c if and only if T of c and w or P of x and y and S of c if and only if k(z, c) equals w if and only if f(z) equals u and f(c, v) equals y."
+"((k(w) == c) & (m(a, u) == c)) | (Equivalent(g(a) == y, R(a, y, u)))","k(w) equals c and m(a, u) equals c or g(a) equals y if and only if R of a and y and u."
+"ForAll(c, Exists(z, Implies((Equivalent(h(b, a) == w, k(y, z) == v)) & (Implies(V(c), h(c, z) == v)), ((f(z) == v) | (f(v, x) == z)) & ((f(w) == b) | (P(u, a))))))","For all c, There exists an z such that If h(b, a) equals w if and only if k(y, z) equals v and If V of c, then h(c, z) equals v, then f(z) equals v or f(v, x) equals z and f(w) equals b or P of u and a."
+"Exists(b, ~(~(Equivalent(S(x, v, w), T(x)))))",There exists an b such that not (not (S of x and v and w if and only if T of x)).
+"Exists(x, ~(((f(w) == a) | (U(x, b))) | ((k(c, x) == w) & (T(x, w, v)))))","There exists an x such that not (f(w) equals a or U of x and b or k(c, x) equals w and T of x and w and v)."
+"Exists(z, (h(x) == u) & (m(w) == c))",There exists an z such that h(x) equals u and m(w) equals c.
+"Exists(b, W(b))",There exists an b such that W of b.
+"Exists(z, Equivalent(Implies(T(y, a, w), m(u) == x), Implies(m(y, a) == z, V(x))))","There exists an z such that If T of y and a and w, then m(u) equals x if and only if If m(y, a) equals z, then V of x."
+"Exists(a, (((W(u)) & (V(z, u))) | (Equivalent(R(v, z), h(v, a) == c))) & (Implies(Equivalent(W(y), m(z) == z), Implies(V(w), m(x, v) == b))))","There exists an a such that W of u and V of z and u or R of v and z if and only if h(v, a) equals c and If W of y if and only if m(z) equals z, then If V of w, then m(x, v) equals b."
+"ForAll(a, Equivalent(Equivalent(Implies(S(b, y), m(w) == b), (g(c, u) == c) & (k(c) == x)), ((f(y) == x) & (Q(z, a, b))) | ((W(x)) | (k(y) == x))))","For all a, If S of b and y, then m(w) equals b if and only if g(c, u) equals c and k(c) equals x if and only if f(y) equals x and Q of z and a and b or W of x or k(y) equals x."
+"Exists(x, (h(x, u) == w) | (k(b, a) == c))","There exists an x such that h(x, u) equals w or k(b, a) equals c."
+"Exists(v, ForAll(u, (Implies((U(w)) & (f(b, x) == w), (T(v, c, x)) & (h(y) == y))) & (Equivalent(Equivalent(S(w), V(c)), ~(m(x) == b)))))","There exists an v such that For all u, If U of w and f(b, x) equals w, then T of v and c and x and h(y) equals y and S of w if and only if V of c if and only if not (m(x) equals b)."
+"ForAll(y, ForAll(x, Equivalent(Implies(k(x, u) == a, f(a) == u), (m(y) == w) & (k(z) == b))))","For all y, For all x, If k(x, u) equals a, then f(a) equals u if and only if m(y) equals w and k(z) equals b."
+"ForAll(b, Implies(Implies(g(u) == z, U(y, w)), Implies(k(b) == u, k(v, a) == z)))","For all b, If If g(u) equals z, then U of y and w, then If k(b) equals u, then k(v, a) equals z."
+"ForAll(z, Equivalent(Equivalent(Q(b, x), f(z) == y), Equivalent(T(y, u, a), h(a, x) == v)))","For all z, Q of b and x if and only if f(z) equals y if and only if T of y and u and a if and only if h(a, x) equals v."
+"Exists(x, ForAll(v, Implies(Implies(Equivalent(R(a), f(z, y) == c), (f(a, c) == a) | (U(a))), Implies(Equivalent(R(z), P(y, u)), (W(w, x)) | (W(y, w))))))","There exists an x such that For all v, If If R of a if and only if f(z, y) equals c, then f(a, c) equals a or U of a, then If R of z if and only if P of y and u, then W of w and x or W of y and w."
+"ForAll(a, (f(v, a) == w) | (g(x, y) == c))","For all a, f(v, a) equals w or g(x, y) equals c."
+"Exists(v, ~(k(w, z) == z))","There exists an v such that not (k(w, z) equals z)."
+m(x) == u,m(x) equals u.
+"ForAll(u, (h(u) == v) & (m(b, z) == z))","For all u, h(u) equals v and m(b, z) equals z."
+"ForAll(z, h(a, y) == w)","For all z, h(a, y) equals w."
+"Exists(a, ~((m(w, u) == y) | (P(w, v))))","There exists an a such that not (m(w, u) equals y or P of w and v)."
+U(c),U of c.
+"ForAll(v, g(v) == u)","For all v, g(v) equals u."
+"Exists(b, Equivalent(g(x) == b, f(a) == c))",There exists an b such that g(x) equals b if and only if f(a) equals c.
+"ForAll(w, m(z) == a)","For all w, m(z) equals a."
+"Equivalent(Equivalent(P(x, z), R(c)), Equivalent(f(z, c) == v, R(x, a)))","P of x and z if and only if R of c if and only if f(z, c) equals v if and only if R of x and a."
+"ForAll(w, Exists(x, ~((Q(a)) | (g(c) == z))))","For all w, There exists an x such that not (Q of a or g(c) equals z)."
+(R(x)) & (k(x) == y),R of x and k(x) equals y.
+"ForAll(u, (g(y) == u) & (R(c, a)))","For all u, g(y) equals u and R of c and a."
+"ForAll(w, (Implies(h(u) == v, h(b, a) == x)) | (Implies(k(v) == z, g(b, c) == u)))","For all w, If h(u) equals v, then h(b, a) equals x or If k(v) equals z, then g(b, c) equals u."
+"Exists(z, (~(Implies(k(w, y) == v, g(u, x) == a))) | (~(Implies(g(a) == w, k(a, c) == w))))","There exists an z such that not (If k(w, y) equals v, then g(u, x) equals a) or not (If g(a) equals w, then k(a, c) equals w)."
+"ForAll(v, (Equivalent(V(b, z, c), W(y, z))) & (Equivalent(g(w) == v, k(c, a) == u)))","For all v, V of b and z and c if and only if W of y and z and g(w) equals v if and only if k(c, a) equals u."
+"Exists(z, ForAll(y, (((Q(w, u)) | (V(c))) & ((S(x)) | (g(z, a) == x))) | (Equivalent(Implies(k(c) == z, m(y) == z), Implies(T(b, a, y), h(z) == a)))))","There exists an z such that For all y, Q of w and u or V of c and S of x or g(z, a) equals x or If k(c) equals z, then m(y) equals z if and only if If T of b and a and y, then h(z) equals a."
+"ForAll(u, ~(Equivalent(m(y) == z, h(y, a) == b)))","For all u, not (m(y) equals z if and only if h(y, a) equals b)."
+"Exists(b, ForAll(b, Implies(~(Q(z, w)), (V(u)) | (m(y) == u))))","There exists an b such that For all b, If not (Q of z and w), then V of u or m(y) equals u."
+"(m(v) == x) | (P(y, a, u))",m(v) equals x or P of y and a and u.
+"ForAll(y, (~(f(y, x) == x)) & ((R(c)) & (k(a) == c)))","For all y, not (f(y, x) equals x) and R of c and k(a) equals c."
+"ForAll(b, Equivalent(h(z, x) == u, V(x)))","For all b, h(z, x) equals u if and only if V of x."
+"ForAll(y, V(x, y, z))","For all y, V of x and y and z."
+"Exists(b, ForAll(u, ~(Equivalent(Implies(T(x, z, b), f(c) == c), ~(W(v, w, y))))))","There exists an b such that For all u, not (If T of x and z and b, then f(c) equals c if and only if not (W of v and w and y))."
+"ForAll(w, ForAll(u, Implies(Equivalent(g(u) == c, W(v, y, w)), ~(g(z) == y))))","For all w, For all u, If g(u) equals c if and only if W of v and y and w, then not (g(z) equals y)."
+"Exists(v, ForAll(z, Implies(m(z, a) == y, h(z, w) == z)))","There exists an v such that For all z, If m(z, a) equals y, then h(z, w) equals z."
+"(~(Implies(m(a, c) == v, U(y)))) | ((Implies(g(w, v) == z, f(z, a) == a)) & (Implies(V(x, b), P(y, v, a))))","not (If m(a, c) equals v, then U of y) or If g(w, v) equals z, then f(z, a) equals a and If V of x and b, then P of y and v and a."
+"ForAll(c, ((Equivalent(P(c, b), P(a))) | ((T(y, b, c)) | (W(a)))) & ((~(g(u) == z)) & (Implies(P(c, v), h(c) == u))))","For all c, P of c and b if and only if P of a or T of y and b and c or W of a and not (g(u) equals z) and If P of c and v, then h(c) equals u."
+"((Q(y, u)) | (f(u, w) == b)) | (Equivalent(V(v), U(b, x, v)))","Q of y and u or f(u, w) equals b or V of v if and only if U of b and x and v."
+"Exists(u, T(y))",There exists an u such that T of y.
+"~((Q(v, c, u)) | (k(z, x) == z))","not (Q of v and c and u or k(z, x) equals z)."
+"ForAll(w, ForAll(a, Implies(m(u) == b, S(b))))","For all w, For all a, If m(u) equals b, then S of b."
+"Exists(v, Equivalent(Equivalent(h(x, v) == z, m(x, v) == w), ~(P(a, w, u))))","There exists an v such that h(x, v) equals z if and only if m(x, v) equals w if and only if not (P of a and w and u)."
+"ForAll(a, Equivalent(~(h(b) == a), (m(v) == c) | (S(x, v))))","For all a, not (h(b) equals a) if and only if m(v) equals c or S of x and v."
+"ForAll(a, Equivalent((g(x, v) == z) & (R(u, v)), Implies(f(z, v) == y, g(y, w) == c)))","For all a, g(x, v) equals z and R of u and v if and only if If f(z, v) equals y, then g(y, w) equals c."
+"Exists(w, Implies(f(v) == z, f(u) == u))","There exists an w such that If f(v) equals z, then f(u) equals u."
+"Exists(z, (R(c, a)) | (T(x)))",There exists an z such that R of c and a or T of x.
+"ForAll(x, g(b) == v)","For all x, g(b) equals v."
+"ForAll(w, ~((U(u)) & (V(u, b))))","For all w, not (U of u and V of u and b)."
+"Exists(c, S(z))",There exists an c such that S of z.
+"ForAll(x, ~((f(y) == u) & (S(b, c))))","For all x, not (f(y) equals u and S of b and c)."
+"U(a, y, u)",U of a and y and u.
+"Exists(u, Implies(Implies(k(c) == w, f(z, u) == x), Equivalent(S(y), k(c, y) == v)))","There exists an u such that If If k(c) equals w, then f(z, u) equals x, then S of y if and only if k(c, y) equals v."
+"ForAll(a, ~((Equivalent(g(y) == b, k(w, x) == w)) | ((f(x) == z) | (k(a) == y))))","For all a, not (g(y) equals b if and only if k(w, x) equals w or f(x) equals z or k(a) equals y)."
+"ForAll(b, Equivalent(Implies(Implies(k(u, w) == u, W(y)), (V(c)) & (m(a, u) == b)), ((P(x)) | (U(u, z))) & (Implies(R(v), h(a, u) == z))))","For all b, If If k(u, w) equals u, then W of y, then V of c and m(a, u) equals b if and only if P of x or U of u and z and If R of v, then h(a, u) equals z."
+"(~(Implies(R(x, y, c), f(w, z) == a))) & (Implies((Q(z, b)) | (U(w, u)), Implies(k(a, b) == a, m(a, z) == z)))","not (If R of x and y and c, then f(w, z) equals a) and If Q of z and b or U of w and u, then If k(a, b) equals a, then m(a, z) equals z."
+"ForAll(u, Implies((Equivalent(V(w, a, v), f(x) == a)) & ((g(w) == x) | (T(z, y))), (Equivalent(f(z) == u, k(v) == w)) & ((Q(c, v)) | (P(u, c)))))","For all u, If V of w and a and v if and only if f(x) equals a and g(w) equals x or T of z and y, then f(z) equals u if and only if k(v) equals w and Q of c and v or P of u and c."
+"ForAll(c, Equivalent(P(v, w, x), k(b, x) == a))","For all c, P of v and w and x if and only if k(b, x) equals a."
+"ForAll(x, ForAll(w, (~((P(c)) | (m(z, a) == v))) & (Implies(Implies(m(x, z) == c, f(a) == x), Implies(k(x) == c, h(y) == u)))))","For all x, For all w, not (P of c or m(z, a) equals v) and If If m(x, z) equals c, then f(a) equals x, then If k(x) equals c, then h(y) equals u."
+"ForAll(c, T(a, y))","For all c, T of a and y."
+"P(v, c, w)",P of v and c and w.
+"Exists(w, ~(Equivalent(k(c, w) == y, g(v) == c)))","There exists an w such that not (k(c, w) equals y if and only if g(v) equals c)."
+"Exists(b, Exists(a, P(y)))",There exists an b such that There exists an a such that P of y.
+"ForAll(b, ForAll(a, k(x, y) == x))","For all b, For all a, k(x, y) equals x."
+"Exists(y, f(w) == c)",There exists an y such that f(w) equals c.
+"Exists(x, k(w, u) == u)","There exists an x such that k(w, u) equals u."
+"ForAll(w, Implies((S(v, w)) | (U(a, w, u)), Equivalent(S(u, z), g(a, z) == y)))","For all w, If S of v and w or U of a and w and u, then S of u and z if and only if g(a, z) equals y."
+"Equivalent(Equivalent(m(x) == u, U(u, z, a)), Implies(k(v) == w, f(w) == z))","m(x) equals u if and only if U of u and z and a if and only if If k(v) equals w, then f(w) equals z."
+"ForAll(c, ForAll(b, ~(g(c) == b)))","For all c, For all b, not (g(c) equals b)."
+"(k(y, c) == c) | (R(b, a))","k(y, c) equals c or R of b and a."
+"Q(z, y)",Q of z and y.
+"ForAll(b, ForAll(a, Equivalent(g(v) == v, P(w, b, a))))","For all b, For all a, g(v) equals v if and only if P of w and b and a."
+"ForAll(a, h(w, a) == a)","For all a, h(w, a) equals a."
+"(f(w) == z) | (g(w, u) == b)","f(w) equals z or g(w, u) equals b."
+"S(x, b)",S of x and b.
+"ForAll(v, ((U(b)) & (U(x))) | (~(g(x, c) == c)))","For all v, U of b and U of x or not (g(x, c) equals c)."
+"Exists(x, (Equivalent((U(v)) & (W(y, z)), (k(v) == a) & (k(u, z) == x))) & (((k(z, c) == v) & (h(b) == z)) & (~(R(x, a, w)))))","There exists an x such that U of v and W of y and z if and only if k(v) equals a and k(u, z) equals x and k(z, c) equals v and h(b) equals z and not (R of x and a and w)."
+"ForAll(x, ~(~(h(z) == b)))","For all x, not (not (h(z) equals b))."
+"ForAll(y, (k(a) == u) & (P(x)))","For all y, k(a) equals u and P of x."
+"ForAll(v, ForAll(c, Implies(((m(z) == c) & (h(w) == c)) & ((T(u)) | (k(y, u) == a)), Equivalent(Equivalent(V(c), T(b, v)), (g(y) == x) | (S(x, a, u))))))","For all v, For all c, If m(z) equals c and h(w) equals c and T of u or k(y, u) equals a, then V of c if and only if T of b and v if and only if g(y) equals x or S of x and a and u."
+"Exists(a, (V(w, x)) & (W(a, b)))",There exists an a such that V of w and x and W of a and b.
+"ForAll(a, ForAll(z, Equivalent(S(a, w), V(z))))","For all a, For all z, S of a and w if and only if V of z."
+"ForAll(y, Implies(Equivalent(Equivalent(S(b, a, x), h(z) == c), Implies(Q(z, w), m(b, c) == z)), Equivalent(~(U(c, x, z)), ~(T(y, b, x)))))","For all y, If S of b and a and x if and only if h(z) equals c if and only if If Q of z and w, then m(b, c) equals z, then not (U of c and x and z) if and only if not (T of y and b and x)."
+"ForAll(v, (k(y, b) == y) & (m(x, c) == w))","For all v, k(y, b) equals y and m(x, c) equals w."
+"ForAll(x, ((m(w, b) == x) & (S(x))) & (~(P(y, a))))","For all x, m(w, b) equals x and S of x and not (P of y and a)."
+"Exists(u, Implies((~(S(u))) & ((P(a)) | (P(b))), Implies(Implies(V(z, v), h(b) == v), (T(v, a, w)) | (k(v, x) == a))))","There exists an u such that If not (S of u) and P of a or P of b, then If If V of z and v, then h(b) equals v, then T of v and a and w or k(v, x) equals a."
+"ForAll(z, Implies(~(k(w, u) == v), Equivalent(U(c, a, w), W(u, a))))","For all z, If not (k(w, u) equals v), then U of c and a and w if and only if W of u and a."
+"Exists(c, k(c, b) == x)","There exists an c such that k(c, b) equals x."
+"Exists(b, (h(a) == w) | (f(w, x) == w))","There exists an b such that h(a) equals w or f(w, x) equals w."
+"Exists(v, Exists(z, (W(u)) | (g(x) == b)))",There exists an v such that There exists an z such that W of u or g(x) equals b.
+"ForAll(b, Exists(u, ((P(y)) & (g(c, w) == y)) | ((U(x, z)) & (S(w, u)))))","For all b, There exists an u such that P of y and g(c, w) equals y or U of x and z and S of w and u."
+"ForAll(c, Equivalent(Implies(R(u), m(v) == z), Implies(h(c) == a, U(y, x, v))))","For all c, If R of u, then m(v) equals z if and only if If h(c) equals a, then U of y and x and v."
+"Equivalent(Implies(V(x, y), Q(y, b)), Equivalent(h(b) == x, R(c, y)))","If V of x and y, then Q of y and b if and only if h(b) equals x if and only if R of c and y."
+"ForAll(w, (~(Equivalent(U(b, w, u), T(y, z)))) & (~((W(a, z, x)) | (S(y, a)))))","For all w, not (U of b and w and u if and only if T of y and z) and not (W of a and z and x or S of y and a)."
+"ForAll(z, k(v) == w)","For all z, k(v) equals w."
+"Implies(Equivalent(~(T(u)), (U(y, v)) | (R(w))), Implies(~(R(u, y, b)), (h(b, a) == b) & (U(v))))","If not (T of u) if and only if U of y and v or R of w, then If not (R of u and y and b), then h(b, a) equals b and U of v."
+"ForAll(x, T(u, a, v))","For all x, T of u and a and v."
+"ForAll(c, Exists(u, Implies(k(y) == w, g(b) == z)))","For all c, There exists an u such that If k(y) equals w, then g(b) equals z."
+"ForAll(z, g(x) == c)","For all z, g(x) equals c."
+"Exists(a, Q(w, b))",There exists an a such that Q of w and b.
+"ForAll(x, ForAll(w, ~(~(~(k(b) == v)))))","For all x, For all w, not (not (not (k(b) equals v)))."
+"Equivalent(~(R(a)), Equivalent(W(c, x, y), h(z) == w))",not (R of a) if and only if W of c and x and y if and only if h(z) equals w.
+"Exists(y, f(v) == a)",There exists an y such that f(v) equals a.
+"Implies(m(x) == y, R(y, x))","If m(x) equals y, then R of y and x."
+"ForAll(z, (T(z)) | (Q(u)))","For all z, T of z or Q of u."
+"Exists(u, Q(a, y, w))",There exists an u such that Q of a and y and w.
+"Exists(w, Implies(Equivalent(Equivalent(W(u, a, v), T(b, a)), (U(z)) & (Q(x, b))), ~((f(y, z) == u) & (U(y, c, a)))))","There exists an w such that If W of u and a and v if and only if T of b and a if and only if U of z and Q of x and b, then not (f(y, z) equals u and U of y and c and a)."
+"Exists(u, Exists(w, ((g(w, c) == a) | (V(b, y))) | (Equivalent(V(z, a, y), k(z) == a))))","There exists an u such that There exists an w such that g(w, c) equals a or V of b and y or V of z and a and y if and only if k(z) equals a."
+"Exists(c, ~((Equivalent(h(z) == z, k(v) == v)) & ((g(x) == v) | (V(y, v)))))",There exists an c such that not (h(z) equals z if and only if k(v) equals v and g(x) equals v or V of y and v).
+"~(m(u, a) == v)","not (m(u, a) equals v)."
+"ForAll(v, Equivalent((m(x, u) == a) | (T(c)), (S(y, w)) & (R(y, z, u))))","For all v, m(x, u) equals a or T of c if and only if S of y and w and R of y and z and u."
+"ForAll(c, P(a, z))","For all c, P of a and z."
+"Exists(y, ((Implies(S(x, y, v), V(x, b))) & ((m(v, b) == x) & (Q(b)))) | (Equivalent(Implies(k(c, y) == c, Q(b, u)), Implies(V(u), W(w)))))","There exists an y such that If S of x and y and v, then V of x and b and m(v, b) equals x and Q of b or If k(c, y) equals c, then Q of b and u if and only if If V of u, then W of w."
+"ForAll(w, ForAll(z, Equivalent(Equivalent((S(c)) | (R(x, y)), (Q(a, b)) | (g(y) == a)), ((W(c)) | (h(x) == v)) | ((U(v, w, c)) & (m(w) == a)))))","For all w, For all z, S of c or R of x and y if and only if Q of a and b or g(y) equals a if and only if W of c or h(x) equals v or U of v and w and c and m(w) equals a."
+"Exists(u, ForAll(c, ~(Equivalent(R(w, y, c), k(z, y) == z))))","There exists an u such that For all c, not (R of w and y and c if and only if k(z, y) equals z)."
+"Exists(x, Exists(z, Implies(~(T(w, u, x)), Implies(S(x), m(c, w) == x))))","There exists an x such that There exists an z such that If not (T of w and u and x), then If S of x, then m(c, w) equals x."
+"Equivalent(k(w) == y, m(y) == u)",k(w) equals y if and only if m(y) equals u.
+"ForAll(v, Exists(v, (Implies(~(g(x, z) == v), Equivalent(T(y, u, a), S(z, u)))) & (Equivalent(~(T(v, c, y)), (g(z) == v) & (f(b, a) == w)))))","For all v, There exists an v such that If not (g(x, z) equals v), then T of y and u and a if and only if S of z and u and not (T of v and c and y) if and only if g(z) equals v and f(b, a) equals w."
+"k(u, y) == u","k(u, y) equals u."
+"Exists(a, Equivalent(~(f(c) == z), (S(w)) | (h(z, c) == x)))","There exists an a such that not (f(c) equals z) if and only if S of w or h(z, c) equals x."
+"ForAll(w, Implies(Implies((V(y)) | (f(c) == u), (g(z, v) == x) | (g(v) == a)), Equivalent(Implies(T(u), h(c) == a), (h(z, v) == u) & (m(c) == w))))","For all w, If If V of y or f(c) equals u, then g(z, v) equals x or g(v) equals a, then If T of u, then h(c) equals a if and only if h(z, v) equals u and m(c) equals w."
+"Exists(b, Equivalent(m(b, x) == u, h(u, w) == y))","There exists an b such that m(b, x) equals u if and only if h(u, w) equals y."
+"Exists(u, P(w))",There exists an u such that P of w.
+"Exists(y, Implies((k(a, b) == c) & (f(y, b) == x), ~(m(y, c) == x)))","There exists an y such that If k(a, b) equals c and f(y, b) equals x, then not (m(y, c) equals x)."
+"Exists(a, (Implies(k(x, w) == y, Q(a, b, w))) & (Implies(T(u), m(c, w) == x)))","There exists an a such that If k(x, w) equals y, then Q of a and b and w and If T of u, then m(c, w) equals x."
+"ForAll(z, (f(v) == z) & (R(w, b)))","For all z, f(v) equals z and R of w and b."
+"ForAll(c, ~(Equivalent(U(b, a, w), T(c, y))))","For all c, not (U of b and a and w if and only if T of c and y)."
+"Exists(z, Exists(w, ((m(a) == u) | (g(y) == x)) & (Equivalent(m(y, u) == x, g(b, w) == c))))","There exists an z such that There exists an w such that m(a) equals u or g(y) equals x and m(y, u) equals x if and only if g(b, w) equals c."
+"ForAll(v, V(u, v, z))","For all v, V of u and v and z."
+"Exists(b, ForAll(b, (Equivalent(Equivalent(Q(c), R(u, c, z)), Equivalent(P(b, u), T(v, w)))) & (Implies(Equivalent(g(u, a) == b, W(b, v, a)), Equivalent(m(v, u) == v, U(u, b, w))))))","There exists an b such that For all b, Q of c if and only if R of u and c and z if and only if P of b and u if and only if T of v and w and If g(u, a) equals b if and only if W of b and v and a, then m(v, u) equals v if and only if U of u and b and w."
+"ForAll(y, Exists(a, (((W(a)) | (h(v) == b)) & (Implies(W(u, c), P(x, c, v)))) | (((m(u) == v) | (g(a, w) == u)) & ((V(x, c)) & (W(x, y))))))","For all y, There exists an a such that W of a or h(v) equals b and If W of u and c, then P of x and c and v or m(u) equals v or g(a, w) equals u and V of x and c and W of x and y."
+"Exists(u, Implies(Implies(~(U(c, u, w)), (k(y, v) == v) & (k(c) == a)), ((k(c, z) == x) & (V(w, c))) & (Implies(R(u, c), R(z, b, u)))))","There exists an u such that If If not (U of c and u and w), then k(y, v) equals v and k(c) equals a, then k(c, z) equals x and V of w and c and If R of u and c, then R of z and b and u."
+"ForAll(w, Exists(w, Implies(((f(y) == c) | (f(b, v) == b)) & ((W(c, w)) | (W(v, c))), (Equivalent(f(z) == u, Q(c, a))) | (Implies(k(y, u) == y, f(x) == z)))))","For all w, There exists an w such that If f(y) equals c or f(b, v) equals b and W of c and w or W of v and c, then f(z) equals u if and only if Q of c and a or If k(y, u) equals y, then f(x) equals z."
+"Exists(c, Exists(w, (g(b) == c) | (m(c) == v)))",There exists an c such that There exists an w such that g(b) equals c or m(c) equals v.
+"Exists(c, ForAll(u, k(z, u) == c))","There exists an c such that For all u, k(z, u) equals c."
+"Exists(u, P(u, y, a))",There exists an u such that P of u and y and a.
+"~(Implies(R(y, w), g(y) == z))","not (If R of y and w, then g(y) equals z)."
+"Implies(V(y, u), U(w))","If V of y and u, then U of w."
+"S(x, u)",S of x and u.
+"(Implies(Q(x, a, z), h(b, a) == a)) & ((f(y) == z) & (h(x) == a))","If Q of x and a and z, then h(b, a) equals a and f(y) equals z and h(x) equals a."
+k(x) == x,k(x) equals x.
+"~(Equivalent(m(a) == c, Q(b, w, c)))",not (m(a) equals c if and only if Q of b and w and c).
+"Exists(x, Exists(x, (((S(v)) | (m(x) == x)) & (~(k(z) == c))) | (((W(v)) & (m(z, v) == u)) & (~(f(w, z) == x)))))","There exists an x such that There exists an x such that S of v or m(x) equals x and not (k(z) equals c) or W of v and m(z, v) equals u and not (f(w, z) equals x)."
+"Exists(c, ForAll(c, Equivalent((P(a, w)) & (k(b, a) == w), Implies(U(a, c, w), g(y) == a))))","There exists an c such that For all c, P of a and w and k(b, a) equals w if and only if If U of a and c and w, then g(y) equals a."
+"Exists(z, Implies(Implies((S(a)) & (R(z, x)), (V(x, v, u)) | (k(x) == u)), ~((m(u, z) == v) & (Q(v, b, a)))))","There exists an z such that If If S of a and R of z and x, then V of x and v and u or k(x) equals u, then not (m(u, z) equals v and Q of v and b and a)."
+"Exists(c, Equivalent(V(b, u, w), U(u, z, w)))",There exists an c such that V of b and u and w if and only if U of u and z and w.
+"Exists(v, Implies(Equivalent((k(z) == w) & (R(c, x, a)), Equivalent(U(u), U(a, v))), Equivalent(Equivalent(V(v, w, a), T(v, w)), (U(u)) | (U(w, c)))))","There exists an v such that If k(z) equals w and R of c and x and a if and only if U of u if and only if U of a and v, then V of v and w and a if and only if T of v and w if and only if U of u or U of w and c."
+"Exists(w, ForAll(a, T(c, a, w)))","There exists an w such that For all a, T of c and a and w."
+"Exists(w, W(a, v, z))",There exists an w such that W of a and v and z.
+"~((h(a) == b) | (P(x, u, z)))",not (h(a) equals b or P of x and u and z).
+"ForAll(z, g(y) == w)","For all z, g(y) equals w."
+"ForAll(u, ForAll(v, ~((R(b, a)) & (m(c) == v))))","For all u, For all v, not (R of b and a and m(c) equals v)."
+"Exists(a, Exists(v, (U(u)) & (g(c, a) == a)))","There exists an a such that There exists an v such that U of u and g(c, a) equals a."
+"Exists(a, g(a) == x)",There exists an a such that g(a) equals x.
+"ForAll(c, Equivalent(U(u, a, w), m(y) == z))","For all c, U of u and a and w if and only if m(y) equals z."
+"ForAll(b, Implies(Implies(U(u, c), W(b, w, a)), Implies(V(z), h(w) == a)))","For all b, If If U of u and c, then W of b and w and a, then If V of z, then h(w) equals a."
+"Exists(w, h(y) == c)",There exists an w such that h(y) equals c.
+"ForAll(w, T(v, y, a))","For all w, T of v and y and a."
+"ForAll(b, Implies(h(c) == u, h(b, a) == w))","For all b, If h(c) equals u, then h(b, a) equals w."
+"Exists(b, Exists(c, h(v, u) == v))","There exists an b such that There exists an c such that h(v, u) equals v."
