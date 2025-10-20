@@ -7,7 +7,7 @@ MODEL_LIST = [
     "google/gemma-3-1b-it",
 ]
 
-EPOCH = [1]
+EPOCHS = 5
 
 
 
