@@ -23,7 +23,7 @@ data_files = {
 dataset = load_dataset("csv", data_files = data_files)
 dataset = dataset.remove_columns('id')
 
-train_val_split = dataset["train"].train_test_split(test_size = 0.1, shuffle=True)
+train_val_split = dataset["train"].train_test_split(test_size = 0.05, shuffle=True) #small validation set should suffice 
 
 
 train_split = train_val_split['train']
@@ -36,29 +36,14 @@ for model_name in config.MODEL_LIST:
    tokenizer = AutoTokenizer.from_pretrained(model_name)
    model = AutoModelForCausalLM.from_pretrained(model_name)
    
+   train_tokenized = train_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
+   valid_tokenized = val_split.map(trainer.tokenize, batched = True, fn_kwargs={"tokenizer": tokenizer})
+   test_tokenized = test_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
    
-   train_tokenized = tokenizer(
-        list(train_split),
-        truncation = True, 
-        max_length = 128,
-        padding = True,
-        return_tensors = 'pt'
-    )
-   test_tokenized = tokenizer(
-        list(train_split['sympy']),
-        truncation = True, 
-        max_length = 128,
-        padding = True,
-        return_tensors = 'pt'
-    )
+   trainer.train_model(model, train_tokenized, valid_tokenized)
+   
+  
    
    
+
    
-   
-#    FOL = tokenizer(
-#         x['sympy'],
-#         truncation = True,
-#         padding = True
-#     )
-    
-    
