@@ -11,9 +11,12 @@ from datasets import load_dataset
 from huggingface_hub import login
 load_dotenv()
 
-os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
-os.environ['TOKENIZERS_PARALLELISM'] = 'True' 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
+# os.environ['PYTORCH_ALLOC_CONF'] = 'True'
+os.environ['TOKENIZERS_PARALLELISM'] = 'False' 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ['CUDA_LAUNCH_BLOCKING']="1"
+os.environ['TORCH_USE_CUDA_DSA'] = "True"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
@@ -32,14 +35,15 @@ train_val_split = dataset["train"].train_test_split(test_size = 0.05, shuffle=Tr
 train_split = train_val_split['train']
 val_split = train_val_split['test']
 test_split = dataset["test"]
-torch.cuda.empty_cache()
-gc.collect()
+
+train_split.shard(num_shards=10, index=0)
 
 for model_name in config.MODEL_LIST:
     
    tokenizer = AutoTokenizer.from_pretrained(model_name)
-   model = AutoModelForCausalLM.from_pretrained(model_name)
+   model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
    
+   tokenizer.add_special_tokens({'pad_token': '[PAD]'})
    train_tokenized = train_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
    valid_tokenized = val_split.map(trainer.tokenize, batched = True, fn_kwargs={"tokenizer": tokenizer})
    test_tokenized = test_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
