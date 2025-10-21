@@ -15,7 +15,7 @@ load_dotenv()
 os.environ['TOKENIZERS_PARALLELISM'] = 'False' 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ['CUDA_LAUNCH_BLOCKING']="1"
-os.environ['TORCH_USE_CUDA_DSA'] = "True"
+os.environ['TORCH_USE_CUDA_DSA'] = "1"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 
 TOKEN = os.getenv("TOKEN")
@@ -36,7 +36,7 @@ train_split = train_val_split['train']
 val_split = train_val_split['test']
 test_split = dataset["test"]
 
-train_split.shard(num_shards=10, index=0)
+# train_split.shard(num_shards=10, index=0)
 
 for model_name in config.MODEL_LIST:
     
@@ -44,6 +44,10 @@ for model_name in config.MODEL_LIST:
    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
    
    tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+   model.resize_token_embeddings(len(tokenizer))
+    # Update the model config with the new pad token ID
+   model.config.pad_token_id = tokenizer.pad_token_id
+   
    train_tokenized = train_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
    valid_tokenized = val_split.map(trainer.tokenize, batched = True, fn_kwargs={"tokenizer": tokenizer})
    test_tokenized = test_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})

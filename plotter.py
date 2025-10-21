@@ -19,32 +19,16 @@ for d in log_history:
     losses.append(d['loss'])
     grad_norms.append(d['grad_norm'])
     
-# Extract values
 
 # Plot loss
-plt.figure()
-plt.plot(steps, losses)
-plt.title("Training Loss")
-plt.xlabel("Step")
-plt.ylabel("Loss")
-plt.savefig("Training_Loss.png")
-print("plotted loss")
+def plot_loss(x_val, y_val, title, x_label, y_label, saveas):
+    plt.figure()
+    plt.plot(x_val, y_val)
+    plt.title(title)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.savefig(saveas)
+    print(title)
 
-# Plot grad norm
-plt.figure()
-plt.plot(steps, grad_norms)
-plt.title("Gradient Norm")
-plt.xlabel("Step")
-plt.ylabel("Grad Norm")
-plt.savefig('Gradient_Norm.png')
-print("plotted gradnorm")
 
-# Evaluation losses 
 
-plt.figure()
-plt.plot(eval_steps, eval_losses)
-plt.title("raw_evaluation_loss")
-plt.xlabel("Step")
-plt.ylabel("Loss")
-plt.savefig('raw_evaluation_loss.png')
-print("plotted raw_evaluation_loss")
