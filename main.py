@@ -13,7 +13,7 @@ load_dotenv()
 
 # os.environ['PYTORCH_ALLOC_CONF'] = 'True'
 os.environ['TOKENIZERS_PARALLELISM'] = 'False' 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,4,5"
 os.environ['CUDA_LAUNCH_BLOCKING']="1"
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "7"

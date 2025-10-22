@@ -23,7 +23,7 @@ def train_model(model, train_tokenized, valid_tokenized, epochs):
     
     train_args = TrainingArguments(
           
-        output_dir = f"./results/llama",
+        output_dir = f"./results/llama7b",
         per_device_train_batch_size = 10,
         per_device_eval_batch_size = 10,
         gradient_accumulation_steps = 4,
