@@ -1,4 +1,5 @@
-
+from transformers import  AutoModelForCausalLM, AutoTokenizer
+import pandas as pd
 import json
 import os
 import re 
@@ -9,20 +10,18 @@ from dotenv import load_dotenv
 from huggingface_hub import login
 load_dotenv()
 
-from transformers import  AutoModelForCausalLM, AutoTokenizer
-import pandas as pd
 
 df = pd.read_csv('fol_sympy_nl_16k.csv')
-inputs = df['natural_language'].to_list()
-outputs = df['sympy'].to_list()
-test_loader_tuple = zip(inputs, outputs)
-
+inputs = df['natural_language'].to_list()   # the input to the model is a natural lanugage statement 
+outputs = df['sympy'].to_list()             # the output of the model is a sympy statement 
+test_loader_tuple = zip(inputs, outputs)    # combining the data in the form of (input, output) to be tested
+os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3'
 wandb_api = os.getenv("WANDB")
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
 
 
-def prediction(checkpoint_path): #evaluator function 
+def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function 
    
     models = os.listdir(checkpoint_path)
     model_load_path=[]
@@ -32,37 +31,42 @@ def prediction(checkpoint_path): #evaluator function
     for model in models:
         model_nums.append(int(model.split('-')[1]))
     model_nums.sort()
-
+    print("Starting the predictions")
+    
     for model_num in model_nums:
         # model_load_path.append(f'{os.getcwd()}' +  "/results/checkpoint-" + str(model_num))
-        model_load_path.append('./results/checkpoint-' + str(model_num) + "/")
-    
+        model_load_path.append('./results/llama/checkpoint-' + str(model_num))
+     
+    print(model_load_path)
+    exit()
     
     for run_model in model_load_path:
         for input, output in test_loader_tuple:
-                    
-            print(input+'------'+output)
-            print(run_model)
-            tokenizer = AutoTokenizer.from_pretrained(run_model, local_files_only = True, trust_remote_code = True)
-            model = AutoModelForCausalLM.from_pretrained(run_model, local_files_only = True, trust_remote_code = True)
-            exit()
+            
+            tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer).to_device('cuda')
+            model = AutoModelForCausalLM.from_pretrained(run_model).to_device('cuda')
+          
             input_sentence_tokenized = tokenizer(input, return_tensors = 'pt')
-            exit()
+            # model.generation_config.cache_implementation = 'static'
+            
             with torch.no_grad():
-                predictions = model.generate(**input_sentence_tokenized)
+                predictions = model.generate(**input_sentence_tokenized, cache_implementation = 'static', max_new_tokens = 1)
+             
+                predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True)[0]
                 
-            print('The predictions are')
-            print(predictions)
-            # predicted_output_sentence = tokenizer.decode(outputs[0], skip_special_tokens=True)
-            # print(predicted_output_sentence)
-    
+                print("1] Prediction ",predicted_output_sentence, "\n", "2] Actual ", output )
+            
+            # model.forward = torch.compile(model.forward, mode = 'reduce-overhead', fullgraph = True )
+            # input_ids = tokenizer(input, return_tensors = 'pt')
+            # outputs = model.generate(**input_ids)
+            # print(tokenizer.batch_decode(outputs, skip_special_tokens = True))
+            # print("The predicted output is ")
+        
         
     matched_true = 0
     matched_false = 0
          
 def plot_loss(model_path, saveas):
-    
-    
     
     with open(checkpoint_path+'/trainer_state.json') as f:
        data = json.load(f)
@@ -93,6 +97,10 @@ def plot_loss(model_path, saveas):
 
 print("The plotting function begins")
 
-# plot_loss(steps, y_val, "./results/gemma3_1b/checkpoint-1195/trainer_state.json", x_label, y_label, saveas)
+# Start
 
-prediction("./results/gemma3_1b")
+#clear cache before you start 
+
+torch.cuda.empty_cache()
+
+prediction('')
