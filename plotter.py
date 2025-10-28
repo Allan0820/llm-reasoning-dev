@@ -15,7 +15,7 @@ df = pd.read_csv('fol_sympy_nl_16k.csv')
 inputs = df['natural_language'].to_list()   # the input to the model is a natural lanugage statement 
 outputs = df['sympy'].to_list()             # the output of the model is a sympy statement 
 test_loader_tuple = zip(inputs, outputs)    # combining the data in the form of (input, output) to be tested
-os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4'
 wandb_api = os.getenv("WANDB")
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
@@ -35,26 +35,30 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
     
     for model_num in model_nums:
         # model_load_path.append(f'{os.getcwd()}' +  "/results/checkpoint-" + str(model_num))
-        model_load_path.append('./results/llama/checkpoint-' + str(model_num))
-     
-    print(model_load_path)
-    exit()
+        model_load_path.append(checkpoint_path + '/checkpoint-' + str(model_num))
+    
+    # print(model_load_path)
+    # exit()
     
     for run_model in model_load_path:
+        
+        torch.cuda.empty_cache()
+        tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
+        model = AutoModelForCausalLM.from_pretrained(run_model)
+        model.to('cuda')
+        
         for input, output in test_loader_tuple:
             
-            tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer).to_device('cuda')
-            model = AutoModelForCausalLM.from_pretrained(run_model).to_device('cuda')
-          
-            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt')
-            # model.generation_config.cache_implementation = 'static'
-            
+            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
+            model.generation_config.cache_implementation = 'static'
+            model.generation_config.pad_token_id = tokenizer.eos_token_id
+        
             with torch.no_grad():
-                predictions = model.generate(**input_sentence_tokenized, cache_implementation = 'static', max_new_tokens = 1)
+                predictions = model.generate(**input_sentence_tokenized, max_new_tokens = 1)
              
                 predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True)[0]
                 
-                print("1] Prediction ",predicted_output_sentence, "\n", "2] Actual ", output )
+                print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
             
             # model.forward = torch.compile(model.forward, mode = 'reduce-overhead', fullgraph = True )
             # input_ids = tokenizer(input, return_tensors = 'pt')
@@ -101,6 +105,6 @@ print("The plotting function begins")
 
 #clear cache before you start 
 
-torch.cuda.empty_cache()
 
-prediction('')
+
+prediction('./results/llama', 'meta-llama/Llama-3.2-1B')
