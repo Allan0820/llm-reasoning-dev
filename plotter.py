@@ -69,9 +69,9 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         model.to('cuda')
         actual_inputs, predicted_outputs, cosine_similarity, ground_truth, actual_outputs = [], [],[], [], []
         counter = 0
-        print("Finished with outer loop")
+        # print("Finished with outer loop")
         for input, output in test_loader_tuple:
-            print("Starting with the inner loop")
+            # print("Starting with the inner loop")
             
             input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
             model.generation_config.cache_implementation = 'static'
@@ -88,8 +88,8 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
                 similarity_score = sentence_model.similarity(embeddings, embeddings)
                 cosine_similarity.append(similarity_score.numpy()[0][1])
                 counter +=1
-                print(counter)   
-                print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
+                #print(counter)   
+               # print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
                 
         '''========================================================================='''     
            
@@ -106,7 +106,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
       
         Epoch +=1
         epoch_counter.append(Epoch)
-        datafinal.to_csv('./results/model_outputs/' + f"Epoch_{Epoch}__"+ name_version +'.csv')
+        datafinal.to_csv(f'./results/model_outputs/{name_version}' + f"Epoch_{Epoch}__"+ name_version +'.csv')
         print("saved_df of ", run_model) 
         
         '''=========================== Below is the plotting function for the training and eval curves (cross-entropy loss) =================='''
@@ -133,23 +133,23 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         plt.figure()
         plt.plot(train_epochs, train_losses)
         plt.title(name_version + " Training Curves")
-        plt.xlabel("Training Loss")
-        plt.ylabel("Training Epochs")
-        plt.savefig('./results/model_outputs/' + name_version + '_training.jpg')
+        plt.ylabel("Training Loss")
+        plt.xlabel("Training Epochs")
+        plt.savefig(f'./results/model_outputs/{name_version}' + name_version + '_training.jpg')
         
         plt.figure()
         plt.plot(eval_epochs, eval_losses)
         plt.title(name_version + " Validation Curves")
-        plt.xlabel("Validation Loss")
-        plt.ylabel("Validation Epochs")
-        plt.savefig('./results/model_outputs/' + name_version + '_validation.jpg')
+        plt.ylabel("Validation Loss")
+        plt.xlabel("Validation Epochs")
+        plt.savefig(f'./results/model_outputs/{name_version}' + name_version + '_validation.jpg')
         
         plt.figure()
         plt.plot(epoch_counter, avg_cosine_similarity)
         plt.title(name_version + " Testing Curves")
-        plt.xlabel("Testing Loss")
-        plt.ylabel("Testing Epochs")
-        plt.savefig('./results/model_outputs/' + name_version + '_testing.jpg')
+        plt.ylabel("Testing Loss")
+        plt.xlabel("Testing Epochs")
+        plt.savefig(f'./results/model_outputs/{name_version}' + name_version + '_testing.jpg')
       
         
     Epoch = 0
@@ -171,4 +171,11 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
     
 #     for ckpt in model_load_path:
         
-
+# print("LLAMA 1B")
+# prediction('./results/llama', 'meta-llama/Llama-3.2-1B')
+# print("LLAMA 3B")
+prediction('./results/llama3b', 'meta-llama/Llama-3.2-3B')
+print("GEMMA3 1B")
+prediction('./results/gemma3_1b', 'google/gemma-3-1b-pt')
+print("ROBERTA 1B")
+prediction('./results/roberta', 'nyu-mll/roberta-base-1B-3')

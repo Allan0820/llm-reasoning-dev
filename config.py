@@ -4,7 +4,7 @@ TEST_SIZE = 0.2
 SEED = 42
 
 MODEL_LIST = [
-    "tencent/Hunyuan-MT-7B",
+    "meta-llama/Llama-3.2-1B",
     
 ]
 
