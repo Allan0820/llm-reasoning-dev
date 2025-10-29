@@ -126,35 +126,49 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
                 train_losses.append(sum(losses)/len(losses))
                 losses = []
                 continue
-            
             steps.append(d['step'])
             losses.append(d['loss'])
         
         
         plt.figure()
         plt.plot(train_epochs, train_losses)
-        plt.title(name_version)
+        plt.title(name_version + " Training Curves")
         plt.xlabel("Training Loss")
         plt.ylabel("Training Epochs")
-        plt.savefig('./results/model_outputs/' + name_version + '.jpg')
+        plt.savefig('./results/model_outputs/' + name_version + '_training.jpg')
+        
+        plt.figure()
+        plt.plot(eval_epochs, eval_losses)
+        plt.title(name_version + " Validation Curves")
+        plt.xlabel("Validation Loss")
+        plt.ylabel("Validation Epochs")
+        plt.savefig('./results/model_outputs/' + name_version + '_validation.jpg')
+        
+        plt.figure()
+        plt.plot(epoch_counter, avg_cosine_similarity)
+        plt.title(name_version + " Testing Curves")
+        plt.xlabel("Testing Loss")
+        plt.ylabel("Testing Epochs")
+        plt.savefig('./results/model_outputs/' + name_version + '_testing.jpg')
       
+        
     Epoch = 0
  
-    print("The average cosine similarity is - ", avg_cosine_similarity)
+    print("Epoch Number Finished ", Epoch)
 
-def plot_generic_loss(checkpoint_path):
-    ''' This function just parses the logs of the trainer for each checkpoint and gives the outputs'''
-    model_load_path=[]
-    model_nums = []
-    models = os.listdir(checkpoint_path)
-    for model in models:
-        model_nums.append(int(model.split('-')[1]))
-    model_nums.sort()
-    print("Starting the plotting")
+# def plot_generic_loss(checkpoint_path):
+#     ''' This function just parses the logs of the trainer for each checkpoint and gives the outputs'''
+#     model_load_path=[]
+#     model_nums = []
+#     models = os.listdir(checkpoint_path)
+#     for model in models:
+#         model_nums.append(int(model.split('-')[1]))
+#     model_nums.sort()
+#     print("Starting the plotting")
     
-    for model_num in model_nums:
-        model_load_path.append(checkpoint_path + '/checkpoint-' + str(model_num))
+#     for model_num in model_nums:
+#         model_load_path.append(checkpoint_path + '/checkpoint-' + str(model_num))
     
-    for ckpt in model_load_path:
+#     for ckpt in model_load_path:
         
 
