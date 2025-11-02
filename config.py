@@ -1,14 +1,15 @@
 TOKENIZERS_PARALLELISM = True 
-DATASET_PATH = 'fol_sympy_nl_16k.csv' 
+DATASET_PATH = "yuan-yang/MALLS-v0" 
 TEST_SIZE = 0.2
 SEED = 42
 
 MODEL_LIST = [
-    "meta-llama/Llama-3.2-1B",
+    "meta-llama/Llama-3.2-3B",
+    #'google/gemma-3-270m'
     
 ]
 
-EPOCHS = 5
+EPOCHS = 10
 
 
 

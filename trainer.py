@@ -3,14 +3,14 @@ from transformers import Trainer, TrainingArguments
 def tokenize(batch,tokenizer):
     
     inputs = tokenizer(
-        batch['natural_language'],
+        batch['NL'],
         truncation = True, 
         max_length = 128,
         padding = 'max_length'
     
     )
     outputs = tokenizer(
-        batch['sympy'],
+        batch['FOL'],
         truncation = True, 
         max_length = 128,
         padding = 'max_length'
@@ -23,10 +23,10 @@ def train_model(model, train_tokenized, valid_tokenized, epochs):
     
     train_args = TrainingArguments(
           
-        output_dir = f"./results/llama7b",
-        per_device_train_batch_size = 10,
-        per_device_eval_batch_size = 10,
-        gradient_accumulation_steps = 4,
+        output_dir = f"./results/llama3b",
+        per_device_train_batch_size = 64,
+        per_device_eval_batch_size = 64,
+        gradient_accumulation_steps = 1,
         eval_strategy = 'epoch',
         save_strategy = 'epoch',
         do_eval = True,

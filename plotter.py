@@ -28,12 +28,12 @@ load_dotenv()
 # wandb.login(TOKEN = os.getenv('WANDB'))
 
 sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
-
+torch.cuda.empty_cache()
 df = pd.read_csv('fol_sympy_nl.csv')
 inputs = df['natural_language'].to_list()   # the input to the model is a natural lanugage statement 
 outputs = df['sympy'].to_list()             # the output of the model is a sympy statement 
 test_loader_tuple = list(zip(inputs, outputs))    # combining the data in the form of (input, output) to be tested
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 wandb_api = os.getenv("WANDB")
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
@@ -76,10 +76,10 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
             input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
             model.generation_config.cache_implementation = 'static'
             model.generation_config.pad_token_id = tokenizer.eos_token_id
-            
+            model.to('cuda')
             with torch.no_grad():
-                predictions = model.generate(**input_sentence_tokenized, max_new_tokens = 1)
-                predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True)[0]
+                predictions = model.generate(**input_sentence_tokenized)
+                predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True, max_new_tokens =1)[0]
                 actual_inputs.append(input) ; predicted_outputs.append(predicted_output_sentence) ; ground_truth.append(output)
                 actual_outputs.append(output)
                 
@@ -89,7 +89,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
                 cosine_similarity.append(similarity_score.numpy()[0][1])
                 counter +=1
                 #print(counter)   
-               # print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
+                print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
                 
         '''========================================================================='''     
            
@@ -171,11 +171,11 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
     
 #     for ckpt in model_load_path:
         
-# print("LLAMA 1B")
+print("LLAMA 1B")
 # prediction('./results/llama', 'meta-llama/Llama-3.2-1B')
 # print("LLAMA 3B")
-prediction('./results/llama3b', 'meta-llama/Llama-3.2-3B')
-print("GEMMA3 1B")
-prediction('./results/gemma3_1b', 'google/gemma-3-1b-pt')
-print("ROBERTA 1B")
-prediction('./results/roberta', 'nyu-mll/roberta-base-1B-3')
+prediction('./results/gemma3', 'meta-llama/Llama-3.2-3B')
+# print("GEMMA3 1B")
+# prediction('./results/gemma3', 'google/gemma-3-270m')
+# print("ROBERTA 1B")
+# prediction('./results/roberta', 'nyu-mll/roberta-base-1B-3')
