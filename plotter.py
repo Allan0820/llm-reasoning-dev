@@ -1,5 +1,4 @@
 
-
 '''
 Directory structure should be as follows 
 
@@ -13,6 +12,7 @@ Prediction Folder for outputs of the trained models --> ./results/<model_name>/<
 '''
 
 from transformers import  AutoModelForCausalLM, AutoTokenizer
+from transformers import Trainer
 import pandas as pd
 import json
 import numpy
@@ -23,24 +23,27 @@ import torch
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from huggingface_hub import login
+from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
 load_dotenv()
 # wandb.login(TOKEN = os.getenv('WANDB'))
 
 sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
 torch.cuda.empty_cache()
-df = pd.read_csv('fol_sympy_nl.csv')
-inputs = df['natural_language'].to_list()   # the input to the model is a natural lanugage statement 
-outputs = df['sympy'].to_list()             # the output of the model is a sympy statement 
-test_loader_tuple = list(zip(inputs, outputs))    # combining the data in the form of (input, output) to be tested
+
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
 wandb_api = os.getenv("WANDB")
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
 
+ds = load_dataset("yuan-yang/MALLS-v0")
+test = ds['test']
+test_df = test.to_pandas()
+test_loader_tuple = zip(list(test_df['NL']),list(test_df['FOL']))
 
 def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function 
    
+
     models = os.listdir(checkpoint_path)
     model_load_path=[]
     model_nums = []
@@ -64,19 +67,18 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         print('folder exists!')
     for run_model in model_load_path:
         
-        tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
-        model = AutoModelForCausalLM.from_pretrained(run_model)
-        model.to('cuda')
+        tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer, device_map='auto')
+        model = AutoModelForCausalLM.from_pretrained(run_model, device_map='auto')
         actual_inputs, predicted_outputs, cosine_similarity, ground_truth, actual_outputs = [], [],[], [], []
         counter = 0
         # print("Finished with outer loop")
         for input, output in test_loader_tuple:
             # print("Starting with the inner loop")
             
-            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
+            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt')
             model.generation_config.cache_implementation = 'static'
             model.generation_config.pad_token_id = tokenizer.eos_token_id
-            model.to('cuda')
+        
             with torch.no_grad():
                 predictions = model.generate(**input_sentence_tokenized)
                 predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True, max_new_tokens =1)[0]
@@ -88,7 +90,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
                 similarity_score = sentence_model.similarity(embeddings, embeddings)
                 cosine_similarity.append(similarity_score.numpy()[0][1])
                 counter +=1
-                #print(counter)   
+                print(counter)   
                 print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
                 
         '''========================================================================='''     
@@ -156,25 +158,10 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
  
     print("Epoch Number Finished ", Epoch)
 
-# def plot_generic_loss(checkpoint_path):
-#     ''' This function just parses the logs of the trainer for each checkpoint and gives the outputs'''
-#     model_load_path=[]
-#     model_nums = []
-#     models = os.listdir(checkpoint_path)
-#     for model in models:
-#         model_nums.append(int(model.split('-')[1]))
-#     model_nums.sort()
-#     print("Starting the plotting")
-    
-#     for model_num in model_nums:
-#         model_load_path.append(checkpoint_path + '/checkpoint-' + str(model_num))
-    
-#     for ckpt in model_load_path:
-        
 print("LLAMA 1B")
 # prediction('./results/llama', 'meta-llama/Llama-3.2-1B')
 # print("LLAMA 3B")
-prediction('./results/gemma3', 'meta-llama/Llama-3.2-3B')
+prediction('./results/llama3b', 'meta-llama/Llama-3.2-3B')
 # print("GEMMA3 1B")
 # prediction('./results/gemma3', 'google/gemma-3-270m')
 # print("ROBERTA 1B")
