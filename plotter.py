@@ -67,18 +67,18 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         print('folder exists!')
     for run_model in model_load_path:
         
-        tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer, device_map='auto')
-        model = AutoModelForCausalLM.from_pretrained(run_model, device_map='auto')
+        tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
+        model = AutoModelForCausalLM.from_pretrained(run_model)
         actual_inputs, predicted_outputs, cosine_similarity, ground_truth, actual_outputs = [], [],[], [], []
         counter = 0
         # print("Finished with outer loop")
         for input, output in test_loader_tuple:
             # print("Starting with the inner loop")
             
-            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt')
+            input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
             model.generation_config.cache_implementation = 'static'
             model.generation_config.pad_token_id = tokenizer.eos_token_id
-        
+            model.to('cuda')
             with torch.no_grad():
                 predictions = model.generate(**input_sentence_tokenized)
                 predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True, max_new_tokens =1)[0]
