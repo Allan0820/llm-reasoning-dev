@@ -44,7 +44,7 @@ for model_name in config.MODEL_LIST:
    valid_tokenized = validation_split.map(trainer.tokenize, batched = True, fn_kwargs={"tokenizer": tokenizer})
    test_tokenized = test_split.map(trainer.tokenize, batched= True, fn_kwargs={"tokenizer": tokenizer})
    
-   trainer.train_model(model, train_tokenized, valid_tokenized, config.EPOCHS)
+   trainer.train_model(model, train_tokenized, valid_tokenized, config.EPOCHS, model_name)
    
    del model, tokenizer
    torch.cuda.synchronize()  # Soft stop the GPU and ensure all processes finish

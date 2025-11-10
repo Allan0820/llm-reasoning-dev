@@ -39,7 +39,7 @@ login(token = TOKEN)
 ds = load_dataset("yuan-yang/MALLS-v0")
 test = ds['test']
 test_df = test.to_pandas()
-test_loader_tuple = zip(list(test_df['NL']),list(test_df['FOL']))
+test_loader_tuple = list(zip(list(test_df['NL']),list(test_df['FOL']))) #converting back to a list to remove the iterator prop from zip
 
 def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function 
    
@@ -91,7 +91,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
                 cosine_similarity.append(similarity_score.numpy()[0][1])
                 counter +=1
                 print(counter)   
-                print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
+                #print("1] Actual ", output , "\n", "2] Predicted ", predicted_output_sentence)
                 
         '''========================================================================='''     
            
@@ -112,6 +112,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         print("saved_df of ", run_model) 
         
         '''=========================== Below is the plotting function for the training and eval curves (cross-entropy loss) =================='''
+        
         with open(run_model+'/trainer_state.json') as f:
              data = json.load(f)
 

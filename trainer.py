@@ -1,4 +1,5 @@
 from transformers import Trainer, TrainingArguments
+import config
 
 def tokenize(batch,tokenizer):
     
@@ -19,11 +20,13 @@ def tokenize(batch,tokenizer):
     inputs['labels'] = outputs['input_ids']
     return inputs
 
-def train_model(model, train_tokenized, valid_tokenized, epochs):
+def train_model(model, train_tokenized, valid_tokenized, epochs, model_name):
+    
+    # loss_functions = config.LOSS_FUNCTIONS
     
     train_args = TrainingArguments(
           
-        output_dir = f"./results/llama3b",
+        output_dir = f"./results/{model_name}",
         per_device_train_batch_size = 64,
         per_device_eval_batch_size = 64,
         gradient_accumulation_steps = 1,

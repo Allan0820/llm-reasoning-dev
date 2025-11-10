@@ -4,10 +4,14 @@ TEST_SIZE = 0.2
 SEED = 42
 
 MODEL_LIST = [
-    "meta-llama/Llama-3.2-3B",
-    #'google/gemma-3-270m'
+    #"meta-llama/Llama-3.2-3B",
+    'google/gemma-3-270m'
     
 ]
+
+# LOSS_FUNCTIONS = [
+    
+# ]
 
 EPOCHS = 10
 
