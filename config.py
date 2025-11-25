@@ -13,7 +13,7 @@ MODEL_LIST = [
     
 # ]
 
-EPOCHS = 10
+EPOCHS = 5
 
 
 

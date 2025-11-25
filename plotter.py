@@ -31,7 +31,7 @@ load_dotenv()
 sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
 torch.cuda.empty_cache()
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,4,5,6,7'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 wandb_api = os.getenv("WANDB")
 TOKEN = os.getenv("TOKEN")
 login(token = TOKEN)
@@ -69,8 +69,10 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
         
         tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
         model = AutoModelForCausalLM.from_pretrained(run_model)
+        
         actual_inputs, predicted_outputs, cosine_similarity, ground_truth, actual_outputs = [], [],[], [], []
         counter = 0
+        model.to('cuda')
         # print("Finished with outer loop")
         for input, output in test_loader_tuple:
             # print("Starting with the inner loop")
@@ -78,7 +80,7 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
             input_sentence_tokenized = tokenizer(input, return_tensors = 'pt').to('cuda')
             model.generation_config.cache_implementation = 'static'
             model.generation_config.pad_token_id = tokenizer.eos_token_id
-            model.to('cuda')
+            
             with torch.no_grad():
                 predictions = model.generate(**input_sentence_tokenized)
                 predicted_output_sentence = tokenizer.batch_decode(predictions, skip_special_tokens=True, max_new_tokens =1)[0]
@@ -159,11 +161,11 @@ def prediction(checkpoint_path, pretrained_tokenizer): #evaluator function
  
     print("Epoch Number Finished ", Epoch)
 
-print("LLAMA 1B")
+# print("LLAMA 1B")
 # prediction('./results/llama', 'meta-llama/Llama-3.2-1B')
 # print("LLAMA 3B")
-prediction('./results/llama3b', 'meta-llama/Llama-3.2-3B')
-# print("GEMMA3 1B")
-# prediction('./results/gemma3', 'google/gemma-3-270m')
+# prediction('./results/llama3b', 'meta-llama/Llama-3.2-3B')
+print("GEMMA3 1B")
+prediction('./results/google/gemma-3-270m', 'google/gemma-3-270m')
 # print("ROBERTA 1B")
 # prediction('./results/roberta', 'nyu-mll/roberta-base-1B-3')
