@@ -5,8 +5,8 @@ SEED = 42
 
 MODEL_LIST = [
     #"meta-llama/Llama-3.2-3B",
-    # 'google/gemma-3-270m'
-    ''
+     'google/gemma-3-270m'
+    
     
 ]
 

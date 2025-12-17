@@ -28,8 +28,8 @@ train_validation_split = ds['train'].train_test_split(0.2)
 train_split = train_validation_split['train']
 validation_split = train_validation_split['test']
 test_split = ds['test']
-print(train_split['FOL'])
-exit()
+# print(train_split['FOL'])
+# exit()
 
 torch.cuda.empty_cache()  # Clear GPU RAM before starting the training of the program
 
