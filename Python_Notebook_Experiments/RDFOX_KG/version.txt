@@ -1,0 +1,1 @@
+RDFox version: 7.5 (cce79478565ca2dde156465b4e62e26ef48f8651)
